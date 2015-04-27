@@ -1,31 +1,19 @@
 #include <time.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
-#include "map.map.h"
-#include "map.raw.h"
-#include "map.pal.h"
+// Map data
+#include "mapFunctions.h"
 
-
-struct scrollingBG {
-    int xBGAhead, xBGBehind;
-    int xMapAhead, xMapBehind;
-    int yMapAhead, yMapBehind;
-    int ulx, uly;
-    int deltaX, deltaY;
-};
+// Sprite data
+#include "spriteFunctions.h"
 
 
-struct scrollingBG bg;
+
+
 int game_state;  //Change this initialization to 1 to skip the start menu.  Doing this will eliminate rand seeding, however.
-int n, tileToCopy, locationToPaste;
-int x, y;
-int mapWidthTiles, mapHeightTiles;
-int screenWidth, screenHeight;
-int playerXTile, playerYTile;
-int xLoop, yLoop;
-unsigned short* bg0map;
-unsigned short* bg1map;
+int n;
 
 
 void Initialize(){
@@ -33,8 +21,21 @@ void Initialize(){
 	//NO DECLARATIONS HERE.  All variables referenced in this function should be global.
 	x = 0;
 	y = 0;
+		
+	mapWidthTiles = 32;
+	mapHeightTiles = 640;
 	
+	screenWidth = 240;
+	screenHeight = 160;
 	
+	playerXTile = 16; // 16
+	playerYTile = 10;
+	
+    xLoop = 0;
+    yLoop = 0;
+    
+    
+    
     bg.xBGBehind = 31;
     bg.xBGAhead = 30;
     bg.xMapBehind = -1; // 16
@@ -45,79 +46,28 @@ void Initialize(){
     bg.uly = 0;
     bg.deltaX = 0;
     bg.deltaY = 0;
-	
-	mapWidthTiles = 64;
-	mapHeightTiles = 320;
-	
-	screenWidth = 240;
-	screenHeight = 160;
-	
-	playerXTile = 16; // 16
-	playerYTile = 10;
-	
-    xLoop = 0;
-    yLoop = 0;
+    bg.tileUnderPlayer = 16 + mapWidthTiles*10;
+    bg.rocketPower = .15;
+    bg.gravity = .1;
+    bg.playerVelocity = 0;
+    bg.terminalVelocity = 3;
+    bg.maxRocketVelocity = 2;
 	
 	game_state = 1;
 	bg0map = (unsigned short*)ScreenBaseBlock(23);
 	bg1map = (unsigned short*)ScreenBaseBlock(31);
+	
+	
+	//initSprites();
 }
 
-void setMineral(int position, int tile) {
-    material_Map[position] = tile;                      // upper left
-    material_Map[position+1] = tile+1;                  // upper right
-    material_Map[position+mapWidthTiles] = tile+8;      // bottom left
-    material_Map[position+mapWidthTiles+1] = tile+9;    // bottom right
-}
 
-void setDirt() {
-    int tile = 32;
-    int position = playerXTile + playerYTile*mapWidthTiles;
-    
-    map_Map[position] = tile;                       // upper left
-    map_Map[position+1] = tile+1;                   // upper right
-    map_Map[position+mapWidthTiles] = tile+8;       // bottom left
-    map_Map[position+mapWidthTiles+1] = tile+9;     // bottom right
-    
-    bg0map[position] = tile;                        // upper left
-    bg0map[position+1] = tile+1;                    // upper right
-    bg0map[position+32] = tile+8;                   // bottom left
-    bg0map[position+32+1] = tile+9;                 // bottom right
-}
-
-void blackoutMinerals() {
-    for (yLoop = 0; yLoop < 64; yLoop++) {
-        for (xLoop = 0; xLoop < 64; xLoop++) {
-            material_Map[xLoop + yLoop*32] = 48;
-        }
-    }
-}
-
-void addAllMinerals() {
-    for (yLoop = 12; yLoop < 32; yLoop+=2) {
-        for (xLoop = 0; xLoop < 64; xLoop+=2) {
-            int r = rand() % 20; // 0 and 19
-
-            if (r < 3) {
-                setMineral(xLoop + yLoop*mapWidthTiles, 28);
-            }
-		}
-    }
-}
-
-void loadStartingPosition() {
-    for (yLoop = 0; yLoop < 32; yLoop++) {
-        for (xLoop = 0; xLoop < 32; xLoop++) {
-            bg0map[xLoop + yLoop*32] = map_Map[xLoop + yLoop*mapWidthTiles]; // xLoop + 16
-            bg1map[xLoop + yLoop*32] = material_Map[xLoop + yLoop*mapWidthTiles]; // xLoop + 16
-        }
-    }
-}
 
 void LoadContent(){
 	//Load Music and sound effects
 	
-    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 1);
+	//REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 0 << CHAR_SHIFT);
+    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 1) | (0 << CHAR_SHIFT);
 	REG_BG1CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (31 << SCREEN_SHIFT);
 	
 	DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW); // copy palette into the background
@@ -145,6 +95,7 @@ void Update(){
         State 4		Game Over (Win)
     */
 	keyPoll();
+	UpdateSpriteMemory();
 	WaitVBlank();
 
 	switch(game_state){
@@ -156,20 +107,79 @@ void Update(){
 			//Increment game_state
 			break;
 		case 1:
-			SetMode(0 | BG0_ENABLE | BG1_ENABLE);
+			SetMode(0 | BG0_ENABLE | BG1_ENABLE | OBJ_ENABLE | OBJ_MAP_1D);
+			// SetMode(0 | OBJ_ENABLE | OBJ_MAP_1D | BG0_ENABLE | BG1_ENABLE | BG2_ENABLE | BG3_ENABLE);
+			
+			UpdateSpriteMemory();
+			PlaySprite(0);
+			
+			if (
+                keyIsDown(BUTTON_A) ||
+                keyIsDown(BUTTON_B) ||
+                keyIsDown(BUTTON_START) ||
+                keyIsDown(BUTTON_SELECT) ||
+                keyIsDown(BUTTON_R) ||
+                keyIsDown(BUTTON_L)
+            ) {
+                setDirt(bg.tileUnderPlayer);
+            }
+			
+			// if they aren't flying - apply gravity
+			if (keyIsDown(BUTTON_UP)) {
+			    // check if tile above you is empty
+			    if (y > 10) {
+                    bg.playerVelocity -= bg.rocketPower;
+
+                    // Max velocity of the player
+                    if (bg.playerVelocity < -bg.maxRocketVelocity) {
+                        bg.playerVelocity = -bg.maxRocketVelocity;
+                    }
+
+                    // Apply the velocity to the player
+                    y = floor(y + bg.playerVelocity);
+                    bg.deltaY += floor(bg.playerVelocity);
+                } else {
+                    bg.playerVelocity = 0;
+                }
+            }
+            else if (checkDirection("bottom") == true) {
+                bg.playerVelocity += bg.gravity;
+                
+                // Max velocity of the player
+                if (bg.playerVelocity > bg.terminalVelocity) {
+                    bg.playerVelocity = bg.terminalVelocity;
+                }
+                
+                // Apply the velocity to the player
+                y = floor(y + bg.playerVelocity);
+                bg.deltaY += floor(bg.playerVelocity);
+            }
+            else { // they hit something
+                // check playerVelocity here to do fall damage
+                
+                bg.playerVelocity = 0;
+            }
+			
 			
 			//Button Detection
-			if ( keyIsDown(BUTTON_LEFT) && x > 0) {
+			if (keyIsDown(BUTTON_LEFT) && x > 0) {
                 x--;
                 bg.deltaX--;
             }
-			if ( keyIsDown(BUTTON_RIGHT) && x < ((mapWidthTiles-32)*8) ) {
+			if (keyIsDown(BUTTON_RIGHT) && x < 16) {
                 x++;
                 bg.deltaX++;
             }
-			if (keyIsDown(BUTTON_UP) && y > 0) { y--; }
-			if (keyIsDown(BUTTON_DOWN) && y < (mapHeightTiles*8)) { y++; }
-			
+
+            
+			if (keyIsDown(BUTTON_DOWN) && y < (mapHeightTiles*8)) {
+                //digDirection("down");
+
+                y++;
+                bg.deltaY++;
+            }
+            
+            
 			REG_BG0VOFS = y;
 			REG_BG1VOFS = y;
 			
@@ -177,59 +187,54 @@ void Update(){
 			REG_BG1HOFS = x;
 			
 			
-			/*
-                int xBGAhead = 31;
-                int xBGBehind = 30;
-                int xMapAhead = 31;
-                int xMapBehind = 0;
-                int ulx = 0;
-                int uly = 0;
-                int deltaX = 0;
-                int deltaY = 0;
-            */
-
-            if (bg.deltaX == -8) { // LEFT
+            
+            if (bg.deltaX == -8) {
                 bg.deltaX = 0;
-                bg.xMapAhead = bg.xMapAhead - 1;
-                bg.xMapBehind = bg.xMapBehind - 1;
-                bg.xBGAhead = bg.xBGAhead - 1; // abs(bg.xBGAhead - 1) % 32;
-                if (bg.xBGAhead == -1) {
-                    bg.xBGAhead = 31;
-                }
-                bg.xBGBehind = bg.xBGBehind - 1; // abs(bg.xBGBehind - 1) % 32;
-                if (bg.xBGBehind == -1) {
-                    bg.xBGBehind = 31;
-                }
-                
-                int loopY = 0;
-                for (loopY = 0; loopY < 32; loopY++) {
-                    bg0map[loopY*32 + bg.xBGBehind] = map_Map[loopY*mapWidthTiles + bg.xMapBehind];
-                }
+                bg.tileUnderPlayer--;
             }
-            if (bg.deltaX == 8) {  // RIGHT
+            else if (bg.deltaX == 8) {
                 bg.deltaX = 0;
-                bg.xMapAhead = bg.xMapAhead + 1;
-                bg.xMapBehind = bg.xMapBehind + 1;
-                bg.xBGAhead = bg.xBGAhead + 1;
-                bg.xBGAhead = bg.xBGAhead % 32;
-                bg.xBGBehind = bg.xBGBehind + 1;
-                bg.xBGBehind = bg.xBGBehind % 32;
-                
-                int loopY = 0;
-                for (loopY = 0; loopY < 32; loopY++) {
-                    bg0map[loopY*32 + bg.xBGAhead] = map_Map[loopY*mapWidthTiles + bg.xMapAhead];
-                }
+                bg.tileUnderPlayer++;
             }
             
-            /*
-			
+            
+            if (bg.deltaY <= -8) { // moved up
+                tilesFromTop--;
+                bg.deltaY += 8;
+                bg.tileUnderPlayer -= mapWidthTiles;
+
+                tileToCopy = 32 * (abs(tilesFromTop - 1));
+                locationToPaste = 32 * (abs(tilesFromTop - 1) % 32);
+
                 int loopMe = 0;
                 for (loopMe = 0; loopMe < 32; loopMe++) {
-                    bg0map[loopMe*32 + locationToPaste] = map_Map[loopMe*mapWidthTiles + tileToCopy];
+                    bg0map[locationToPaste + loopMe] = map_Map[loopMe + tileToCopy];
+                    bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
                 }
-			*/
+            }
+            else if (bg.deltaY >= 8) { // moved down
+                tilesFromTop++;
+                bg.deltaY -= 8;
+                bg.tileUnderPlayer += mapWidthTiles;
+
+                tileToCopy = 32 * (tilesFromTop + 21);
+                locationToPaste = 32 * ((tilesFromTop + 21) % 32);
+
+                int loopMe = 0;
+                for (loopMe = 0; loopMe < 32; loopMe++) {
+                    bg0map[locationToPaste + loopMe] = map_Map[loopMe + tileToCopy];
+                    bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
+                }
+            }
+
+            
+            
+            
+            
+            
 			
 			WaitVBlank();
+			
 			
 			n = 40000;
 			while(n--);
