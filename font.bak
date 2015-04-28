@@ -826,7 +826,7 @@ unsigned short font[] =
 #endif
 
 //This method is used to draw characters to the screen
-void DrawChar(int left, int top, char letter, unsigned short color)
+/*void DrawChar(int left, int top, char letter, unsigned short color)
 {
 int x, y;
 int draw;
@@ -852,4 +852,4 @@ void Print(int left, int top, char *str, unsigned short color)
         DrawChar(left + pos, top, *str++, color);
         pos += 8;
     }
-}
+}*/

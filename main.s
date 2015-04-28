@@ -19,5836 +19,13 @@
 @ -fmath-errno -ftrapping-math -mapcs -mapcs-frame -mapcs-32 -msoft-float
 @ -mthumb-interwork -mlong-calls
 
-	.global	font
+	.global	SpriteData3
 	.data
-	.align	1
-	.type	font, %object
-	.size	font, 11648
-font:
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	1
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
+	.align	2
+	.type	SpriteData3, %object
+	.size	SpriteData3, 4
+SpriteData3:
+	.word	100745216
 	.global	angle
 	.bss
 	.global	angle
@@ -5871,30 +48,18 @@ angle2:
 	.size	zoom, 4
 zoom:
 	.word	256
-	.global	videoBuffer
+	.global	rotData
 	.align	2
-	.type	videoBuffer, %object
-	.size	videoBuffer, 4
-videoBuffer:
-	.word	100663296
-	.global	BUTTONS
+	.type	rotData, %object
+	.size	rotData, 4
+rotData:
+	.word	gamesprites
+	.global	bg0map
 	.align	2
-	.type	BUTTONS, %object
-	.size	BUTTONS, 4
-BUTTONS:
-	.word	67109168
-	.global	paletteMem
-	.align	2
-	.type	paletteMem, %object
-	.size	paletteMem, 4
-paletteMem:
-	.word	83886080
-	.global	ScanlineCounter
-	.align	2
-	.type	ScanlineCounter, %object
-	.size	ScanlineCounter, 4
-ScanlineCounter:
-	.word	67108870
+	.type	bg0map, %object
+	.size	bg0map, 4
+bg0map:
+	.word	100726784
 	.global	FrontBuffer
 	.align	2
 	.type	FrontBuffer, %object
@@ -5907,7 +72,233 @@ FrontBuffer:
 	.size	BackBuffer, 4
 BackBuffer:
 	.word	100704256
+	.global	ScanlineCounter
+	.align	2
+	.type	ScanlineCounter, %object
+	.size	ScanlineCounter, 4
+ScanlineCounter:
+	.word	67108870
+	.global	BUTTONS
+	.align	2
+	.type	BUTTONS, %object
+	.size	BUTTONS, 4
+BUTTONS:
+	.word	67109168
 	.text
+	.align	2
+	.global	keyPoll
+	.type	keyPoll, %function
+keyPoll:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L2
+	ldr	r2, [r3, #0]	@  BUTTONS
+	ldr	r1, [r2, #0]
+	ldr	r2, .L2+4
+	mvn	r1, r1
+	ldrh	r0, [r2, #0]	@ movhi	@  curr_state
+	ldr	r3, .L2+8
+	bic	r1, r1, #64512
+	@ lr needed for prologue
+	strh	r0, [r3, #0]	@ movhi 	@  prev_state
+	strh	r1, [r2, #0]	@ movhi 	@  curr_state
+	bx	lr
+.L3:
+	.align	2
+.L2:
+	.word	BUTTONS
+	.word	curr_state
+	.word	prev_state
+	.size	keyPoll, .-keyPoll
+	.align	2
+	.global	keyIsDown
+	.type	keyIsDown, %function
+keyIsDown:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L5
+	ldrh	r2, [r3, #0]	@  curr_state
+	and	r2, r2, r0	@  key,  key
+	mov	r0, r2	@  key
+	@ lr needed for prologue
+	bx	lr
+.L6:
+	.align	2
+.L5:
+	.word	curr_state
+	.size	keyIsDown, .-keyIsDown
+	.align	2
+	.global	keyIsUp
+	.type	keyIsUp, %function
+keyIsUp:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L8
+	ldrh	r2, [r3, #0]	@  curr_state
+	bic	r0, r0, r2	@  key,  key
+	@ lr needed for prologue
+	bx	lr
+.L9:
+	.align	2
+.L8:
+	.word	curr_state
+	.size	keyIsUp, .-keyIsUp
+	.align	2
+	.global	keyWasDown
+	.type	keyWasDown, %function
+keyWasDown:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L11
+	ldrh	r2, [r3, #0]	@  prev_state
+	and	r2, r2, r0	@  key,  key
+	mov	r0, r2	@  key
+	@ lr needed for prologue
+	bx	lr
+.L12:
+	.align	2
+.L11:
+	.word	prev_state
+	.size	keyWasDown, .-keyWasDown
+	.align	2
+	.global	keyWasUp
+	.type	keyWasUp, %function
+keyWasUp:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L14
+	ldrh	r2, [r3, #0]	@  prev_state
+	bic	r0, r0, r2	@  key,  key
+	@ lr needed for prologue
+	bx	lr
+.L15:
+	.align	2
+.L14:
+	.word	prev_state
+	.size	keyWasUp, .-keyWasUp
+	.align	2
+	.global	keyTransition
+	.type	keyTransition, %function
+keyTransition:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L17
+	ldr	r1, .L17+4
+	ldrh	r2, [r3, #0]	@  curr_state
+	ldrh	r3, [r1, #0]	@  prev_state
+	eor	r2, r2, r3
+	and	r2, r2, r0	@  key,  key
+	mov	r0, r2	@  key
+	@ lr needed for prologue
+	bx	lr
+.L18:
+	.align	2
+.L17:
+	.word	curr_state
+	.word	prev_state
+	.size	keyTransition, .-keyTransition
+	.align	2
+	.global	keyHeld
+	.type	keyHeld, %function
+keyHeld:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L20
+	ldr	r1, .L20+4
+	ldrh	r2, [r3, #0]	@  curr_state
+	ldrh	r3, [r1, #0]	@  prev_state
+	and	r2, r2, r3
+	and	r2, r2, r0	@  key,  key
+	mov	r0, r2	@  key
+	@ lr needed for prologue
+	bx	lr
+.L21:
+	.align	2
+.L20:
+	.word	curr_state
+	.word	prev_state
+	.size	keyHeld, .-keyHeld
+	.align	2
+	.global	keyHit
+	.type	keyHit, %function
+keyHit:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L23
+	ldr	r1, .L23+4
+	ldrh	r2, [r3, #0]	@  curr_state
+	ldrh	r3, [r1, #0]	@  prev_state
+	bic	r2, r2, r3
+	and	r2, r2, r0	@  key,  key
+	mov	r0, r2	@  key
+	@ lr needed for prologue
+	bx	lr
+.L24:
+	.align	2
+.L23:
+	.word	curr_state
+	.word	prev_state
+	.size	keyHit, .-keyHit
+	.align	2
+	.global	keyReleased
+	.type	keyReleased, %function
+keyReleased:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L26
+	ldr	r2, .L26+4
+	ldrh	r1, [r3, #0]	@  curr_state
+	ldrh	r3, [r2, #0]	@  prev_state
+	bic	r3, r3, r1
+	and	r3, r3, r0	@  key,  key
+	mov	r0, r3	@  key
+	@ lr needed for prologue
+	bx	lr
+.L27:
+	.align	2
+.L26:
+	.word	curr_state
+	.word	prev_state
+	.size	keyReleased, .-keyReleased
+	.align	2
+	.global	WaitVBlank
+	.type	WaitVBlank, %function
+WaitVBlank:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	ldr	r3, .L32
+	ldr	r2, [r3, #0]	@  ScanlineCounter
+	@ lr needed for prologue
+.L29:
+	ldrh	r3, [r2, #0]
+	cmp	r3, #159
+	bls	.L29
+	bx	lr
+.L33:
+	.align	2
+.L32:
+	.word	ScanlineCounter
+	.size	WaitVBlank, .-WaitVBlank
 	.align	2
 	.global	DMAFastCopy
 	.type	DMAFastCopy, %function
@@ -5926,21281 +317,268 @@ DMAFastCopy:
 	streq	r2, [ip, #220]
 	bx	lr
 	.size	DMAFastCopy, .-DMAFastCopy
-	.align	2
-	.global	WaitVBlank
-	.type	WaitVBlank, %function
-WaitVBlank:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	mov	r2, #67108864
-.L4:
-	ldrh	r3, [r2, #4]
-	tst	r3, #1
-	bne	.L4
-	bx	lr
-	.size	WaitVBlank, .-WaitVBlank
-	.align	2
-	.global	DrawPixel4
-	.type	DrawPixel4, %function
-DrawPixel4:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	rsb	r4, r1, r1, asl #4	@  y,  y
-	sub	fp, ip, #4
-	and	r5, r2, #255	@  color
-	mov	r6, r0	@  x
-	add	r4, r0, r4, asl #4	@  x
-	bl	WaitVBlank
-	mov	r4, r4, asl #15
-	ldr	r3, .L10
-	mov	r4, r4, asr #16	@  offset
-	ldr	r1, [r3, #0]	@  videoBuffer
-	mov	r4, r4, asl #16	@  offset
-	mov	r4, r4, lsr #15
-	ldrsh	r3, [r4, r1]	@  pixel
-	and	r2, r3, #65280	@  pixel
-	and	r3, r3, #255	@  pixel
-	tst	r6, #1	@  x
-	add	r2, r2, r5	@  color
-	add	r3, r3, r5, asl #8	@  color
-	strneh	r3, [r4, r1]	@ movhi 
-	streqh	r2, [r4, r1]	@ movhi 
-	ldmea	fp, {r4, r5, r6, fp, sp, lr}
-	bx	lr
-.L11:
-	.align	2
-.L10:
-	.word	videoBuffer
-	.size	DrawPixel4, .-DrawPixel4
-	.align	2
-	.global	DrawChar
-	.type	DrawChar, %function
-DrawChar:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
-	and	r2, r2, #255	@  letter
-	mov	r3, r3, asl #16
-	ldr	r9, .L29
-	sub	fp, ip, #4
-	mov	sl, r0	@  left
-	mov	r8, r1	@  top
-	mov	r7, r3, asr #16	@  color
-	mov	r6, r2, asl #3	@  letter
-	mov	r5, #0	@  y
-.L23:
-	mov	r4, #0	@  x
-.L22:
-	add	r3, r6, r5	@  y
-	add	r3, r4, r3, asl #3	@  x
-	add	r3, r9, r3, asl #1
-	sub	r3, r3, #4096
-	ldrh	r2, [r3, #0]	@  draw,  font
-	cmp	r2, #0	@  draw
-	add	r0, sl, r4	@  left,  left,  x
-	add	r1, r8, r5	@  top,  y
-	add	r4, r4, #1	@  x,  x
-	and	r2, r7, #255	@  color
-	bne	.L28
-.L19:
-	cmp	r4, #7	@  x
-	ble	.L22
-	add	r5, r5, #1	@  y,  y
-	cmp	r5, #7	@  y
-	ble	.L23
-	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
-	bx	lr
-.L28:
-	bl	DrawPixel4
-	b	.L19
-.L30:
-	.align	2
-.L29:
-	.word	font
-	.size	DrawChar, .-DrawChar
-	.align	2
-	.global	Print
-	.type	Print, %function
-Print:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, r8, fp, ip, lr, pc}
-	mov	r5, r2	@  str
-	ldrb	r2, [r2, #0]	@ zero_extendqisi2	@  str, * str
-	mov	r3, r3, asl #16
-	cmp	r2, #0	@  str
-	sub	fp, ip, #4
-	mov	r8, r0	@  left
-	mov	r7, r1	@  top
-	mov	r3, r3, asr #16	@  color
-	mov	r4, #0	@  pos
-	beq	.L37
-	mov	r6, r3, asl #16	@  color
-.L35:
-	add	r0, r8, r4	@  left,  left,  pos
-	mov	r3, r6, lsr #16
-	mov	r1, r7	@  top
-	bl	DrawChar
-	ldrb	r3, [r5, #1]!	@ zero_extendqisi2	@  str
-	cmp	r3, #0	@  str
-	mov	r2, r3	@  str,  str
-	add	r4, r4, #8	@  pos,  pos
-	bne	.L35
-.L37:
-	ldmea	fp, {r4, r5, r6, r7, r8, fp, sp, lr}
-	bx	lr
-	.size	Print, .-Print
-	.align	2
-	.global	CheckButtons
-	.type	CheckButtons, %function
-CheckButtons:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L39
-	ldr	r1, [r3, #0]	@  BUTTONS
-	ldr	r2, [r1, #0]
-	ldr	r0, .L39+4
-	eor	r2, r2, #1
-	and	r2, r2, #1
-	str	r2, [r0, #0]	@  buttons
-	ldr	r3, [r1, #0]
-	mov	r3, r3, lsr #1
-	eor	r3, r3, #1
-	and	r3, r3, #1
-	str	r3, [r0, #4]	@  buttons
-	ldr	r2, [r1, #0]
-	mov	r2, r2, lsr #5
-	eor	r2, r2, #1
-	and	r2, r2, #1
-	str	r2, [r0, #8]	@  buttons
-	ldr	r3, [r1, #0]
-	mov	r3, r3, lsr #4
-	eor	r3, r3, #1
-	and	r3, r3, #1
-	str	r3, [r0, #12]	@  buttons
-	ldr	r2, [r1, #0]
-	mov	r2, r2, lsr #6
-	eor	r2, r2, #1
-	and	r2, r2, #1
-	str	r2, [r0, #16]	@  buttons
-	ldr	r3, [r1, #0]
-	mov	r3, r3, lsr #7
-	eor	r3, r3, #1
-	and	r3, r3, #1
-	str	r3, [r0, #20]	@  buttons
-	ldr	r2, [r1, #0]
-	mov	r2, r2, lsr #3
-	eor	r2, r2, #1
-	and	r2, r2, #1
-	str	r2, [r0, #24]	@  buttons
-	ldr	r3, [r1, #0]
-	mov	r3, r3, lsr #2
-	eor	r3, r3, #1
-	and	r3, r3, #1
-	str	r3, [r0, #28]	@  buttons
-	ldr	r2, [r1, #0]
-	mov	r2, r2, lsr #8
-	eor	r2, r2, #1
-	and	r2, r2, #1
-	str	r2, [r0, #32]	@  buttons
-	ldr	r3, [r1, #0]
-	mov	r3, r3, lsr #9
-	eor	r3, r3, #1
-	and	r3, r3, #1
-	@ lr needed for prologue
-	str	r3, [r0, #36]	@  buttons
-	bx	lr
-.L40:
-	.align	2
-.L39:
-	.word	BUTTONS
-	.word	buttons
-	.size	CheckButtons, .-CheckButtons
-	.align	2
-	.global	Pressed
-	.type	Pressed, %function
-Pressed:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	cmp	r0, #16	@  button
-	ldreq	r3, .L58
-	@ lr needed for prologue
-	ldreq	r0, [r3, #12]	@  button,  buttons
-	bxeq	lr
-	bgt	.L55
-	cmp	r0, #2	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #4]	@  button,  buttons
-	bxeq	lr
-	bgt	.L56
-	cmp	r0, #1	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #0]	@  button,  buttons
-	bxeq	lr
-.L42:
-	mov	r0, #0	@  button
-	bx	lr
-.L56:
-	cmp	r0, #4	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #28]	@  button,  buttons
-	bxeq	lr
-	cmp	r0, #8	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #24]	@  button,  buttons
-	bne	.L42
-	bx	lr
-.L55:
-	cmp	r0, #128	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #20]	@  button,  buttons
-	bxeq	lr
-	bgt	.L57
-	cmp	r0, #32	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #8]	@  button,  buttons
-	bxeq	lr
-	cmp	r0, #64	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #16]	@  button,  buttons
-	bne	.L42
-	bx	lr
-.L57:
-	cmp	r0, #256	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #32]	@  button,  buttons
-	bxeq	lr
-	cmp	r0, #512	@  button
-	ldreq	r3, .L58
-	ldreq	r0, [r3, #36]	@  button,  buttons
-	bne	.L42
-	bx	lr
-.L59:
-	.align	2
-.L58:
-	.word	buttons
-	.size	Pressed, .-Pressed
-	.align	2
-	.global	keyPoll
-	.type	keyPoll, %function
-keyPoll:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L61
-	ldr	r2, [r3, #0]	@  BUTTONS
-	ldr	r1, [r2, #0]
-	ldr	r2, .L61+4
-	mvn	r1, r1
-	ldrh	r0, [r2, #0]	@ movhi	@  curr_state
-	ldr	r3, .L61+8
-	bic	r1, r1, #64512
-	@ lr needed for prologue
-	strh	r0, [r3, #0]	@ movhi 	@  prev_state
-	strh	r1, [r2, #0]	@ movhi 	@  curr_state
-	bx	lr
-.L62:
-	.align	2
-.L61:
-	.word	BUTTONS
-	.word	curr_state
-	.word	prev_state
-	.size	keyPoll, .-keyPoll
-	.align	2
-	.global	keyIsDown
-	.type	keyIsDown, %function
-keyIsDown:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L64
-	ldrh	r2, [r3, #0]	@  curr_state
-	and	r2, r2, r0	@  key,  key
-	mov	r0, r2	@  key
-	@ lr needed for prologue
-	bx	lr
-.L65:
-	.align	2
-.L64:
-	.word	curr_state
-	.size	keyIsDown, .-keyIsDown
-	.align	2
-	.global	keyIsUp
-	.type	keyIsUp, %function
-keyIsUp:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L67
-	ldrh	r2, [r3, #0]	@  curr_state
-	bic	r0, r0, r2	@  key,  key
-	@ lr needed for prologue
-	bx	lr
-.L68:
-	.align	2
-.L67:
-	.word	curr_state
-	.size	keyIsUp, .-keyIsUp
-	.align	2
-	.global	keyWasDown
-	.type	keyWasDown, %function
-keyWasDown:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L70
-	ldrh	r2, [r3, #0]	@  prev_state
-	and	r2, r2, r0	@  key,  key
-	mov	r0, r2	@  key
-	@ lr needed for prologue
-	bx	lr
-.L71:
-	.align	2
-.L70:
-	.word	prev_state
-	.size	keyWasDown, .-keyWasDown
-	.align	2
-	.global	keyWasUp
-	.type	keyWasUp, %function
-keyWasUp:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L73
-	ldrh	r2, [r3, #0]	@  prev_state
-	bic	r0, r0, r2	@  key,  key
-	@ lr needed for prologue
-	bx	lr
-.L74:
-	.align	2
-.L73:
-	.word	prev_state
-	.size	keyWasUp, .-keyWasUp
-	.align	2
-	.global	keyTransition
-	.type	keyTransition, %function
-keyTransition:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L76
-	ldr	r1, .L76+4
-	ldrh	r2, [r3, #0]	@  curr_state
-	ldrh	r3, [r1, #0]	@  prev_state
-	eor	r2, r2, r3
-	and	r2, r2, r0	@  key,  key
-	mov	r0, r2	@  key
-	@ lr needed for prologue
-	bx	lr
-.L77:
-	.align	2
-.L76:
-	.word	curr_state
-	.word	prev_state
-	.size	keyTransition, .-keyTransition
-	.align	2
-	.global	keyHeld
-	.type	keyHeld, %function
-keyHeld:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L79
-	ldr	r1, .L79+4
-	ldrh	r2, [r3, #0]	@  curr_state
-	ldrh	r3, [r1, #0]	@  prev_state
-	and	r2, r2, r3
-	and	r2, r2, r0	@  key,  key
-	mov	r0, r2	@  key
-	@ lr needed for prologue
-	bx	lr
-.L80:
-	.align	2
-.L79:
-	.word	curr_state
-	.word	prev_state
-	.size	keyHeld, .-keyHeld
-	.align	2
-	.global	keyHit
-	.type	keyHit, %function
-keyHit:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L82
-	ldr	r1, .L82+4
-	ldrh	r2, [r3, #0]	@  curr_state
-	ldrh	r3, [r1, #0]	@  prev_state
-	bic	r2, r2, r3
-	and	r2, r2, r0	@  key,  key
-	mov	r0, r2	@  key
-	@ lr needed for prologue
-	bx	lr
-.L83:
-	.align	2
-.L82:
-	.word	curr_state
-	.word	prev_state
-	.size	keyHit, .-keyHit
-	.align	2
-	.global	keyReleased
-	.type	keyReleased, %function
-keyReleased:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	ldr	r3, .L85
-	ldr	r2, .L85+4
-	ldrh	r1, [r3, #0]	@  curr_state
-	ldrh	r3, [r2, #0]	@  prev_state
-	bic	r3, r3, r1
-	and	r3, r3, r0	@  key,  key
-	mov	r0, r3	@  key
-	@ lr needed for prologue
-	bx	lr
-.L86:
-	.align	2
-.L85:
-	.word	curr_state
-	.word	prev_state
-	.size	keyReleased, .-keyReleased
-	.align	2
-	.global	DrawPixel3
-	.type	DrawPixel3, %function
-DrawPixel3:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	sub	fp, ip, #4
-	mov	r6, r2, asl #16
-	mov	r5, r0	@  x
-	mov	r4, r1	@  y
-	bl	WaitVBlank
-	ldr	r3, .L88
-	rsb	r4, r4, r4, asl #4	@  y,  y
-	add	r5, r5, r4, asl #4	@  x
-	ldr	r2, [r3, #0]	@  videoBuffer
-	mov	r6, r6, asr #16	@  c
-	mov	r5, r5, asl #1
-	strh	r6, [r5, r2]	@ movhi 	@  c
-	ldmea	fp, {r4, r5, r6, fp, sp, lr}
-	bx	lr
-.L89:
-	.align	2
-.L88:
-	.word	videoBuffer
-	.size	DrawPixel3, .-DrawPixel3
-	.align	2
-	.global	DrawCircle3
-	.type	DrawCircle3, %function
-DrawCircle3:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 12
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
-	mov	r9, #0	@  x
-	mov	sl, r2	@  y,  radius
-	cmp	r9, r2	@  x,  y
-	mov	r2, r2, asl #1	@  y
-	sub	fp, ip, #4
-	sub	sp, sp, #12
-	mov	r3, r3, asl #16
-	rsb	r2, r2, #3
-	mov	r3, r3, asr #16	@  color
-	str	r0, [fp, #-44]	@  xCenter
-	str	r1, [fp, #-48]	@  yCenter
-	str	r2, [fp, #-52]	@  p
-	bgt	.L98
-	mov	r3, r3, asl #16	@  color
-	mov	r8, r3, lsr #16	@  radius
-.L96:
-	ldr	r1, [fp, #-44]	@  xCenter
-	ldr	r2, [fp, #-48]	@  yCenter
-	add	r6, r1, r9	@  xCenter,  x
-	add	r4, r2, sl	@  yCenter,  y
-	rsb	r7, r9, r1	@  xCenter,  x
-	mov	r0, r6	@  xCenter
-	mov	r1, r4	@  yCenter
-	mov	r2, r8	@  radius
-	bl	DrawPixel3
-	ldr	r3, [fp, #-48]	@  yCenter
-	mov	r1, r4	@  yCenter
-	rsb	r5, sl, r3	@  yCenter,  y
-	mov	r0, r7	@  xCenter
-	mov	r2, r8	@  radius
-	bl	DrawPixel3
-	mov	r0, r6	@  xCenter
-	mov	r1, r5	@  yCenter
-	mov	r2, r8	@  radius
-	bl	DrawPixel3
-	ldr	r3, [fp, #-48]	@  yCenter
-	add	r4, r3, r9	@  yCenter,  x
-	ldr	r3, [fp, #-44]	@  xCenter
-	mov	r0, r7	@  xCenter
-	mov	r1, r5	@  yCenter
-	mov	r2, r8	@  radius
-	add	r6, r3, sl	@  xCenter,  y
-	bl	DrawPixel3
-	ldr	r1, [fp, #-44]	@  xCenter
-	mov	r0, r6	@  xCenter
-	rsb	r7, sl, r1	@  xCenter,  y
-	mov	r2, r8	@  radius
-	mov	r1, r4	@  yCenter
-	bl	DrawPixel3
-	ldr	r2, [fp, #-48]	@  yCenter
-	mov	r1, r4	@  yCenter
-	rsb	r5, r9, r2	@  yCenter,  x
-	mov	r0, r7	@  xCenter
-	mov	r2, r8	@  radius
-	bl	DrawPixel3
-	mov	r0, r6	@  xCenter
-	mov	r1, r5	@  yCenter
-	mov	r2, r8	@  radius
-	bl	DrawPixel3
-	mov	r1, r5	@  yCenter
-	mov	r2, r8	@  radius
-	mov	r0, r7	@  xCenter
-	bl	DrawPixel3
-	ldr	r1, [fp, #-52]	@  p
-	rsb	r3, sl, r9	@  y,  x
-	cmp	r1, #0
-	add	r2, r1, r9, asl #2	@  x
-	add	r3, r1, r3, asl #2
-	addlt	r2, r2, #6
-	addge	r3, r3, #10
-	subge	sl, sl, #1	@  y,  y
-	add	r9, r9, #1	@  x,  x
-	strlt	r2, [fp, #-52]	@  p
-	strge	r3, [fp, #-52]	@  p
-	cmp	r9, sl	@  x,  y
-	ble	.L96
-.L98:
-	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
-	bx	lr
-	.size	DrawCircle3, .-DrawCircle3
-	.align	2
-	.global	DrawLine3
-	.type	DrawLine3, %function
-DrawLine3:
-	@ Function supports interworking.
-	@ args = 4, pretend = 0, frame = 16
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
-	mov	r5, r3	@  y2
-	mov	r4, r2	@  x2
-	rsb	r3, r0, r2	@  x1,  x2
-	rsb	r2, r1, r5	@  y1,  y2
-	sub	fp, ip, #4
-	sub	sp, sp, #16
-	eor	lr, r3, r3, asr #31	@  deltax
-	sub	lr, lr, r3, asr #31	@  deltax
-	eor	ip, r2, r2, asr #31	@  deltay
-	sub	ip, ip, r2, asr #31	@  deltay
-	cmp	lr, ip	@  deltax,  deltay
-	ldrsh	r8, [fp, #4]	@  color,  color
-	blt	.L101
-	mov	r3, ip, asl #1	@  dinc1,  deltay
-	rsb	r2, lr, ip	@  deltax,  deltay
-	mov	sl, #1	@  xinc2
-	str	r3, [fp, #-44]	@  dinc1,  dinc1
-	mov	r9, r2, asl sl	@  dinc2
-	rsb	r7, lr, r3	@  d,  deltax,  dinc1
-	add	r2, lr, sl	@  numpixels,  deltax
-	mov	ip, sl	@  xinc1,  xinc2
-	mov	r3, #0	@  yinc1
-.L114:
-	cmp	r0, r4	@  x1,  x2
-	str	sl, [fp, #-48]	@  xinc2,  yinc2
-	rsbgt	ip, ip, #0	@  xinc1,  xinc1
-	mvngt	sl, #0	@  xinc2
-	cmp	r1, r5	@  y1,  y2
-	mvngt	lr, #0
-	rsbgt	r3, r3, #0	@  yinc1,  yinc1
-	strgt	lr, [fp, #-48]	@  yinc2
-	cmp	r2, #1	@  numpixels
-	mov	r6, r0	@  x,  x1
-	mov	r5, r1	@  y,  y1
-	ble	.L113
-	mov	r8, r8, asl #16	@  color
-	sub	r4, r2, #1	@  i,  numpixels
-.L111:
-	mov	r0, r6	@  x
-	mov	r1, r5	@  y
-	mov	r2, r8, lsr #16
-	str	r3, [fp, #-52]
-	str	ip, [fp, #-56]
-	bl	DrawPixel3
-	cmp	r7, #0	@  d
-	ldrlt	r2, [fp, #-44]	@  dinc1
-	ldrge	lr, [fp, #-48]	@  yinc2
-	ldr	r3, [fp, #-52]
-	ldr	ip, [fp, #-56]
-	addlt	r7, r7, r2	@  d,  d
-	addlt	r6, r6, ip	@  x,  x,  xinc1
-	addlt	r5, r5, r3	@  y,  y,  yinc1
-	addge	r7, r7, r9	@  d,  d,  dinc2
-	addge	r6, r6, sl	@  x,  x,  xinc2
-	addge	r5, r5, lr	@  y,  y
-	subs	r4, r4, #1	@  i,  i
-	bne	.L111
-.L113:
-	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
-	bx	lr
-.L101:
-	rsb	r2, ip, lr	@  deltay,  deltax
-	mov	r3, lr, asl #1	@  dinc1,  deltax
-	mov	sl, #1	@  xinc2
-	rsb	r7, ip, r3	@  d,  deltay,  dinc1
-	str	r3, [fp, #-44]	@  dinc1,  dinc1
-	mov	r9, r2, asl sl	@  dinc2
-	mov	r3, sl	@  yinc1,  xinc2
-	add	r2, ip, sl	@  numpixels,  deltay
-	mov	ip, #0	@  xinc1
-	b	.L114
-	.size	DrawLine3, .-DrawLine3
-	.align	2
-	.global	DrawBox3
-	.type	DrawBox3, %function
-DrawBox3:
-	@ Function supports interworking.
-	@ args = 4, pretend = 0, frame = 0
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
-	cmp	r1, r3	@  y,  bottom
-	sub	fp, ip, #4
-	mov	sl, r3	@  bottom
-	mov	r5, r1	@  y,  top
-	mov	r8, r0	@  left
-	mov	r7, r2	@  right
-	ldrsh	r9, [fp, #4]	@  color,  color
-	bge	.L127
-.L125:
-	cmp	r8, r7	@  x,  right
-	mov	r4, r8	@  x,  left
-	bge	.L129
-	mov	r6, r9, asl #16	@  color
-.L124:
-	mov	r0, r4	@  x
-	mov	r1, r5	@  y
-	mov	r2, r6, lsr #16
-	add	r4, r4, #1	@  x,  x
-	bl	DrawPixel3
-	cmp	r4, r7	@  x,  right
-	blt	.L124
-.L129:
-	add	r5, r5, #1	@  y,  y
-	cmp	r5, sl	@  y,  bottom
-	blt	.L125
-.L127:
-	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
-	bx	lr
-	.size	DrawBox3, .-DrawBox3
-	.align	2
-	.global	DrawBitmap4
-	.type	DrawBitmap4, %function
-DrawBitmap4:
-	@ Function supports interworking.
-	@ args = 4, pretend = 0, frame = 8
-	@ frame_needed = 0, uses_anonymous_args = 0
-	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
-	mov	r9, r3	@  dim2
-	add	r3, r1, r3	@  a,  dim2
-	sub	r3, r3, #1
-	sub	sp, sp, #8
-	cmp	r1, r3	@  a
-	str	r1, [sp, #4]	@  y
-	mov	r5, r1	@  a
-	mov	r8, r0	@  x
-	mov	r4, r2	@  dim1
-	ldr	r7, [sp, #40]	@  bitmap,  bitmap
-	bge	.L142
-	rsb	r6, r1, r1, asl #4	@  a,  a
-	rsb	r1, r0, #0	@  x
-	str	r1, [sp, #0]
-	add	sl, r0, r2	@  x,  dim1
-.L140:
-	cmp	r8, sl	@  b
-	mov	ip, r8	@  b,  x
-	bge	.L144
-	ldr	r2, [sp, #4]	@  y
-	rsb	r3, r2, r5	@  a
-	mla	r2, r4, r3, r4	@  dim1,  dim1
-	ldr	r3, [sp, #0]
-	ldr	r1, .L145
-	add	r2, r2, r3
-	add	r3, r8, r6, asl #4	@  b
-	ldr	r0, [r1, #0]	@  videoBuffer
-	mov	lr, r3, asl #1
-	add	r1, r8, r2	@  b
-.L139:
-	add	ip, ip, #1	@  b,  b
-	ldrb	r2, [r7, r1]	@ zero_extendqisi2
-	add	r3, ip, r4	@  b,  dim1
-	cmp	ip, r3	@  b
-	strh	r2, [lr, r0]	@ movhi 
-	add	r1, r1, #1
-	add	lr, lr, #2
-	blt	.L139
-.L144:
-	add	r5, r5, #1	@  a,  a
-	add	r3, r5, r9	@  a,  dim2
-	sub	r3, r3, #1
-	cmp	r5, r3	@  a
-	add	r6, r6, #15
-	blt	.L140
-.L142:
-	add	sp, sp, #8
-	ldmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
-	bx	lr
-.L146:
-	.align	2
-.L145:
-	.word	videoBuffer
-	.size	DrawBitmap4, .-DrawBitmap4
-	.align	2
-	.global	FlipPage
-	.type	FlipPage, %function
-FlipPage:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	mov	r1, #67108864
-	ldr	r3, [r1, #0]
-	tst	r3, #16
-	orr	ip, r3, #16
-	bic	r0, r3, #16
-	ldrne	r3, .L151
-	ldreq	r3, .L151+4
-	ldrne	r2, [r3, #0]	@  BackBuffer
-	ldreq	r2, [r3, #0]	@  FrontBuffer
-	ldr	r3, .L151+8
-	@ lr needed for prologue
-	strne	r0, [r1, #0]
-	streq	ip, [r1, #0]
-	str	r2, [r3, #0]	@  videoBuffer
-	bx	lr
-.L152:
-	.align	2
-.L151:
-	.word	BackBuffer
-	.word	FrontBuffer
-	.word	videoBuffer
-	.size	FlipPage, .-FlipPage
-	.global	map_Map
+	.global	map_Palette
 	.section	.rodata
 	.align	1
-	.type	map_Map, %object
-	.size	map_Map, 40960
-map_Map:
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	2
-	.short	3
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	4
-	.short	5
-	.short	6
-	.short	7
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	8
-	.short	9
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	10
-	.short	1034
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	10
-	.short	1034
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	11
-	.short	12
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	13
-	.short	14
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	13
-	.short	14
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	2
-	.short	3
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	4
-	.short	5
-	.short	6
-	.short	7
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	15
-	.short	16
-	.short	17
-	.short	18
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	8
-	.short	9
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	19
-	.short	20
-	.short	21
-	.short	22
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	11
-	.short	12
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	10
-	.short	1034
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	10
-	.short	1034
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	13
-	.short	14
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	13
-	.short	14
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	10
-	.short	1034
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	15
-	.short	16
-	.short	17
-	.short	18
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	13
-	.short	14
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	19
-	.short	20
-	.short	21
-	.short	22
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	15
-	.short	16
-	.short	17
-	.short	18
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	19
-	.short	20
-	.short	21
-	.short	22
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	10
-	.short	1034
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	13
-	.short	14
-	.short	0
-	.short	0
-	.short	8
-	.short	9
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	1
-	.short	2
-	.short	3
-	.short	0
-	.short	0
-	.short	0
-	.short	23
-	.short	1047
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	11
-	.short	12
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	4
-	.short	5
-	.short	6
-	.short	7
-	.short	0
-	.short	0
-	.short	2071
-	.short	3095
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	15
-	.short	16
-	.short	17
-	.short	18
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	19
-	.short	20
-	.short	21
-	.short	22
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	24
-	.short	25
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	26
-	.short	26
-	.short	27
-	.short	27
-	.short	1049
-	.short	1048
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	24
-	.short	25
-	.short	27
-	.short	27
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	26
-	.short	28
-	.short	29
-	.short	28
-	.short	29
-	.short	28
-	.short	29
-	.short	30
+	.type	map_Palette, %object
+	.size	map_Palette, 512
+map_Palette:
+	.short	0
+	.short	25464
+	.short	136
+	.short	268
+	.short	272
+	.short	388
+	.short	904
+	.short	924
+	.short	8460
+	.short	8588
+	.short	8592
+	.short	8984
+	.short	24584
+	.short	24856
+	.short	25348
+	.short	21140
 	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	30
-	.short	31
-	.short	28
-	.short	29
-	.short	28
-	.short	29
-	.short	28
-	.short	29
-	.short	28
-	.short	29
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	34
-	.short	35
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	32
-	.short	33
-	.short	36
-	.short	36
-	.short	37
-	.short	37
-	.short	38
-	.short	39
-	.short	40
-	.short	41
-	.short	42
-	.short	43
-	.short	44
-	.short	45
-	.short	46
-	.short	47
-	.short	48
-	.short	49
-	.short	50
-	.short	51
-	.short	52
-	.short	53
-	.short	54
-	.short	55
-	.short	56
-	.short	57
-	.short	58
-	.short	59
-	.short	60
-	.short	61
-	.short	62
-	.short	63
-	.short	36
-	.short	36
-	.short	36
-	.short	36
-	.short	37
-	.short	37
-	.short	64
-	.short	65
-	.short	66
-	.short	67
-	.short	68
-	.short	69
-	.short	70
-	.short	71
-	.short	72
-	.short	73
-	.short	74
-	.short	75
-	.short	76
-	.short	77
-	.short	78
-	.short	79
-	.short	80
-	.short	81
-	.short	82
-	.short	83
-	.short	84
-	.short	85
-	.short	86
-	.short	87
-	.short	88
-	.short	89
-	.short	36
-	.short	36
+	.short	32767
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
 	.global	map_Tiles
 	.type	map_Tiles, %object
 	.size	map_Tiles, 5760
@@ -32965,267 +6343,6 @@ map_Tiles:
 	.byte	3
 	.byte	2
 	.byte	2
-	.global	map_Palette
-	.align	1
-	.type	map_Palette, %object
-	.size	map_Palette, 512
-map_Palette:
-	.short	0
-	.short	25464
-	.short	136
-	.short	268
-	.short	272
-	.short	388
-	.short	904
-	.short	924
-	.short	8460
-	.short	8588
-	.short	8592
-	.short	8984
-	.short	24584
-	.short	24856
-	.short	25348
-	.short	21140
-	.short	31
-	.short	32767
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
 	.global	emptyTiles
 	.data
 	.align	2
@@ -33277,26 +6394,27 @@ setMineral:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, r5, r6, lr}
-	ldr	r3, .L154
+	ldr	r3, .L37
 	ldr	r2, [r3, #0]	@  mapWidthTiles
-	ldr	r3, .L154+4
+	ldr	r3, .L37+4
 	add	r2, r0, r2	@  position
+	ldr	ip, [r3, #0]	@  material_Map
 	mov	r2, r2, asl #1
 	mov	r0, r0, asl #1	@  position
-	add	r6, r1, #25	@  tile
-	add	r4, r0, r3
+	add	r6, r1, #27	@  tile
+	add	r4, r0, ip
 	add	lr, r1, #1	@  tile
-	add	r5, r2, r3
-	add	ip, r1, #24	@  tile
-	strh	r1, [r0, r3]	@ movhi 	@  tile,  material_Map
-	strh	lr, [r4, #2]	@ movhi 	@  material_Map
-	strh	ip, [r2, r3]	@ movhi 	@  material_Map
-	strh	r6, [r5, #2]	@ movhi 	@  material_Map
+	add	r5, r2, ip
+	add	r3, r1, #26	@  tile
+	strh	r1, [r0, ip]	@ movhi 	@  tile
+	strh	lr, [r4, #2]	@ movhi 
+	strh	r3, [r2, ip]	@ movhi 
+	strh	r6, [r5, #2]	@ movhi 
 	ldmfd	sp!, {r4, r5, r6, lr}
 	bx	lr
-.L155:
+.L38:
 	.align	2
-.L154:
+.L37:
 	.word	mapWidthTiles
 	.word	material_Map
 	.size	setMineral, .-setMineral
@@ -33308,34 +6426,35 @@ setDirt:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, r5, r6, r7, r8, lr}
-	ldr	r3, .L157
+	ldr	r3, .L40
+	ldr	r2, .L40+4
 	ldr	r1, [r3, #0]	@  mapWidthTiles
-	ldr	r3, .L157+4
-	ldr	ip, .L157+8
-	ldr	r7, [r3, #0]	@  bg0map
+	ldr	r3, .L40+8
+	ldr	r8, [r2, #0]	@  bg0map
+	ldr	ip, [r3, #0]	@  map_Map
 	add	r1, r0, r1	@  position
 	mov	r3, #62	@  tile
 	mov	r0, r0, asl #1	@  position
 	mov	r1, r1, asl #1
-	add	r2, r0, r7
-	add	lr, r3, #1	@  tile
-	add	r4, r3, #26	@  tile
+	add	lr, r0, r8
+	add	r6, r3, #1	@  tile
+	add	r7, r3, #26	@  tile
 	add	r5, r3, #27	@  tile
-	add	r6, r0, ip
-	add	r8, r1, ip
-	strh	r3, [r0, r7]	@ movhi 	@  tile
-	strh	r3, [r0, ip]	@ movhi 	@  tile,  map_Map
-	strh	r5, [r2, #66]	@ movhi 
-	strh	lr, [r6, #2]	@ movhi 	@  map_Map
-	strh	lr, [r2, #2]	@ movhi 
-	strh	r4, [r1, ip]	@ movhi 	@  map_Map
-	strh	r4, [r2, #64]	@ movhi 
-	strh	r5, [r8, #2]	@ movhi 	@  map_Map
+	add	r2, r0, ip
+	add	r4, r1, ip
+	strh	r3, [r0, ip]	@ movhi 	@  tile
+	strh	r6, [r2, #2]	@ movhi 
+	strh	r7, [r1, ip]	@ movhi 
+	strh	r5, [r4, #2]	@ movhi 
+	strh	r3, [r0, r8]	@ movhi 	@  tile
+	strh	r5, [lr, #66]	@ movhi 
+	strh	r6, [lr, #2]	@ movhi 
+	strh	r7, [lr, #64]	@ movhi 
 	ldmfd	sp!, {r4, r5, r6, r7, r8, lr}
 	bx	lr
-.L158:
+.L41:
 	.align	2
-.L157:
+.L40:
 	.word	mapWidthTiles
 	.word	bg0map
 	.word	map_Map
@@ -33347,42 +6466,45 @@ blackoutMinerals:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	stmfd	sp!, {r4, r5, r6, r7, lr}
-	ldr	r3, .L175
-	ldr	r4, .L175+4
+	stmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
+	ldr	r3, .L58
+	ldr	r4, .L58+4
 	mov	r2, #0
+	mov	r6, #636
 	str	r2, [r4, #0]	@  yLoop
 	ldr	r5, [r3, #0]	@  mapWidthTiles
-	ldr	r6, .L175+8
-.L169:
+	ldr	r7, .L58+8
+	ldr	r8, .L58+12
+	add	r6, r6, #3
+.L52:
 	cmp	r2, r5
-	str	r2, [r6, #0]	@  xLoop
-	bge	.L173
+	str	r2, [r7, #0]	@  xLoop
+	bge	.L56
 	ldr	r3, [r4, #0]	@  yLoop
-	ldr	lr, .L175+12
+	ldr	lr, [r8, #0]	@  material_Map
 	mov	ip, r3, asl #5
 	mov	r0, r5
 	mov	r1, r2
-.L168:
+.L51:
 	add	r3, ip, r1
 	add	r1, r1, #1
 	mov	r3, r3, asl #1
-	mov	r7, #95	@ movhi
+	mov	sl, #36	@ movhi
 	cmp	r1, r0
-	strh	r7, [r3, lr]	@ movhi 	@  material_Map
-	blt	.L168
-	str	r1, [r6, #0]	@  xLoop
-.L173:
+	strh	sl, [r3, lr]	@ movhi 
+	blt	.L51
+	str	r1, [r7, #0]	@  xLoop
+.L56:
 	ldr	r3, [r4, #0]	@  yLoop
 	add	r3, r3, #1
-	cmp	r3, #119
+	cmp	r3, r6
 	str	r3, [r4, #0]	@  yLoop
-	ble	.L169
-	ldmfd	sp!, {r4, r5, r6, r7, lr}
+	ble	.L52
+	ldmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
 	bx	lr
-.L176:
+.L59:
 	.align	2
-.L175:
+.L58:
 	.word	mapWidthTiles
 	.word	yLoop
 	.word	xLoop
@@ -33397,57 +6519,1143 @@ addAllMinerals:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, r7, fp, ip, lr, pc}
-	ldr	r6, .L194
+	ldr	r5, .L107
 	mov	r3, #28
-	str	r3, [r6, #0]	@  yLoop
-	ldr	r4, .L194+4
-	ldr	r5, .L194+8
-	ldr	r7, .L194+12
+	str	r3, [r5, #0]	@  yLoop
+	ldr	r4, .L107+4
+	ldr	r7, .L107+8
+	ldr	r6, .L107+12
 	sub	fp, ip, #4
-.L188:
+.L91:
 	mov	r3, #0
 	str	r3, [r4, #0]	@  xLoop
-.L187:
+.L90:
 	mov	lr, pc
-	bx	r5
-	ldr	r3, .L194+16
+	bx	r7
+	ldr	r3, .L107+16
 	smull	r2, r1, r3, r0
 	mov	r2, r0, asr #31
-	rsb	r3, r2, r1, asr #3	@  r
+	rsb	r3, r2, r1, asr #5	@  r
 	add	r3, r3, r3, asl #2	@  r,  r
+	add	r3, r3, r3, asl #2
 	sub	r3, r0, r3, asl #2	@  r
+	cmp	r3, #0	@  r
+	beq	.L97
+	cmp	r3, #1	@  r
+	beq	.L97
 	cmp	r3, #2	@  r
-	mov	r1, #56
-	ble	.L193
-.L184:
+	beq	.L98
+	cmp	r3, #3	@  r
+	beq	.L99
+	cmp	r3, #4	@  r
+	beq	.L100
+	cmp	r3, #5	@  r
+	beq	.L101
+	cmp	r3, #6	@  r
+	beq	.L102
+	cmp	r3, #7	@  r
+	beq	.L103
+	cmp	r3, #8	@  r
+	beq	.L104
+	cmp	r3, #9	@  r
+	beq	.L105
+	cmp	r3, #10	@  r
+	beq	.L106
+.L67:
 	ldr	r3, [r4, #0]	@  xLoop
 	add	r3, r3, #2
 	cmp	r3, #31
 	str	r3, [r4, #0]	@  xLoop
-	ble	.L187
-	ldr	r3, [r6, #0]	@  yLoop
+	ble	.L90
+	ldr	r3, [r5, #0]	@  yLoop
 	add	r3, r3, #2
-	cmp	r3, #119
-	str	r3, [r6, #0]	@  yLoop
-	ble	.L188
+	cmp	r3, #640
+	str	r3, [r5, #0]	@  yLoop
+	blt	.L91
 	ldmea	fp, {r4, r5, r6, r7, fp, sp, lr}
 	bx	lr
-.L193:
-	ldr	ip, [r6, #0]	@  yLoop
-	ldr	r2, [r7, #0]	@  mapWidthTiles
+.L106:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
 	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, ip, r3
+	mla	r0, r2, r1, r3
+	mov	r1, #60
+.L96:
 	bl	setMineral
-	b	.L184
-.L195:
+	b	.L67
+.L105:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #58
+	b	.L96
+.L104:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #56
+	b	.L96
+.L103:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #54
+	b	.L96
+.L102:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #52
+	b	.L96
+.L101:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #50
+	b	.L96
+.L100:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #48
+	b	.L96
+.L99:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #46
+	b	.L96
+.L98:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #44
+	b	.L96
+.L97:
+	ldr	r1, [r5, #0]	@  yLoop
+	ldr	r2, [r6, #0]	@  mapWidthTiles
+	ldr	r3, [r4, #0]	@  xLoop
+	mla	r0, r2, r1, r3
+	mov	r1, #42
+	b	.L96
+.L108:
 	.align	2
-.L194:
+.L107:
 	.word	yLoop
 	.word	xLoop
 	.word	rand
 	.word	mapWidthTiles
-	.word	1717986919
+	.word	1374389535
 	.size	addAllMinerals, .-addAllMinerals
+	.global	aboveGround
+	.section	.rodata
+	.align	1
+	.type	aboveGround, %object
+	.size	aboveGround, 2048
+aboveGround:
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	1
+	.short	2
+	.short	3
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	4
+	.short	5
+	.short	6
+	.short	7
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	8
+	.short	9
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	10
+	.short	1034
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	10
+	.short	1034
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	11
+	.short	12
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	13
+	.short	14
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	13
+	.short	14
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	1
+	.short	2
+	.short	3
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	4
+	.short	5
+	.short	6
+	.short	7
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	15
+	.short	16
+	.short	17
+	.short	18
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	8
+	.short	9
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	19
+	.short	20
+	.short	21
+	.short	22
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	11
+	.short	12
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	10
+	.short	1034
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	10
+	.short	1034
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	13
+	.short	14
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	13
+	.short	14
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	10
+	.short	1034
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	15
+	.short	16
+	.short	17
+	.short	18
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	13
+	.short	14
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	19
+	.short	20
+	.short	21
+	.short	22
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	15
+	.short	16
+	.short	17
+	.short	18
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	19
+	.short	20
+	.short	21
+	.short	22
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	10
+	.short	1034
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	13
+	.short	14
+	.short	0
+	.short	0
+	.short	8
+	.short	9
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	1
+	.short	2
+	.short	3
+	.short	0
+	.short	0
+	.short	0
+	.short	23
+	.short	1047
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	11
+	.short	12
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	4
+	.short	5
+	.short	6
+	.short	7
+	.short	0
+	.short	0
+	.short	2071
+	.short	3095
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	15
+	.short	16
+	.short	17
+	.short	18
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	19
+	.short	20
+	.short	21
+	.short	22
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	24
+	.short	25
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	26
+	.short	26
+	.short	27
+	.short	27
+	.short	1049
+	.short	1048
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	24
+	.short	25
+	.short	27
+	.short	27
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	26
+	.short	28
+	.short	29
+	.short	28
+	.short	29
+	.short	28
+	.short	29
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	30
+	.short	31
+	.short	28
+	.short	29
+	.short	28
+	.short	29
+	.short	28
+	.short	29
+	.short	28
+	.short	29
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	32
+	.short	33
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.short	34
+	.short	35
+	.space	192
+	.text
+	.align	2
+	.global	generateMap
+	.type	generateMap, %function
+generateMap:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, fp, ip, lr, pc}
+	ldr	lr, .L131
+	sub	fp, ip, #4
+	mov	r0, #892
+	ldr	ip, .L131+4
+	ldr	r1, [lr, #0]	@  map_Map
+	mov	r2, #0	@  i
+	add	r0, r0, #3
+.L114:
+	mov	r3, r2, asl #1	@  i
+	ldrh	r4, [r3, ip]	@ movhi	@  aboveGround
+	add	r2, r2, #1	@  i,  i
+	cmp	r2, r0	@  i
+	strh	r4, [r3, r1]	@ movhi 
+	ble	.L114
+	ldr	r3, .L131+8
+	ldr	r6, [r3, #0]	@  mapWidthTiles
+	ldr	ip, [lr, #0]	@  map_Map
+	rsb	r3, r6, r6, asl #3
+	mov	r4, r3, asl #2
+	mov	r5, #28	@  yLoop
+	mov	r7, r6, asl #1
+.L124:
+	add	r3, r4, r6
+	mov	r0, r3, asl #1
+	mov	lr, #0	@  xLoop
+	mov	r1, r4, asl #1
+.L123:
+	mov	r8, #32	@ movhi
+	strh	r8, [r1, ip]	@ movhi 
+	add	r3, r1, ip
+	mov	r8, #33	@ movhi
+	add	lr, lr, #2	@  xLoop,  xLoop
+	strh	r8, [r3, #2]	@ movhi 
+	add	r2, r0, ip
+	mov	r3, #34	@ movhi
+	mov	r8, #35	@ movhi
+	cmp	lr, #31	@  xLoop
+	strh	r3, [r0, ip]	@ movhi 
+	add	r1, r1, #4
+	strh	r8, [r2, #2]	@ movhi 
+	add	r0, r0, #4
+	ble	.L123
+	add	r5, r5, #2	@  yLoop,  yLoop
+	cmp	r5, #640	@  yLoop
+	add	r4, r4, r7
+	ble	.L124
+	bl	blackoutMinerals
+	ldmea	fp, {r4, r5, r6, r7, r8, fp, sp, lr}
+	b	addAllMinerals
+.L132:
+	.align	2
+.L131:
+	.word	map_Map
+	.word	aboveGround
+	.word	mapWidthTiles
+	.size	generateMap, .-generateMap
 	.align	2
 	.global	loadStartingPosition
 	.type	loadStartingPosition, %function
@@ -33456,21 +7664,23 @@ loadStartingPosition:
 	@ args = 0, pretend = 0, frame = 4
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
-	ldr	r3, .L212
-	ldr	r2, .L212+4
-	ldr	r8, .L212+8
-	ldr	r5, [r3, #0]	@  bg0map
+	ldr	r3, .L149
+	ldr	r2, .L149+4
+	ldr	r7, [r3, #0]	@  bg0map
 	ldr	r2, [r2, #0]	@  mapWidthTiles
-	ldr	r3, .L212+12
+	ldr	r3, .L149+8
 	sub	sp, sp, #4
+	ldr	r8, .L149+12
+	str	r2, [sp, #0]
+	ldr	r6, [r3, #0]	@  map_Map
+	ldr	r2, .L149+16
+	ldr	r3, .L149+20
 	mov	r1, #0
 	str	r1, [r8, #0]	@  yLoop
-	str	r2, [sp, #0]
-	ldr	r4, [r3, #0]	@  bg1map
-	ldr	r7, .L212+16
-	ldr	r6, .L212+20
-	ldr	r9, .L212+24
-.L206:
+	ldr	r5, [r2, #0]	@  bg1map
+	ldr	r4, [r3, #0]	@  material_Map
+	ldr	r9, .L149+24
+.L143:
 	ldr	r1, [r8, #0]	@  yLoop
 	ldr	lr, [sp, #0]
 	mul	lr, r1, lr
@@ -33478,34 +7688,34 @@ loadStartingPosition:
 	str	r3, [r9, #0]	@  xLoop
 	mov	ip, r1, asl #5
 	mov	r0, r3
-.L205:
+.L142:
 	add	r3, r0, lr
 	mov	r3, r3, asl #1
+	ldrh	sl, [r3, r6]	@ movhi
 	add	r2, ip, r0
-	ldrh	sl, [r3, r7]	@ movhi	@  map_Map
-	add	r0, r0, #1
-	ldrh	r3, [r3, r6]	@ movhi	@  material_Map
 	mov	r2, r2, asl #1
+	strh	sl, [r2, r7]	@ movhi 
+	add	r0, r0, #1
+	ldrh	r3, [r3, r4]	@ movhi
 	cmp	r0, #31
-	strh	sl, [r2, r5]	@ movhi 
-	strh	r3, [r2, r4]	@ movhi 
-	ble	.L205
+	strh	r3, [r2, r5]	@ movhi 
+	ble	.L142
 	add	r3, r1, #1
 	cmp	r3, #31
 	str	r0, [r9, #0]	@  xLoop
 	str	r3, [r8, #0]	@  yLoop
-	ble	.L206
+	ble	.L143
 	add	sp, sp, #4
 	ldmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	bx	lr
-.L213:
+.L150:
 	.align	2
-.L212:
+.L149:
 	.word	bg0map
 	.word	mapWidthTiles
+	.word	map_Map
 	.word	yLoop
 	.word	bg1map
-	.word	map_Map
 	.word	material_Map
 	.word	xLoop
 	.size	loadStartingPosition, .-loadStartingPosition
@@ -33517,13 +7727,14 @@ isTileOpen:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	ldr	r3, .L223
+	ldr	r3, .L160
+	ldr	r2, [r3, #0]	@  map_Map
 	mov	r0, r0, asl #1	@  tileToCheck
-	ldrh	r1, [r0, r3]	@  map_Map
-	ldr	r0, .L223+4
+	ldrh	r1, [r0, r2]
+	ldr	r0, .L160+4
 	@ lr needed for prologue
 	mov	r2, #0	@  i
-.L220:
+.L157:
 	ldr	r3, [r0, r2, asl #2]	@  emptyTiles
 	cmp	r1, r3
 	add	r2, r2, #1	@  i,  i
@@ -33531,11 +7742,11 @@ isTileOpen:
 	bxeq	lr
 	cmp	r2, #27	@  i
 	movhi	r0, #0	@  tileToCheck
-	bls	.L220
+	bls	.L157
 	bx	lr
-.L224:
+.L161:
 	.align	2
-.L223:
+.L160:
 	.word	map_Map
 	.word	emptyTiles
 	.size	isTileOpen, .-isTileOpen
@@ -33562,55 +7773,55 @@ checkDirection:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	ldr	r3, .L233
-	ldr	r1, .L233+4
+	ldr	r3, .L170
+	ldr	r1, .L170+4
 	mov	r2, #4
 	sub	fp, ip, #4
-	ldr	r6, .L233+8
+	ldr	r6, .L170+8
 	ldr	r4, [r3, #40]	@  tileToCompare,  bg.tileUnderPlayer
 	mov	r5, r0	@  direction
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	ldreq	r3, .L233+12
+	ldreq	r3, .L170+12
 	mov	r2, #6
 	ldreq	r2, [r3, #0]	@  mapWidthTiles
-	ldr	r1, .L233+16
+	ldr	r1, .L170+16
 	mov	r0, r5	@  direction
 	rsbeq	r4, r2, r4	@  tileToCompare,  tileToCompare
-	beq	.L227
+	beq	.L164
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
 	mov	r0, r5	@  direction
-	ldr	r1, .L233+20
+	ldr	r1, .L170+20
 	mov	r2, #7
 	addeq	r4, r4, #2	@  tileToCompare,  tileToCompare
-	beq	.L227
+	beq	.L164
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	ldreq	r3, .L233+12
+	ldreq	r3, .L170+12
 	mov	r2, #5
 	ldreq	r2, [r3, #0]	@  mapWidthTiles
 	mov	r0, r5	@  direction
-	ldr	r1, .L233+24
+	ldr	r1, .L170+24
 	addeq	r4, r4, r2	@  tileToCompare,  tileToCompare
-	beq	.L227
+	beq	.L164
 	mov	lr, pc
 	bx	r6
 	cmp	r0, #0	@  direction
 	subeq	r4, r4, #2	@  tileToCompare,  tileToCompare
-.L227:
+.L164:
 	mov	r0, r4	@  tileToCompare
 	ldmea	fp, {r4, r5, r6, fp, sp, lr}
 	b	isTileOpen
-.L234:
+.L171:
 	.align	2
-.L233:
+.L170:
 	.word	bg
 	.word	.LC0
 	.word	memcmp
@@ -33619,6 +7830,909 @@ checkDirection:
 	.word	.LC2
 	.word	.LC3
 	.size	checkDirection, .-checkDirection
+	.align	2
+	.global	initbackgrounds
+	.type	initbackgrounds, %function
+initbackgrounds:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, fp, ip, lr, pc}
+	mov	r0, #40960
+	sub	fp, ip, #4
+	ldr	r4, .L173+24
+	mov	lr, pc
+	bx	r4
+	ldr	r3, .L173+28
+	mov	r2, r0
+	str	r2, [r3, #0]	@  material_Map
+	mov	r0, #40960
+	mov	lr, pc
+	bx	r4
+	ldr	r3, .L173+32
+	str	r0, [r3, #0]	@  map_Map
+	ldr	r3, .L173+36
+	mov	r2, #640
+	str	r2, [r3, #0]	@  mapHeightTiles
+	ldr	r3, .L173+40
+	mov	r0, #240
+	str	r0, [r3, #0]	@  screenWidth
+	ldr	r3, .L173+44
+	mov	r2, #16
+	str	r2, [r3, #0]	@  playerXTile
+	ldr	r3, .L173+48
+	mov	r0, #10
+	mov	lr, #100663296
+	str	r0, [r3, #0]	@  playerYTile
+	ldr	r3, .L173+52
+	ldr	r1, .L173+56
+	add	r6, lr, #63488
+	add	lr, lr, #47104
+	mov	r2, #2
+	str	lr, [r3, #0]	@  bg0map
+	ldr	r3, .L173+60
+	mov	ip, #0
+	str	r2, [r1, #72]	@  bg.maxRocketVelocity
+	ldr	r2, .L173+64
+	str	ip, [r3, #0]	@  x
+	ldr	r3, .L173+68
+	mov	r4, #32
+	str	r6, [r2, #0]	@  bg1map
+	ldr	r2, .L173+72
+	mov	r7, #160
+	str	r4, [r3, #0]	@  mapWidthTiles
+	ldr	r3, .L173+76
+	mov	r5, r7, asl #1
+	str	ip, [r2, #0]	@  y
+	ldr	r2, .L173+80
+	add	r5, r5, #15
+	str	ip, [r3, #0]	@  xLoop
+	mov	r3, #31
+	str	r3, [r1, #4]	@  bg.xBGBehind
+	str	r4, [r1, #16]	@  bg.yMapAhead
+	str	r5, [r1, #40]	@  bg.tileUnderPlayer
+	mov	r3, #3
+	str	r4, [r1, #8]	@  bg.xMapAhead
+	str	r7, [r2, #0]	@  screenHeight
+	adr	r4, .L173
+	ldmia	r4, {r4-r5}
+	ldr	r2, .L173+84
+	str	r3, [r1, #68]	@  bg.terminalVelocity
+	add	r3, r1, #44
+	stmia	r3, {r4-r5}	@  bg.rocketPower
+	str	ip, [r2, #0]	@  yLoop
+	adr	r3, .L173+8
+	ldmia	r3, {r3-r4}
+	mov	r2, #30
+	str	r2, [r1, #0]	@  bg.xBGAhead
+	add	r2, r1, #52
+	mvn	r8, #0
+	stmia	r2, {r3-r4}	@  bg.gravity
+	adr	r4, .L173+16
+	ldmia	r4, {r4-r5}
+	str	r8, [r1, #20]	@  bg.yMapBehind
+	str	ip, [r1, #36]	@  bg.deltaY
+	str	r8, [r1, #12]	@  bg.xMapBehind
+	str	ip, [r1, #24]	@  bg.ulx
+	str	ip, [r1, #28]	@  bg.uly
+	str	ip, [r1, #32]	@  bg.deltaX
+	add	r1, r1, #60
+	stmia	r1, {r4-r5}	@  bg.playerVelocity
+	ldmea	fp, {r4, r5, r6, r7, r8, fp, sp, lr}
+	bx	lr
+.L174:
+	.align	2
+.L173:
+	.word	1069757235
+	.word	858993459
+	.word	1069128089
+	.word	-1717986918
+	.word	0
+	.word	0
+	.word	malloc
+	.word	material_Map
+	.word	map_Map
+	.word	mapHeightTiles
+	.word	screenWidth
+	.word	playerXTile
+	.word	playerYTile
+	.word	bg0map
+	.word	bg
+	.word	x
+	.word	bg1map
+	.word	mapWidthTiles
+	.word	y
+	.word	xLoop
+	.word	screenHeight
+	.word	yLoop
+	.size	initbackgrounds, .-initbackgrounds
+	.align	2
+	.global	loadBackground
+	.type	loadBackground, %function
+loadBackground:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	r3, #6016
+	mov	ip, sp
+	mov	r2, #67108864
+	add	r3, r3, #1
+	stmfd	sp!, {fp, ip, lr, pc}
+	strh	r3, [r2, #8]	@ movhi 
+	mov	r3, #8064	@ movhi
+	sub	fp, ip, #4
+	strh	r3, [r2, #10]	@ movhi 
+	ldr	r0, .L176
+	mov	r1, #83886080
+	mov	r2, #256
+	mov	r3, #-2147483648
+	bl	DMAFastCopy
+	mov	r1, #100663296
+	mov	r2, #3072
+	ldr	r0, .L176+4
+	mov	r3, #-2080374784
+	bl	DMAFastCopy
+	ldr	r3, .L176+8
+	mov	r0, #0
+	mov	lr, pc
+	bx	r3
+	ldr	r2, .L176+12
+	mov	lr, pc
+	bx	r2
+	bl	generateMap
+	ldmea	fp, {fp, sp, lr}
+	b	loadStartingPosition
+.L177:
+	.align	2
+.L176:
+	.word	map_Palette
+	.word	map_Tiles
+	.word	time
+	.word	srand
+	.size	loadBackground, .-loadBackground
+	.global	__subdf3
+	.global	__floatsidf
+	.global	__ltdf2
+	.global	__adddf3
+	.global	__fixdfsi
+	.global	__gtdf2
+	.align	2
+	.global	drawBackground
+	.type	drawBackground, %function
+drawBackground:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+	sub	fp, ip, #4
+	bl	keyPoll
+	bl	WaitVBlank
+	mov	r0, #1
+	bl	keyIsDown
+	cmp	r0, #0
+	bne	.L180
+	mov	r0, #2
+	bl	keyIsDown
+	cmp	r0, #0
+	bne	.L180
+	mov	r0, #8
+	bl	keyIsDown
+	cmp	r0, #0
+	bne	.L180
+	mov	r0, #4
+	bl	keyIsDown
+	cmp	r0, #0
+	bne	.L180
+	mov	r0, #256
+	bl	keyIsDown
+	cmp	r0, #0
+	bne	.L180
+	mov	r0, #512
+	bl	keyIsDown
+	cmp	r0, #0
+	ldreq	sl, .L216+8
+	beq	.L179
+.L180:
+	ldr	sl, .L216+8
+	ldr	r0, [sl, #40]	@  bg.tileUnderPlayer
+	bl	setDirt
+.L179:
+	mov	r0, #64
+	bl	keyIsDown
+	cmp	r0, #0
+	beq	.L181
+	ldr	r1, .L216+12
+	ldr	r6, [r1, #0]	@  y
+	cmp	r6, #16
+	ble	.L187
+	ldr	r2, .L216+16
+	ldr	r3, [r2, #0]	@  mapHeightTiles
+	mov	r3, r3, asl #3
+	sub	r3, r3, #16
+	cmp	r6, r3
+	bge	.L187
+	ldr	r2, .L216+8
+	ldr	r5, .L216+20
+	add	r1, r2, #44
+	ldmia	r1, {r2-r3}	@  bg.rocketPower
+	ldr	ip, .L216+24
+	ldmia	r5, {r0-r1}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	ip
+	ldr	ip, .L216+20
+	mov	r5, r1
+	mov	r4, r0
+	ldr	r0, [sl, #72]	@  bg.maxRocketVelocity
+	stmia	ip, {r4-r5}	@  bg.playerVelocity
+	rsb	r0, r0, #0
+	ldr	r9, .L216+28
+	mov	lr, pc
+	bx	r9
+	mov	r8, r1
+	mov	r7, r0
+	mov	r3, r8
+	mov	r2, r7
+	mov	r1, r5
+	mov	r0, r4
+	ldr	ip, .L216+32
+	mov	lr, pc
+	bx	ip
+	cmp	r0, #0
+	blt	.L215
+.L183:
+	ldr	r5, .L216+20
+	mov	r0, r6
+	mov	lr, pc
+	bx	r9
+	ldr	r8, .L216+36
+	ldmia	r5, {r2-r3}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	r8
+	ldr	r6, .L216+40
+	mov	lr, pc
+	bx	r6
+	ldr	r7, .L216+44
+	mov	lr, pc
+	bx	r7
+	ldr	ip, .L216+8
+	ldr	r1, .L216+12
+	ldr	r3, [ip, #36]	@  bg.deltaY
+	str	r0, [r1, #0]	@  y
+	mov	r0, r3
+	mov	lr, pc
+	bx	r9
+	ldr	r2, .L216+20
+	mov	r5, r1
+	mov	r4, r0
+	ldmia	r2, {r0-r1}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	r6
+	mov	r3, r1
+	mov	r2, r0
+	mov	r1, r5
+	mov	r0, r4
+	mov	lr, pc
+	bx	r8
+	mov	lr, pc
+	bx	r7
+	ldr	r3, .L216+8
+	str	r0, [r3, #36]	@  bg.deltaY
+.L186:
+	mov	r0, #32
+	bl	keyIsDown
+	cmp	r0, #0
+	ldreq	r4, .L216+48
+	beq	.L191
+	ldr	r4, .L216+48
+	ldr	r2, [r4, #0]	@  x
+	cmp	r2, #0
+	ldrgt	r3, [sl, #32]	@  bg.deltaX
+	subgt	r2, r2, #1
+	subgt	r3, r3, #1
+	strgt	r2, [r4, #0]	@  x
+	strgt	r3, [sl, #32]	@  bg.deltaX
+.L191:
+	mov	r0, #16
+	bl	keyIsDown
+	cmp	r0, #0
+	beq	.L192
+	ldr	r2, [r4, #0]	@  x
+	cmp	r2, #15
+	ldrle	r3, [sl, #32]	@  bg.deltaX
+	addle	r2, r2, #1
+	addle	r3, r3, #1
+	strle	r2, [r4, #0]	@  x
+	strle	r3, [sl, #32]	@  bg.deltaX
+.L192:
+	mov	r0, #128
+	bl	keyIsDown
+	cmp	r0, #0
+	beq	.L193
+	ldr	r3, .L216+16
+	ldr	r2, [r3, #0]	@  mapHeightTiles
+	ldr	r3, .L216+12
+	ldr	r1, [r3, #0]	@  y
+	cmp	r1, r2, asl #3
+	bge	.L193
+	ldr	r3, [sl, #36]	@  bg.deltaY
+	ldr	r5, .L216+12
+	add	r2, r1, #1
+	add	r3, r3, #1
+	str	r2, [r5, #0]	@  y
+	str	r3, [sl, #36]	@  bg.deltaY
+.L193:
+	ldr	ip, .L216+12
+	ldr	r0, [sl, #32]	@  bg.deltaX
+	ldrh	r1, [r4, #0]	@  x
+	ldrh	r3, [ip, #0]	@  y
+	mov	r2, #67108864
+	cmn	r0, #8
+	strh	r3, [r2, #18]	@ movhi 
+	strh	r3, [r2, #22]	@ movhi 
+	strh	r1, [r2, #16]	@ movhi 
+	strh	r1, [r2, #20]	@ movhi 
+	ldr	r1, .L216+8
+	bgt	.L194
+	ldr	r3, [sl, #40]	@  bg.tileUnderPlayer
+	mov	r2, #0
+	sub	r3, r3, #1
+	str	r2, [sl, #32]	@  bg.deltaX
+	str	r3, [sl, #40]	@  bg.tileUnderPlayer
+.L195:
+	ldr	r6, [sl, #36]	@  bg.deltaY
+	cmn	r6, #8
+	ldr	r7, .L216+8
+	bgt	.L197
+	ldr	r5, .L216+52
+	ldr	lr, [r5, #0]	@  tilesFromTop
+	sub	lr, lr, #1
+	sub	r1, lr, #1
+	cmp	r1, #0
+	rsblt	r1, r1, #0
+	mov	r2, r1, asr #31
+	add	r2, r1, r2, lsr #27
+	ldr	r3, .L216+56
+	bic	r2, r2, #31
+	rsb	r1, r2, r1
+	ldr	r8, .L216+60
+	ldr	r4, [r3, #0]	@  mapWidthTiles
+	mov	r3, r1, asl #5
+	ldr	ip, [sl, #40]	@  bg.tileUnderPlayer
+	str	r3, [r8, #0]	@  locationToPaste
+	ldr	r3, .L216+64
+	mov	r0, lr, asl #5
+	add	r2, r6, #8
+	str	lr, [r5, #0]	@  tilesFromTop
+	ldr	r9, .L216+68
+	ldr	r5, .L216+72
+	rsb	ip, r4, ip
+	sub	r0, r0, #32
+	str	r2, [sl, #36]	@  bg.deltaY
+	ldr	r4, [r3, #0]	@  bg0map
+	ldr	r2, .L216+76
+	ldr	r3, .L216+80
+	cmp	r0, #0
+	rsblt	r0, r0, #0
+	str	ip, [sl, #40]	@  bg.tileUnderPlayer
+	ldr	lr, [r9, #0]	@  map_Map
+	ldr	ip, [r5, #0]	@  bg1map
+	str	r0, [r2, #0]	@  tileToCopy
+	mov	r1, r1, asl #6
+	ldr	r2, [r3, #0]	@  material_Map
+	mov	r0, r0, asl #1
+	mov	r3, #31	@  loopMe
+.L202:
+	ldrh	r5, [r0, lr]	@ movhi
+	strh	r5, [r1, r4]	@ movhi 
+	ldrh	r5, [r0, r2]	@ movhi
+	subs	r3, r3, #1	@  loopMe,  loopMe
+	strh	r5, [r1, ip]	@ movhi 
+	add	r0, r0, #2
+	add	r1, r1, #2
+	bpl	.L202
+.L178:
+	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+	bx	lr
+.L197:
+	cmp	r6, #7
+	ble	.L178
+	ldr	r5, .L216+52
+	ldr	r0, [r5, #0]	@  tilesFromTop
+	add	lr, r0, #22
+	mov	r2, lr, asr #31
+	ldr	r3, .L216+56
+	add	r2, lr, r2, lsr #27
+	ldr	r4, [r3, #0]	@  mapWidthTiles
+	bic	r2, r2, #31
+	ldr	r1, [r7, #40]	@  bg.tileUnderPlayer
+	add	r0, r0, #1
+	rsb	lr, r2, lr
+	ldr	r8, .L216+60
+	sub	r2, r6, #8
+	add	r1, r1, r4
+	mov	r3, lr, asl #5
+	str	r0, [r5, #0]	@  tilesFromTop
+	ldr	r9, .L216+68
+	str	r2, [r7, #36]	@  bg.deltaY
+	ldr	r5, .L216+80
+	ldr	r2, .L216+64
+	mov	ip, r0, asl #5
+	str	r1, [r7, #40]	@  bg.tileUnderPlayer
+	str	r3, [r8, #0]	@  locationToPaste
+	ldr	r1, .L216+76
+	ldr	r3, .L216+72
+	add	ip, ip, #672
+	ldr	r4, [r2, #0]	@  bg0map
+	ldr	r0, [r9, #0]	@  map_Map
+	ldr	r2, [r5, #0]	@  material_Map
+	str	ip, [r1, #0]	@  tileToCopy
+	mov	lr, lr, asl #6
+	ldr	r1, [r3, #0]	@  bg1map
+	mov	ip, ip, asl #1
+	mov	r3, #31	@  loopMe
+.L209:
+	ldrh	r5, [ip, r0]	@ movhi
+	strh	r5, [lr, r4]	@ movhi 
+	ldrh	r5, [ip, r2]	@ movhi
+	subs	r3, r3, #1	@  loopMe,  loopMe
+	strh	r5, [lr, r1]	@ movhi 
+	add	ip, ip, #2
+	add	lr, lr, #2
+	bpl	.L209
+	b	.L178
+.L194:
+	cmp	r0, #7
+	ldrgt	r3, [r1, #40]	@  bg.tileUnderPlayer
+	movgt	r2, #0
+	addgt	r3, r3, #1
+	strgt	r3, [r1, #40]	@  bg.tileUnderPlayer
+	strgt	r2, [r1, #32]	@  bg.deltaX
+	b	.L195
+.L215:
+	ldr	r1, .L216+20
+	stmia	r1, {r7-r8}	@  bg.playerVelocity
+	b	.L183
+.L187:
+	ldr	r3, .L216+20
+	adr	r1, .L216
+	ldmia	r1, {r1-r2}
+	stmia	r3, {r1-r2}	@  bg.playerVelocity
+	b	.L186
+.L181:
+	ldr	r0, .L216+84
+	bl	checkDirection
+	cmp	r0, #1
+	bne	.L187
+	ldr	r2, .L216+8
+	add	r8, r2, #60
+	add	r1, r2, #52
+	ldmia	r1, {r2-r3}	@  bg.gravity
+	ldr	r5, .L216+36
+	ldmia	r8, {r0-r1}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	r5
+	mov	r5, r1
+	mov	r4, r0
+	ldr	r9, .L216+28
+	ldr	r0, [sl, #68]	@  bg.terminalVelocity
+	stmia	r8, {r4-r5}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	r9
+	mov	r7, r1
+	mov	r6, r0
+	mov	r3, r7
+	mov	r2, r6
+	mov	r1, r5
+	mov	r0, r4
+	ldr	ip, .L216+88
+	mov	lr, pc
+	bx	ip
+	cmp	r0, #0
+	stmgtia	r8, {r6-r7}	@  bg.playerVelocity
+.L188:
+	ldr	ip, .L216+12
+	ldr	r0, [ip, #0]	@  y
+	mov	lr, pc
+	bx	r9
+	ldr	r5, .L216+36
+	ldmia	r8, {r2-r3}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	r5
+	ldr	r6, .L216+40
+	mov	lr, pc
+	bx	r6
+	ldr	r7, .L216+44
+	mov	lr, pc
+	bx	r7
+	ldr	ip, .L216+8
+	ldr	r1, .L216+12
+	ldr	r3, [ip, #36]	@  bg.deltaY
+	str	r0, [r1, #0]	@  y
+	mov	r0, r3
+	mov	lr, pc
+	bx	r9
+	mov	r5, r1
+	mov	r4, r0
+	ldmia	r8, {r0-r1}	@  bg.playerVelocity
+	mov	lr, pc
+	bx	r6
+	mov	r3, r1
+	mov	r2, r0
+	mov	r1, r5
+	mov	r0, r4
+	ldr	r5, .L216+36
+	mov	lr, pc
+	bx	r5
+	mov	lr, pc
+	bx	r7
+	ldr	ip, .L216+8
+	str	r0, [ip, #36]	@  bg.deltaY
+	b	.L186
+.L217:
+	.align	2
+.L216:
+	.word	0
+	.word	0
+	.word	bg
+	.word	y
+	.word	mapHeightTiles
+	.word	bg+60
+	.word	__subdf3
+	.word	__floatsidf
+	.word	__ltdf2
+	.word	__adddf3
+	.word	floor
+	.word	__fixdfsi
+	.word	x
+	.word	tilesFromTop
+	.word	mapWidthTiles
+	.word	locationToPaste
+	.word	bg0map
+	.word	map_Map
+	.word	bg1map
+	.word	tileToCopy
+	.word	material_Map
+	.word	.LC2
+	.word	__gtdf2
+	.size	drawBackground, .-drawBackground
+	.align	2
+	.global	DrawPixel4
+	.type	DrawPixel4, %function
+DrawPixel4:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	str	lr, [sp, #-4]!
+	rsb	r1, r1, r1, asl #4	@  y,  y
+	add	r1, r0, r1, asl #4	@  x
+	ldr	r3, .L221
+	bic	ip, r1, #-16777216
+	ldr	lr, [r3, #0]	@  videoBuffer
+	bic	ip, ip, #16646144
+	bic	ip, ip, #1
+	ldrsh	r3, [ip, lr]	@  pixel
+	and	r2, r2, #255	@  color
+	and	r1, r3, #65280	@  pixel
+	and	r3, r3, #255	@  pixel
+	tst	r0, #1	@  x
+	add	r1, r1, r2	@  color
+	add	r3, r3, r2, asl #8	@  color
+	strneh	r3, [ip, lr]	@ movhi 
+	streqh	r1, [ip, lr]	@ movhi 
+	ldr	lr, [sp], #4
+	bx	lr
+.L222:
+	.align	2
+.L221:
+	.word	videoBuffer
+	.size	DrawPixel4, .-DrawPixel4
+	.align	2
+	.global	DrawBox4
+	.type	DrawBox4, %function
+DrawBox4:
+	@ Function supports interworking.
+	@ args = 4, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, sl, fp, ip, lr, pc}
+	cmp	r0, r2	@  x,  right
+	sub	fp, ip, #4
+	mov	sl, r2	@  right
+	mov	r5, r0	@  x,  left
+	mov	r8, r1	@  top
+	mov	r6, r3	@  bottom
+	ldrb	r7, [fp, #4]	@ zero_extendqisi2	@  color,  color
+	bge	.L235
+.L233:
+	cmp	r8, r6	@  y,  bottom
+	mov	r4, r8	@  y,  top
+	blt	.L232
+.L237:
+	add	r5, r5, #1	@  x,  x
+	cmp	r5, sl	@  x,  right
+	blt	.L233
+.L235:
+	ldmea	fp, {r4, r5, r6, r7, r8, sl, fp, sp, lr}
+	bx	lr
+.L232:
+	mov	r1, r4	@  y
+	mov	r0, r5	@  x
+	mov	r2, r7	@  color
+	add	r4, r4, #1	@  y,  y
+	bl	DrawPixel4
+	cmp	r4, r6	@  y,  bottom
+	blt	.L232
+	b	.L237
+	.size	DrawBox4, .-DrawBox4
+	.align	2
+	.global	FlipPage
+	.type	FlipPage, %function
+FlipPage:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	mov	r0, #67108864
+	ldrh	r3, [r0, #0]
+	tst	r3, #16
+	ldrne	r3, .L242
+	ldreq	r3, .L242+4
+	ldrneh	r2, [r0, #0]
+	ldreqh	r2, [r0, #0]
+	ldrne	r1, [r3, #0]	@  BackBuffer
+	ldreq	r1, [r3, #0]	@  FrontBuffer
+	ldr	r3, .L242+8
+	bicne	r2, r2, #16
+	orreq	r2, r2, #16
+	@ lr needed for prologue
+	strh	r2, [r0, #0]	@ movhi 
+	str	r1, [r3, #0]	@  videoBuffer
+	bx	lr
+.L243:
+	.align	2
+.L242:
+	.word	BackBuffer
+	.word	FrontBuffer
+	.word	videoBuffer
+	.size	FlipPage, .-FlipPage
+	.align	2
+	.global	DrawPixel3
+	.type	DrawPixel3, %function
+DrawPixel3:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
+	sub	fp, ip, #4
+	mov	r6, r2, asl #16
+	mov	r5, r0	@  x
+	mov	r4, r1	@  y
+	bl	WaitVBlank
+	ldr	r3, .L245
+	rsb	r4, r4, r4, asl #4	@  y,  y
+	add	r5, r5, r4, asl #4	@  x
+	ldr	r2, [r3, #0]	@  videoBuffer
+	mov	r6, r6, asr #16	@  c
+	mov	r5, r5, asl #1
+	strh	r6, [r5, r2]	@ movhi 	@  c
+	ldmea	fp, {r4, r5, r6, fp, sp, lr}
+	bx	lr
+.L246:
+	.align	2
+.L245:
+	.word	videoBuffer
+	.size	DrawPixel3, .-DrawPixel3
+	.align	2
+	.global	DrawCircle3
+	.type	DrawCircle3, %function
+DrawCircle3:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 12
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+	mov	r9, #0	@  x
+	mov	sl, r2	@  y,  radius
+	cmp	r9, r2	@  x,  y
+	mov	r2, r2, asl #1	@  y
+	sub	fp, ip, #4
+	sub	sp, sp, #12
+	mov	r3, r3, asl #16
+	rsb	r2, r2, #3
+	mov	r3, r3, asr #16	@  color
+	str	r0, [fp, #-44]	@  xCenter
+	str	r1, [fp, #-48]	@  yCenter
+	str	r2, [fp, #-52]	@  p
+	bgt	.L255
+	mov	r3, r3, asl #16	@  color
+	mov	r8, r3, lsr #16	@  radius
+.L253:
+	ldr	r1, [fp, #-44]	@  xCenter
+	ldr	r2, [fp, #-48]	@  yCenter
+	add	r6, r1, r9	@  xCenter,  x
+	add	r4, r2, sl	@  yCenter,  y
+	rsb	r7, r9, r1	@  xCenter,  x
+	mov	r0, r6	@  xCenter
+	mov	r1, r4	@  yCenter
+	mov	r2, r8	@  radius
+	bl	DrawPixel3
+	ldr	r3, [fp, #-48]	@  yCenter
+	mov	r1, r4	@  yCenter
+	rsb	r5, sl, r3	@  yCenter,  y
+	mov	r0, r7	@  xCenter
+	mov	r2, r8	@  radius
+	bl	DrawPixel3
+	mov	r0, r6	@  xCenter
+	mov	r1, r5	@  yCenter
+	mov	r2, r8	@  radius
+	bl	DrawPixel3
+	ldr	r3, [fp, #-48]	@  yCenter
+	add	r4, r3, r9	@  yCenter,  x
+	ldr	r3, [fp, #-44]	@  xCenter
+	mov	r0, r7	@  xCenter
+	mov	r1, r5	@  yCenter
+	mov	r2, r8	@  radius
+	add	r6, r3, sl	@  xCenter,  y
+	bl	DrawPixel3
+	ldr	r1, [fp, #-44]	@  xCenter
+	mov	r0, r6	@  xCenter
+	rsb	r7, sl, r1	@  xCenter,  y
+	mov	r2, r8	@  radius
+	mov	r1, r4	@  yCenter
+	bl	DrawPixel3
+	ldr	r2, [fp, #-48]	@  yCenter
+	mov	r1, r4	@  yCenter
+	rsb	r5, r9, r2	@  yCenter,  x
+	mov	r0, r7	@  xCenter
+	mov	r2, r8	@  radius
+	bl	DrawPixel3
+	mov	r0, r6	@  xCenter
+	mov	r1, r5	@  yCenter
+	mov	r2, r8	@  radius
+	bl	DrawPixel3
+	mov	r1, r5	@  yCenter
+	mov	r2, r8	@  radius
+	mov	r0, r7	@  xCenter
+	bl	DrawPixel3
+	ldr	r1, [fp, #-52]	@  p
+	rsb	r3, sl, r9	@  y,  x
+	cmp	r1, #0
+	add	r2, r1, r9, asl #2	@  x
+	add	r3, r1, r3, asl #2
+	addlt	r2, r2, #6
+	addge	r3, r3, #10
+	subge	sl, sl, #1	@  y,  y
+	add	r9, r9, #1	@  x,  x
+	strlt	r2, [fp, #-52]	@  p
+	strge	r3, [fp, #-52]	@  p
+	cmp	r9, sl	@  x,  y
+	ble	.L253
+.L255:
+	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+	bx	lr
+	.size	DrawCircle3, .-DrawCircle3
+	.align	2
+	.global	DrawLine3
+	.type	DrawLine3, %function
+DrawLine3:
+	@ Function supports interworking.
+	@ args = 4, pretend = 0, frame = 16
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+	mov	r5, r3	@  y2
+	mov	r4, r2	@  x2
+	rsb	r3, r0, r2	@  x1,  x2
+	rsb	r2, r1, r5	@  y1,  y2
+	sub	fp, ip, #4
+	sub	sp, sp, #16
+	eor	lr, r3, r3, asr #31	@  deltax
+	sub	lr, lr, r3, asr #31	@  deltax
+	eor	ip, r2, r2, asr #31	@  deltay
+	sub	ip, ip, r2, asr #31	@  deltay
+	cmp	lr, ip	@  deltax,  deltay
+	ldrsh	r8, [fp, #4]	@  color,  color
+	blt	.L258
+	mov	r3, ip, asl #1	@  dinc1,  deltay
+	rsb	r2, lr, ip	@  deltax,  deltay
+	mov	sl, #1	@  xinc2
+	str	r3, [fp, #-44]	@  dinc1,  dinc1
+	mov	r9, r2, asl sl	@  dinc2
+	rsb	r7, lr, r3	@  d,  deltax,  dinc1
+	add	r2, lr, sl	@  numpixels,  deltax
+	mov	ip, sl	@  xinc1,  xinc2
+	mov	r3, #0	@  yinc1
+.L271:
+	cmp	r0, r4	@  x1,  x2
+	str	sl, [fp, #-48]	@  xinc2,  yinc2
+	rsbgt	ip, ip, #0	@  xinc1,  xinc1
+	mvngt	sl, #0	@  xinc2
+	cmp	r1, r5	@  y1,  y2
+	mvngt	lr, #0
+	rsbgt	r3, r3, #0	@  yinc1,  yinc1
+	strgt	lr, [fp, #-48]	@  yinc2
+	cmp	r2, #1	@  numpixels
+	mov	r6, r0	@  x,  x1
+	mov	r5, r1	@  y,  y1
+	ble	.L270
+	mov	r8, r8, asl #16	@  color
+	sub	r4, r2, #1	@  i,  numpixels
+.L268:
+	mov	r0, r6	@  x
+	mov	r1, r5	@  y
+	mov	r2, r8, lsr #16
+	str	r3, [fp, #-52]
+	str	ip, [fp, #-56]
+	bl	DrawPixel3
+	cmp	r7, #0	@  d
+	ldrlt	r2, [fp, #-44]	@  dinc1
+	ldrge	lr, [fp, #-48]	@  yinc2
+	ldr	r3, [fp, #-52]
+	ldr	ip, [fp, #-56]
+	addlt	r7, r7, r2	@  d,  d
+	addlt	r6, r6, ip	@  x,  x,  xinc1
+	addlt	r5, r5, r3	@  y,  y,  yinc1
+	addge	r7, r7, r9	@  d,  d,  dinc2
+	addge	r6, r6, sl	@  x,  x,  xinc2
+	addge	r5, r5, lr	@  y,  y
+	subs	r4, r4, #1	@  i,  i
+	bne	.L268
+.L270:
+	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+	bx	lr
+.L258:
+	rsb	r2, ip, lr	@  deltay,  deltax
+	mov	r3, lr, asl #1	@  dinc1,  deltax
+	mov	sl, #1	@  xinc2
+	rsb	r7, ip, r3	@  d,  deltay,  dinc1
+	str	r3, [fp, #-44]	@  dinc1,  dinc1
+	mov	r9, r2, asl sl	@  dinc2
+	mov	r3, sl	@  yinc1,  xinc2
+	add	r2, ip, sl	@  numpixels,  deltay
+	mov	ip, #0	@  xinc1
+	b	.L271
+	.size	DrawLine3, .-DrawLine3
+	.align	2
+	.global	DrawBox3
+	.type	DrawBox3, %function
+DrawBox3:
+	@ Function supports interworking.
+	@ args = 4, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+	cmp	r1, r3	@  y,  bottom
+	sub	fp, ip, #4
+	mov	sl, r3	@  bottom
+	mov	r5, r1	@  y,  top
+	mov	r8, r0	@  left
+	mov	r7, r2	@  right
+	ldrsh	r9, [fp, #4]	@  color,  color
+	bge	.L284
+.L282:
+	cmp	r8, r7	@  x,  right
+	mov	r4, r8	@  x,  left
+	bge	.L286
+	mov	r6, r9, asl #16	@  color
+.L281:
+	mov	r0, r4	@  x
+	mov	r1, r5	@  y
+	mov	r2, r6, lsr #16
+	add	r4, r4, #1	@  x,  x
+	bl	DrawPixel3
+	cmp	r4, r7	@  x,  right
+	blt	.L281
+.L286:
+	add	r5, r5, #1	@  y,  y
+	cmp	r5, sl	@  y,  bottom
+	blt	.L282
+.L284:
+	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+	bx	lr
+	.size	DrawBox3, .-DrawBox3
 	.global	SIN
 	.section	.rodata
 	.align	2
@@ -35795,7 +10909,86 @@ RAD:
 	.word	2108313546
 	.word	1075384347
 	.word	-2039594070
+	.text
+	.align	2
+	.global	drawTitle
+	.type	drawTitle, %function
+drawTitle:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	drawTitle, .-drawTitle
+	.align	2
+	.global	updateTitle
+	.type	updateTitle, %function
+updateTitle:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	updateTitle, .-updateTitle
+	.align	2
+	.global	loadTitle
+	.type	loadTitle, %function
+loadTitle:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	loadTitle, .-loadTitle
+	.align	2
+	.global	drawInventory
+	.type	drawInventory, %function
+drawInventory:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	drawInventory, .-drawInventory
+	.align	2
+	.global	updateInventory
+	.type	updateInventory, %function
+updateInventory:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	updateInventory, .-updateInventory
+	.align	2
+	.global	drawGameOver
+	.type	drawGameOver, %function
+drawGameOver:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	drawGameOver, .-drawGameOver
+	.align	2
+	.global	updateGameOver
+	.type	updateGameOver, %function
+updateGameOver:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+	@ lr needed for prologue
+	bx	lr
+	.size	updateGameOver, .-updateGameOver
 	.global	spriteData
+	.section	.rodata
 	.align	1
 	.type	spriteData, %object
 	.size	spriteData, 3328
@@ -37725,31 +12918,13 @@ spritePalette:
 	.short	0
 	.short	0
 	.short	0
-	.global	bg0map
-	.data
-	.align	2
-	.type	bg0map, %object
-	.size	bg0map, 4
-bg0map:
-	.word	100726784
-	.global	SpriteData3
-	.align	2
-	.type	SpriteData3, %object
-	.size	SpriteData3, 4
-SpriteData3:
-	.word	100745216
 	.global	stotal
+	.data
 	.align	2
 	.type	stotal, %object
 	.size	stotal, 4
 stotal:
 	.word	1664
-	.global	rotData
-	.align	2
-	.type	rotData, %object
-	.size	rotData, 4
-rotData:
-	.word	gamesprites
 	.text
 	.align	2
 	.global	UpdateSpriteMemory
@@ -37760,22 +12935,22 @@ UpdateSpriteMemory:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	mov	r0, #508
-	ldr	ip, .L243	@  temp
+	ldr	ip, .L302	@  temp
 	@ lr needed for prologue
 	mov	r1, #0	@  n
 	add	r0, r0, #3
-.L240:
+.L299:
 	mov	r2, r1, asl #1	@  n
 	add	r3, r2, #117440512
 	add	r1, r1, #1	@  n,  n
 	ldrh	r2, [r2, ip]	@ movhi	@ * temp
 	cmp	r1, r0	@  n
 	strh	r2, [r3, #0]	@ movhi 
-	ble	.L240
+	ble	.L299
 	bx	lr
-.L244:
+.L303:
 	.align	2
-.L243:
+.L302:
 	.word	gamesprites
 	.size	UpdateSpriteMemory, .-UpdateSpriteMemory
 	.align	2
@@ -37788,7 +12963,7 @@ setSpriteInfo:
 	add	r3, r0, r0, asl #1	@  num,  num
 	stmfd	sp!, {r4, lr}
 	rsb	r0, r0, r3, asl #3	@  num
-	ldr	lr, .L246
+	ldr	lr, .L305
 	mov	r0, r0, asl #2
 	mov	r2, #240
 	add	r3, r0, lr
@@ -37836,9 +13011,9 @@ setSpriteInfo:
 	strh	r2, [r3, #34]	@ movhi 	@  <variable>.currentFrame
 	ldmfd	sp!, {r4, lr}
 	bx	lr
-.L247:
+.L306:
 	.align	2
-.L246:
+.L305:
 	.word	sprites
 	.size	setSpriteInfo, .-setSpriteInfo
 	.align	2
@@ -37850,21 +13025,21 @@ CopySpritePal:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	mov	r1, #83886080
-	ldr	r0, .L256
+	ldr	r0, .L315
 	@ lr needed for prologue
 	mov	r2, #0	@  n
 	add	r1, r1, #512
-.L253:
+.L312:
 	mov	r3, r2, asl #1	@  n
 	ldrh	ip, [r3, r0]	@ movhi	@  spritePalette
 	add	r2, r2, #1	@  n,  n
 	cmp	r2, #255	@  n
 	strh	ip, [r3, r1]	@ movhi 
-	ble	.L253
+	ble	.L312
 	bx	lr
-.L257:
+.L316:
 	.align	2
-.L256:
+.L315:
 	.word	spritePalette
 	.size	CopySpritePal, .-CopySpritePal
 	.align	2
@@ -37875,31 +13050,92 @@ CopySpriteData:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
-	ldr	r3, .L266
+	ldr	r3, .L325
 	ldr	r3, [r3, #0]	@  stotal
 	mov	r2, #0	@  n
 	cmp	r2, r3	@  n
-	bge	.L265
+	bge	.L324
 	mov	r0, #100663296
-	ldr	ip, .L266+4
+	ldr	ip, .L325+4
 	mov	r1, r3
 	add	r0, r0, #65536
-.L263:
+.L322:
 	mov	r3, r2, asl #1	@  n
 	ldrh	lr, [r3, ip]	@ movhi	@  spriteData
 	add	r2, r2, #1	@  n,  n
 	cmp	r2, r1	@  n
 	strh	lr, [r3, r0]	@ movhi 
-	blt	.L263
-.L265:
+	blt	.L322
+.L324:
 	ldr	lr, [sp], #4
 	bx	lr
-.L267:
+.L326:
 	.align	2
-.L266:
+.L325:
 	.word	stotal
 	.word	spriteData
 	.size	CopySpriteData, .-CopySpriteData
+	.align	2
+	.global	initSprites
+	.type	initSprites, %function
+initSprites:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
+	mov	r4, #0	@  n
+	ldr	r5, .L335
+	sub	fp, ip, #4
+	mov	r6, r4	@  n,  n
+.L332:
+	mov	r0, r4	@  n
+	bl	setSpriteInfo
+	mov	r2, r4, asl #3	@  n
+	mov	r1, #160	@ movhi
+	add	r4, r4, #1	@  n,  n
+	add	r3, r2, r5
+	strh	r1, [r2, r5]	@ movhi 	@  <variable>.attribute0
+	cmp	r4, #127	@  n
+	mov	r2, #240	@ movhi
+	strh	r6, [r3, #4]	@ movhi 	@  n,  <variable>.attribute2
+	strh	r2, [r3, #2]	@ movhi 	@  <variable>.attribute1
+	ble	.L332
+	ldr	r2, .L335+4
+	mov	r3, #70
+	str	r3, [r2, #4]	@  <variable>.y
+	str	r6, [r2, #0]	@  n,  <variable>.x
+	ldmea	fp, {r4, r5, r6, fp, sp, lr}
+	bx	lr
+.L336:
+	.align	2
+.L335:
+	.word	gamesprites
+	.word	sprites
+	.size	initSprites, .-initSprites
+	.align	2
+	.global	loadSprite
+	.type	loadSprite, %function
+loadSprite:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {fp, ip, lr, pc}
+	sub	fp, ip, #4
+	bl	CopySpritePal
+	bl	CopySpriteData
+	ldr	r3, .L338
+	mov	r0, #0
+	mov	lr, pc
+	bx	r3
+	ldmea	fp, {fp, sp, lr}
+	bx	lr
+.L339:
+	.align	2
+.L338:
+	.word	updateSprite
+	.size	loadSprite, .-loadSprite
 	.align	2
 	.global	flipSprite
 	.type	flipSprite, %function
@@ -37908,7 +13144,7 @@ flipSprite:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	ldr	r3, .L276
+	ldr	r3, .L348
 	cmp	r0, #0	@  flip
 	add	r2, r3, r1, asl #3	@  num
 	ldreqh	r3, [r2, #2]	@  <variable>.attribute1
@@ -37916,7 +13152,7 @@ flipSprite:
 	@ lr needed for prologue
 	streqh	r3, [r2, #2]	@ movhi 	@  <variable>.attribute1
 	bxeq	lr
-	ldr	r3, .L276
+	ldr	r3, .L348
 	cmp	r0, #1	@  flip
 	add	r1, r3, r1, asl #3	@  num
 	bxne	lr
@@ -37932,12 +13168,11 @@ flipSprite:
 	bic	r3, r3, #16
 	strh	r3, [r1, #2]	@ movhi 	@  <variable>.attribute1
 	bx	lr
-.L277:
+.L349:
 	.align	2
-.L276:
+.L348:
 	.word	gamesprites
 	.size	flipSprite, .-flipSprite
-	.global	__fixdfsi
 	.global	__negdf2
 	.align	2
 	.global	RotateSprite
@@ -37949,41 +13184,41 @@ RotateSprite:
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
 	mov	r6, r1, asl #3	@  angle
-	ldr	r1, .L279
+	ldr	r1, .L351
 	sub	fp, ip, #4
 	sub	sp, sp, #4
 	add	r1, r6, r1
 	ldmia	r1, {r4-r5}	@  COS,  rotDataIndex
 	mov	r7, r3	@  y_scale
 	str	r0, [fp, #-44]	@  rotDataIndex
-	ldr	r3, .L279+4
+	ldr	r3, .L351+4
 	mov	r1, r5	@  rotDataIndex
 	mov	r0, r4	@  rotDataIndex
 	mov	r9, r2	@  x_scale
 	mov	lr, pc
 	bx	r3
-	ldr	r3, .L279+8
+	ldr	r3, .L351+8
 	add	r6, r6, r3
 	ldmia	r6, {r4-r5}	@  SIN,  rotDataIndex
 	mov	sl, r0	@  rotDataIndex
 	mul	r8, r0, r9	@  rotDataIndex,  x_scale
-	ldr	r3, .L279+4
+	ldr	r3, .L351+4
 	mov	r1, r5	@  rotDataIndex
 	mov	r0, r4	@  rotDataIndex
 	mov	lr, pc
 	bx	r3
-	ldr	r3, .L279+12
+	ldr	r3, .L351+12
 	mul	r6, r0, r7	@  rotDataIndex,  y_scale
 	mov	r1, r5	@  rotDataIndex
 	mov	r0, r4	@  rotDataIndex
 	mov	lr, pc
 	bx	r3
-	ldr	r3, .L279+4
+	ldr	r3, .L351+4
 	mov	lr, pc
 	bx	r3
 	mul	r1, sl, r7	@  rotDataIndex,  y_scale
 	mul	ip, r0, r9	@  rotDataIndex,  x_scale
-	ldr	r3, .L279+16
+	ldr	r3, .L351+16
 	ldr	r2, [r3, #0]	@  rotData
 	ldr	r3, [fp, #-44]	@  rotDataIndex
 	mov	r8, r8, asr #8	@  pa
@@ -37997,9 +13232,9 @@ RotateSprite:
 	strh	ip, [r2, #22]	@ movhi 	@  pc,  <variable>.pc
 	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
 	bx	lr
-.L280:
+.L352:
 	.align	2
-.L279:
+.L351:
 	.word	COS
 	.word	__fixdfsi
 	.word	SIN
@@ -38016,11 +13251,11 @@ updateSprite:
 	stmfd	sp!, {r4, r5, lr}
 	add	r2, r0, r0, asl #1	@  num,  num
 	rsb	r2, r0, r2, asl #3	@  num
-	ldr	ip, .L282
+	ldr	ip, .L354
 	mov	r3, r2, asl #2
 	add	lr, r3, ip
 	ldrh	r4, [r3, ip]	@  <variable>.x
-	ldr	r5, .L282+4
+	ldr	r5, .L354+4
 	ldr	r1, [lr, #36]	@  <variable>.activeFrame
 	ldrh	r3, [lr, #4]	@  <variable>.y
 	mov	r0, r0, asl #3	@  num
@@ -38035,9 +13270,9 @@ updateSprite:
 	strh	ip, [r2, #4]	@ movhi 	@  <variable>.attribute2
 	ldmfd	sp!, {r4, r5, lr}
 	bx	lr
-.L283:
+.L355:
 	.align	2
-.L282:
+.L354:
 	.word	sprites
 	.word	gamesprites
 	.size	updateSprite, .-updateSprite
@@ -38050,15 +13285,15 @@ setHealth:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r1, r1, asl #1	@  num,  num
-	ldr	r3, .L285
+	ldr	r3, .L357
 	rsb	r1, r1, r2, asl #3	@  num
 	add	r3, r3, r1, asl #2
 	@ lr needed for prologue
 	str	r0, [r3, #44]	@  health,  <variable>.health
 	bx	lr
-.L286:
+.L358:
 	.align	2
-.L285:
+.L357:
 	.word	sprites
 	.size	setHealth, .-setHealth
 	.align	2
@@ -38070,15 +13305,15 @@ setAlive:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L288
+	ldr	r3, .L360
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #40]	@  life,  <variable>.alive
 	bx	lr
-.L289:
+.L361:
 	.align	2
-.L288:
+.L360:
 	.word	sprites
 	.size	setAlive, .-setAlive
 	.align	2
@@ -38090,15 +13325,15 @@ setGas:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L291
+	ldr	r3, .L363
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #68]	@  gas,  <variable>.gasLevel
 	bx	lr
-.L292:
+.L364:
 	.align	2
-.L291:
+.L363:
 	.word	sprites
 	.size	setGas, .-setGas
 	.align	2
@@ -38110,15 +13345,15 @@ setMoney:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L294
+	ldr	r3, .L366
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #64]	@  money,  <variable>.money
 	bx	lr
-.L295:
+.L367:
 	.align	2
-.L294:
+.L366:
 	.word	sprites
 	.size	setMoney, .-setMoney
 	.align	2
@@ -38130,15 +13365,15 @@ setDrill:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L297
+	ldr	r3, .L369
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #48]	@  drill,  <variable>.drillType
 	bx	lr
-.L298:
+.L370:
 	.align	2
-.L297:
+.L369:
 	.word	sprites
 	.size	setDrill, .-setDrill
 	.align	2
@@ -38150,15 +13385,15 @@ setSpeed:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L300
+	ldr	r3, .L372
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #72]	@  speed,  <variable>.Movespeed
 	bx	lr
-.L301:
+.L373:
 	.align	2
-.L300:
+.L372:
 	.word	sprites
 	.size	setSpeed, .-setSpeed
 	.align	2
@@ -38170,15 +13405,15 @@ setEngine:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L303
+	ldr	r3, .L375
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #60]	@  Engine,  <variable>.engineType
 	bx	lr
-.L304:
+.L376:
 	.align	2
-.L303:
+.L375:
 	.word	sprites
 	.size	setEngine, .-setEngine
 	.align	2
@@ -38190,15 +13425,15 @@ setTank:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L306
+	ldr	r3, .L378
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #52]	@  tank,  <variable>.tankType
 	bx	lr
-.L307:
+.L379:
 	.align	2
-.L306:
+.L378:
 	.word	sprites
 	.size	setTank, .-setTank
 	.align	2
@@ -38210,135 +13445,17 @@ setHull:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 	add	r2, r0, r0, asl #1	@  num,  num
-	ldr	r3, .L309
+	ldr	r3, .L381
 	rsb	r0, r0, r2, asl #3	@  num
 	add	r3, r3, r0, asl #2
 	@ lr needed for prologue
 	str	r1, [r3, #56]	@  hull,  <variable>.hullType
 	bx	lr
-.L310:
+.L382:
 	.align	2
-.L309:
+.L381:
 	.word	sprites
 	.size	setHull, .-setHull
-	.align	2
-	.global	drawTitle
-	.type	drawTitle, %function
-drawTitle:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	drawTitle, .-drawTitle
-	.align	2
-	.global	updateTitle
-	.type	updateTitle, %function
-updateTitle:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	updateTitle, .-updateTitle
-	.align	2
-	.global	loadTitle
-	.type	loadTitle, %function
-loadTitle:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	loadTitle, .-loadTitle
-	.align	2
-	.global	drawInventory
-	.type	drawInventory, %function
-drawInventory:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	drawInventory, .-drawInventory
-	.align	2
-	.global	updateInventory
-	.type	updateInventory, %function
-updateInventory:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	updateInventory, .-updateInventory
-	.align	2
-	.global	drawGameOver
-	.type	drawGameOver, %function
-drawGameOver:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	drawGameOver, .-drawGameOver
-	.align	2
-	.global	updateGameOver
-	.type	updateGameOver, %function
-updateGameOver:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
-	bx	lr
-	.size	updateGameOver, .-updateGameOver
-	.align	2
-	.global	initSprites
-	.type	initSprites, %function
-initSprites:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	mov	r4, #0	@  n
-	ldr	r5, .L326
-	sub	fp, ip, #4
-	mov	r6, r4	@  n,  n
-.L323:
-	mov	r0, r4	@  n
-	bl	setSpriteInfo
-	mov	r2, r4, asl #3	@  n
-	mov	r1, #160	@ movhi
-	add	r4, r4, #1	@  n,  n
-	add	r3, r2, r5
-	strh	r1, [r2, r5]	@ movhi 	@  <variable>.attribute0
-	cmp	r4, #127	@  n
-	mov	r2, #240	@ movhi
-	strh	r6, [r3, #4]	@ movhi 	@  n,  <variable>.attribute2
-	strh	r2, [r3, #2]	@ movhi 	@  <variable>.attribute1
-	ble	.L323
-	bl	CopySpritePal
-	bl	CopySpriteData
-	ldr	r2, .L326+4
-	mov	r3, #8
-	mov	r0, r6	@  n
-	str	r3, [r2, #4]	@  <variable>.y
-	str	r6, [r2, #0]	@  n,  <variable>.x
-	ldmea	fp, {r4, r5, r6, fp, sp, lr}
-	b	updateSprite
-.L327:
-	.align	2
-.L326:
-	.word	gamesprites
-	.word	sprites
-	.size	initSprites, .-initSprites
 	.align	2
 	.global	PlaySprite
 	.type	PlaySprite, %function
@@ -38352,37 +13469,37 @@ PlaySprite:
 	mov	r6, r0, asl #1	@  num
 	sub	fp, ip, #4
 	bl	keyPoll
-	ldr	r7, .L371
+	ldr	r7, .L426
 	bl	WaitVBlank
 	add	r3, r6, r5	@  num
 	rsb	r3, r5, r3, asl #3	@  num
 	add	r4, r7, r3, asl #2
 	ldr	r3, [r4, #40]	@  <variable>.alive
 	cmp	r3, #1
-	beq	.L369
+	beq	.L424
 	cmp	r3, #0
-	bne	.L357
+	bne	.L412
 	ldr	r3, [r4, #36]	@  <variable>.activeFrame
 	cmp	r3, #10
 	moveq	r3, #11
-	beq	.L368
+	beq	.L423
 	cmp	r3, #11
 	movne	r3, #10
-	beq	.L370
-.L368:
+	beq	.L425
+.L423:
 	str	r3, [r4, #36]	@  <variable>.activeFrame
-.L357:
+.L412:
 	mov	r0, r5	@  num
 	ldmea	fp, {r4, r5, r6, r7, fp, sp, lr}
 	b	updateSprite
-.L370:
+.L425:
 	bl	drawGameOver
-	b	.L357
-.L369:
+	b	.L412
+.L424:
 	mov	r0, #64
 	bl	keyHeld
 	cmp	r0, #0	@  num
-	beq	.L330
+	beq	.L385
 	ldr	r3, [r4, #4]	@  <variable>.y
 	cmp	r3, #0
 	subgt	r3, r3, #1
@@ -38392,11 +13509,11 @@ PlaySprite:
 	moveq	r3, #12
 	movne	r3, #11
 	str	r3, [r4, #36]	@  <variable>.activeFrame
-.L330:
+.L385:
 	mov	r0, #128
 	bl	keyHeld
 	cmp	r0, #0	@  num
-	beq	.L334
+	beq	.L389
 	add	r3, r6, r5	@  num
 	rsb	r3, r5, r3, asl #3	@  num
 	add	r2, r7, r3, asl #2
@@ -38409,11 +13526,11 @@ PlaySprite:
 	moveq	r3, #7
 	movne	r3, #6
 	str	r3, [r2, #36]	@  <variable>.activeFrame
-.L334:
+.L389:
 	mov	r0, #32
 	bl	keyHeld
 	cmp	r0, #0	@  num
-	beq	.L338
+	beq	.L393
 	add	r3, r6, r5	@  num
 	rsb	r3, r5, r3, asl #3	@  num
 	mov	r2, r3, asl #2
@@ -38423,19 +13540,19 @@ PlaySprite:
 	add	r1, r2, r7
 	strgt	r3, [r2, r7]	@  <variable>.x
 	ldr	r3, [r1, #4]	@  <variable>.y
-	cmp	r3, #8
-	bgt	.L340
+	cmp	r3, #70
+	bgt	.L395
 	ldr	r3, [r1, #36]	@  <variable>.activeFrame
 	cmp	r3, #0
 	moveq	r3, #1
 	movne	r3, #0
-.L366:
+.L421:
 	str	r3, [r1, #36]	@  <variable>.activeFrame
-.L338:
+.L393:
 	mov	r0, #16
 	bl	keyHeld
 	cmp	r0, #0	@  num
-	beq	.L346
+	beq	.L401
 	add	r3, r6, r5	@  num
 	rsb	r3, r5, r3, asl #3	@  num
 	mov	r2, r3, asl #2
@@ -38445,50 +13562,50 @@ PlaySprite:
 	add	r1, r2, r7
 	strle	r3, [r2, r7]	@  <variable>.x
 	ldr	r3, [r1, #4]	@  <variable>.y
-	cmp	r3, #8
-	bgt	.L348
+	cmp	r3, #70
+	bgt	.L403
 	ldr	r3, [r1, #36]	@  <variable>.activeFrame
 	cmp	r3, #0
 	moveq	r3, #1
 	movne	r3, #0
-.L367:
+.L422:
 	str	r3, [r1, #36]	@  <variable>.activeFrame
-.L346:
+.L401:
 	mov	r0, #64
 	bl	keyIsUp
 	cmp	r0, #0	@  num
-	beq	.L357
+	beq	.L412
 	add	r3, r6, r5	@  num
 	rsb	r3, r5, r3, asl #3	@  num
 	add	r2, r7, r3, asl #2
 	ldr	r3, [r2, #4]	@  <variable>.y
-	cmp	r3, #7
-	bgt	.L357
-	cmp	r3, #8
-	beq	.L363
+	cmp	r3, #29
+	bgt	.L412
+	cmp	r3, #30
+	beq	.L418
 	add	r3, r3, #4
-	cmp	r3, #8
+	cmp	r3, #30
 	str	r3, [r2, #4]	@  <variable>.y
-	bne	.L357
-.L363:
+	bne	.L412
+.L418:
 	mov	r3, #0
 	str	r3, [r2, #36]	@  <variable>.activeFrame
-	b	.L357
-.L348:
+	b	.L412
+.L403:
 	ldr	r3, [r1, #36]	@  <variable>.activeFrame
 	cmp	r3, #2
 	moveq	r3, #3
 	movne	r3, #2
-	b	.L367
-.L340:
+	b	.L422
+.L395:
 	ldr	r3, [r1, #36]	@  <variable>.activeFrame
 	cmp	r3, #4
 	moveq	r3, #5
 	movne	r3, #4
-	b	.L366
-.L372:
+	b	.L421
+.L427:
 	.align	2
-.L371:
+.L426:
 	.word	sprites
 	.size	PlaySprite, .-PlaySprite
 	.align	2
@@ -38497,103 +13614,20 @@ PlaySprite:
 Initialize:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	ldr	r3, .L374+24
-	mov	r2, #640
-	stmfd	sp!, {r4, r5, r6, r7, r8, lr}
-	str	r2, [r3, #0]	@  mapHeightTiles
-	ldr	r3, .L374+28
-	mov	r0, #240
-	str	r0, [r3, #0]	@  screenWidth
-	ldr	r3, .L374+32
-	mov	r2, #16
-	str	r2, [r3, #0]	@  playerXTile
-	ldr	r3, .L374+36
-	mov	r0, #10
-	str	r0, [r3, #0]	@  playerYTile
-	ldr	r3, .L374+40
-	mov	r0, #1
-	mov	lr, #100663296
-	str	r0, [r3, #0]	@  game_state
-	ldr	r3, .L374+44
-	ldr	r1, .L374+48
-	add	r6, lr, #63488
-	mov	r2, #2
-	str	r6, [r3, #0]	@  bg1map
-	ldr	r3, .L374+52
-	mov	ip, #0
-	str	r2, [r1, #72]	@  bg.maxRocketVelocity
-	ldr	r2, .L374+56
-	add	lr, lr, #47104
-	str	ip, [r3, #0]	@  y
-	ldr	r3, .L374+60
-	mov	r7, #160
-	str	lr, [r2, #0]	@  bg0map
-	ldr	r2, .L374+64
-	str	r7, [r3, #0]	@  screenHeight
-	ldr	r3, .L374+68
-	mov	r5, r7, asl #1
-	str	ip, [r2, #0]	@  x
-	ldr	r2, .L374+72
-	mov	r4, #32
-	add	r5, r5, #16
-	str	ip, [r3, #0]	@  yLoop
-	mov	r3, #30
-	str	r4, [r2, #0]	@  mapWidthTiles
-	str	r3, [r1, #0]	@  bg.xBGAhead
-	ldr	r2, .L374+76
-	str	r4, [r1, #16]	@  bg.yMapAhead
-	str	r5, [r1, #40]	@  bg.tileUnderPlayer
-	mov	r3, #3
-	str	r4, [r1, #8]	@  bg.xMapAhead
-	adr	r4, .L374
-	ldmia	r4, {r4-r5}
-	str	r3, [r1, #68]	@  bg.terminalVelocity
-	add	r3, r1, #44
-	stmia	r3, {r4-r5}	@  bg.rocketPower
-	str	ip, [r2, #0]	@  xLoop
-	adr	r3, .L374+8
-	ldmia	r3, {r3-r4}
-	mov	r2, #31
-	str	r2, [r1, #4]	@  bg.xBGBehind
-	add	r2, r1, #52
-	mvn	r8, #0
-	stmia	r2, {r3-r4}	@  bg.gravity
-	adr	r4, .L374+16
-	ldmia	r4, {r4-r5}
-	str	r8, [r1, #20]	@  bg.yMapBehind
-	str	ip, [r1, #36]	@  bg.deltaY
-	str	r8, [r1, #12]	@  bg.xMapBehind
-	str	ip, [r1, #24]	@  bg.ulx
-	str	ip, [r1, #28]	@  bg.uly
-	str	ip, [r1, #32]	@  bg.deltaX
-	add	r1, r1, #60
-	stmia	r1, {r4-r5}	@  bg.playerVelocity
-	ldmfd	sp!, {r4, r5, r6, r7, r8, lr}
-	bx	lr
-.L375:
+	@ frame_needed = 1, uses_anonymous_args = 0
+	ldr	r3, .L429
+	mov	ip, sp
+	mov	r2, #1
+	stmfd	sp!, {fp, ip, lr, pc}
+	sub	fp, ip, #4
+	str	r2, [r3, #0]	@  GameState
+	bl	initSprites
+	ldmea	fp, {fp, sp, lr}
+	b	initbackgrounds
+.L430:
 	.align	2
-.L374:
-	.word	1069757235
-	.word	858993459
-	.word	1069128089
-	.word	-1717986918
-	.word	0
-	.word	0
-	.word	mapHeightTiles
-	.word	screenWidth
-	.word	playerXTile
-	.word	playerYTile
-	.word	game_state
-	.word	bg1map
-	.word	bg
-	.word	y
-	.word	bg0map
-	.word	screenHeight
-	.word	x
-	.word	yLoop
-	.word	mapWidthTiles
-	.word	xLoop
+.L429:
+	.word	GameState
 	.size	Initialize, .-Initialize
 	.align	2
 	.global	LoadContent
@@ -38602,49 +13636,36 @@ LoadContent:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
-	mov	r3, #6016
 	mov	ip, sp
-	mov	r2, #67108864
-	add	r3, r3, #1
 	stmfd	sp!, {fp, ip, lr, pc}
-	strh	r3, [r2, #8]	@ movhi 
-	mov	r3, #8064	@ movhi
+	ldr	r2, .L440
+	ldr	r3, [r2, #0]	@  GameState
 	sub	fp, ip, #4
-	strh	r3, [r2, #10]	@ movhi 
-	ldr	r0, .L377
-	mov	r1, #83886080
-	mov	r2, #256
-	mov	r3, #-2147483648
-	bl	DMAFastCopy
-	mov	r1, #100663296
-	mov	r2, #3072
-	ldr	r0, .L377+4
-	mov	r3, #-2080374784
-	bl	DMAFastCopy
-	ldr	r3, .L377+8
-	mov	r0, #0
-	mov	lr, pc
-	bx	r3
-	ldr	r2, .L377+12
-	mov	lr, pc
-	bx	r2
-	bl	blackoutMinerals
-	bl	addAllMinerals
+	cmp	r3, #4
+	ldrls	pc, [pc, r3, asl #2]
+	b	.L431
+	.p2align 2
+.L439:
+	.word	.L433
+	.word	.L434
+	.word	.L431
+	.word	.L431
+	.word	.L431
+.L433:
 	ldmea	fp, {fp, sp, lr}
-	b	loadStartingPosition
-.L378:
+	b	loadTitle
+.L434:
+	bl	loadBackground
+	ldmea	fp, {fp, sp, lr}
+	b	loadSprite
+.L431:
+	ldmea	fp, {fp, sp, lr}
+	bx	lr
+.L441:
 	.align	2
-.L377:
-	.word	map_Palette
-	.word	map_Tiles
-	.word	time
-	.word	srand
+.L440:
+	.word	GameState
 	.size	LoadContent, .-LoadContent
-	.global	__subdf3
-	.global	__floatsidf
-	.global	__ltdf2
-	.global	__adddf3
-	.global	__gtdf2
 	.align	2
 	.global	Update
 	.type	Update, %function
@@ -38653,431 +13674,47 @@ Update:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+	stmfd	sp!, {fp, ip, lr, pc}
+	ldr	r2, .L451
+	ldr	r3, [r2, #0]	@  GameState
 	sub	fp, ip, #4
-	bl	keyPoll
-	bl	UpdateSpriteMemory
-	bl	WaitVBlank
-	ldr	r2, .L431+8
-	ldr	r3, [r2, #0]	@  game_state
 	cmp	r3, #4
 	ldrls	pc, [pc, r3, asl #2]
-	b	.L379
+	b	.L442
 	.p2align 2
-.L420:
-	.word	.L381
-	.word	.L382
-	.word	.L419
-	.word	.L419
-	.word	.L419
-.L381:
-	mov	r2, #260
+.L450:
+	.word	.L444
+	.word	.L445
+	.word	.L442
+	.word	.L447
+	.word	.L448
+.L444:
 	mov	r3, #67108864
-	str	r2, [r3, #0]
-.L379:
-	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
-	bx	lr
-.L382:
-	mov	r3, #4928
-	mov	r2, #67108864
-	str	r3, [r2, #0]
-	bl	UpdateSpriteMemory
+	mov	r2, #260	@ movhi
+	strh	r2, [r3, #0]	@ movhi 
+	ldmea	fp, {fp, sp, lr}
+	b	updateTitle
+.L445:
+	mov	r3, #67108864
+	mov	r2, #4928	@ movhi
+	strh	r2, [r3, #0]	@ movhi 
+	bl	drawBackground
 	mov	r0, #0
-	bl	PlaySprite
-	mov	r0, #1
-	bl	keyIsDown
-	cmp	r0, #0
-	bne	.L384
-	mov	r0, #2
-	bl	keyIsDown
-	cmp	r0, #0
-	bne	.L384
-	mov	r0, #8
-	bl	keyIsDown
-	cmp	r0, #0
-	bne	.L384
-	mov	r0, #4
-	bl	keyIsDown
-	cmp	r0, #0
-	bne	.L384
-	mov	r0, #256
-	bl	keyIsDown
-	cmp	r0, #0
-	bne	.L384
-	mov	r0, #512
-	bl	keyIsDown
-	cmp	r0, #0
-	beq	.L383
-.L384:
-	ldr	r1, .L431+12
-	ldr	r0, [r1, #40]	@  bg.tileUnderPlayer
-	bl	setDirt
-.L383:
-	mov	r0, #64
-	bl	keyIsDown
-	cmp	r0, #0
-	beq	.L385
-	ldr	r2, .L431+16
-	ldr	r8, [r2, #0]	@  y
-	cmp	r8, #10
-	ble	.L391
-	ldr	r3, .L431+12
-	add	sl, r3, #60
-	add	r1, r3, #44
-	ldmia	r1, {r2-r3}	@  bg.rocketPower
-	ldr	ip, .L431+20
-	ldmia	sl, {r0-r1}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	ip
-	ldr	ip, .L431+12
-	mov	r5, r1
-	mov	r4, r0
-	ldr	r0, [ip, #72]	@  bg.maxRocketVelocity
-	ldr	r9, .L431+24
-	rsb	r0, r0, #0
-	stmia	sl, {r4-r5}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	r9
-	mov	r7, r1
-	mov	r6, r0
-	mov	r3, r7
-	mov	r2, r6
-	mov	r1, r5
-	mov	r0, r4
-	ldr	ip, .L431+28
-	mov	lr, pc
-	bx	ip
-	cmp	r0, #0
-	blt	.L429
-.L387:
-	mov	r0, r8
-	mov	lr, pc
-	bx	r9
-	ldr	r7, .L431+32
-	ldmia	sl, {r2-r3}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	r7
-	ldr	r6, .L431+36
-	mov	lr, pc
-	bx	r6
-	ldr	r8, .L431+40
-	mov	lr, pc
-	bx	r8
-	ldr	lr, .L431+12
-	ldr	r1, .L431+16
-	ldr	r3, [lr, #36]	@  bg.deltaY
-	str	r0, [r1, #0]	@  y
-	mov	r0, r3
-	mov	lr, pc
-	bx	r9
-	mov	r5, r1
-	mov	r4, r0
-	ldmia	sl, {r0-r1}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	r6
-	mov	r3, r1
-	mov	r2, r0
-	mov	r1, r5
-	mov	r0, r4
-	mov	lr, pc
-	bx	r7
-	mov	lr, pc
-	bx	r8
-	ldr	r2, .L431+12
-	str	r0, [r2, #36]	@  bg.deltaY
-.L390:
-	mov	r0, #32
-	bl	keyIsDown
-	cmp	r0, #0
-	ldreq	r4, .L431+44
-	beq	.L395
-	ldr	r4, .L431+44
-	ldr	r2, [r4, #0]	@  x
-	cmp	r2, #0
-	ble	.L395
-	ldr	r1, .L431+12
-	ldr	r3, [r1, #32]	@  bg.deltaX
-	sub	r2, r2, #1
-	sub	r3, r3, #1
-	str	r2, [r4, #0]	@  x
-	str	r3, [r1, #32]	@  bg.deltaX
-.L395:
-	mov	r0, #16
-	bl	keyIsDown
-	cmp	r0, #0
-	beq	.L396
-	ldr	r2, [r4, #0]	@  x
-	cmp	r2, #15
-	bgt	.L396
-	ldr	r5, .L431+12
-	ldr	r3, [r5, #32]	@  bg.deltaX
-	add	r2, r2, #1
-	add	r3, r3, #1
-	str	r2, [r4, #0]	@  x
-	str	r3, [r5, #32]	@  bg.deltaX
-.L396:
-	mov	r0, #128
-	bl	keyIsDown
-	cmp	r0, #0
-	beq	.L397
-	ldr	r3, .L431+48
-	ldr	ip, .L431+16
-	ldr	r2, [r3, #0]	@  mapHeightTiles
-	ldr	r1, [ip, #0]	@  y
-	cmp	r1, r2, asl #3
-	bge	.L397
-	ldr	lr, .L431+12
-	ldr	r3, [lr, #36]	@  bg.deltaY
-	add	r2, r1, #1
-	add	r3, r3, #1
-	str	r2, [ip, #0]	@  y
-	str	r3, [lr, #36]	@  bg.deltaY
-.L397:
-	ldr	r1, .L431+12
-	ldr	r2, .L431+16
-	ldr	r0, [r1, #32]	@  bg.deltaX
-	ldrh	r3, [r2, #0]	@  y
-	ldrh	r1, [r4, #0]	@  x
-	mov	r2, #67108864
-	cmn	r0, #8
-	strh	r3, [r2, #18]	@ movhi 
-	strh	r3, [r2, #22]	@ movhi 
-	strh	r1, [r2, #16]	@ movhi 
-	strh	r1, [r2, #20]	@ movhi 
-	ldr	r1, .L431+12
-	beq	.L430
-	cmp	r0, #8
-	ldreq	r3, [r1, #40]	@  bg.tileUnderPlayer
-	moveq	r2, #0
-	addeq	r3, r3, #1
-	streq	r3, [r1, #40]	@  bg.tileUnderPlayer
-	streq	r2, [r1, #32]	@  bg.deltaX
-.L399:
-	ldr	r3, .L431+12
-	ldr	r6, [r3, #36]	@  bg.deltaY
-	cmn	r6, #8
-	mov	r7, r3
-	bgt	.L401
-	ldr	r4, .L431+52
-	ldr	lr, [r4, #0]	@  tilesFromTop
-	sub	lr, lr, #1
-	ldr	r3, .L431+56
-	sub	r1, lr, #1
-	cmp	r1, #0
-	rsblt	r1, r1, #0
-	ldr	r5, [r3, #0]	@  mapWidthTiles
-	mov	r2, r1, asr #31
-	ldr	ip, [r7, #40]	@  bg.tileUnderPlayer
-	add	r2, r1, r2, lsr #27
-	rsb	ip, r5, ip
-	bic	r2, r2, #31
-	ldr	r5, .L431+60
-	mov	r0, lr, asl #5
-	ldr	sl, .L431+64
-	rsb	r1, r2, r1
-	sub	r0, r0, #32
-	add	r2, r6, #8
-	ldr	r9, .L431+68
-	ldr	r8, .L431+72
-	mov	r3, r1, asl #5
-	cmp	r0, #0
-	rsblt	r0, r0, #0
-	str	ip, [r7, #40]	@  bg.tileUnderPlayer
-	str	lr, [r4, #0]	@  tilesFromTop
-	str	r2, [r7, #36]	@  bg.deltaY
-	ldr	ip, [r5, #0]	@  bg1map
-	ldr	r2, [sl, #0]	@  bg0map
-	ldr	r5, .L431+76
-	ldr	r4, .L431+80
-	str	r3, [r8, #0]	@  locationToPaste
-	str	r0, [r9, #0]	@  tileToCopy
-	mov	r1, r1, asl #6
-	mov	r0, r0, asl #1
-	mov	r3, #31	@  loopMe
-.L406:
-	ldrh	lr, [r0, r5]	@ movhi	@  map_Map
-	strh	lr, [r1, r2]	@ movhi 
-	ldrh	lr, [r0, r4]	@ movhi	@  material_Map
-	subs	r3, r3, #1	@  loopMe,  loopMe
-	strh	lr, [r1, ip]	@ movhi 
-	add	r0, r0, #2
-	add	r1, r1, #2
-	bpl	.L406
-.L407:
-	bl	WaitVBlank
-	ldr	r2, .L431+84
-	mov	r3, #39936
-	add	r3, r3, #64
-	str	r3, [r2, #0]	@  n
-.L414:
-	sub	r3, r3, #1
-	cmn	r3, #1
-	bne	.L414
-.L428:
-	str	r3, [r2, #0]
-	b	.L379
-.L401:
-	cmp	r6, #7
-	ble	.L407
-	ldr	r5, .L431+52
-	ldr	r0, [r5, #0]	@  tilesFromTop
-	ldr	r3, .L431+56
-	add	ip, r0, #22
-	mov	r2, ip, asr #31
-	ldr	r4, [r3, #0]	@  mapWidthTiles
-	add	r0, r0, #1
-	add	r2, ip, r2, lsr #27
-	ldr	r1, [r7, #40]	@  bg.tileUnderPlayer
-	bic	r2, r2, #31
-	mov	lr, r0, asl #5
-	str	r0, [r5, #0]	@  tilesFromTop
-	ldr	sl, .L431+64
-	ldr	r0, .L431+60
-	rsb	ip, r2, ip
-	add	r1, r1, r4
-	sub	r2, r6, #8
-	ldr	r9, .L431+68
-	ldr	r8, .L431+72
-	mov	r3, ip, asl #5
-	add	lr, lr, #672
-	str	r1, [r7, #40]	@  bg.tileUnderPlayer
-	str	r2, [r7, #36]	@  bg.deltaY
-	ldr	r1, [r0, #0]	@  bg1map
-	ldr	r2, [sl, #0]	@  bg0map
-	ldr	r5, .L431+76
-	ldr	r4, .L431+80
-	str	r3, [r8, #0]	@  locationToPaste
-	str	lr, [r9, #0]	@  tileToCopy
-	mov	ip, ip, asl #6
-	mov	lr, lr, asl #1
-	mov	r3, #31	@  loopMe
-.L413:
-	ldrh	r0, [lr, r5]	@ movhi	@  map_Map
-	strh	r0, [ip, r2]	@ movhi 
-	ldrh	r0, [lr, r4]	@ movhi	@  material_Map
-	subs	r3, r3, #1	@  loopMe,  loopMe
-	strh	r0, [ip, r1]	@ movhi 
-	add	lr, lr, #2
-	add	ip, ip, #2
-	bpl	.L413
-	b	.L407
-.L430:
-	ldr	r3, [r1, #40]	@  bg.tileUnderPlayer
-	mov	r2, #0
-	sub	r3, r3, #1
-	str	r2, [r1, #32]	@  bg.deltaX
-	str	r3, [r1, #40]	@  bg.tileUnderPlayer
-	b	.L399
-.L429:
-	stmia	sl, {r6-r7}	@  bg.playerVelocity
-	b	.L387
-.L391:
-	ldr	r3, .L431+88
-	adr	r0, .L431
-	ldmia	r0, {r0-r1}
-	stmia	r3, {r0-r1}	@  bg.playerVelocity
-	b	.L390
-.L385:
-	ldr	r0, .L431+92
-	bl	checkDirection
-	cmp	r0, #1
-	bne	.L391
-	ldr	r9, .L431+12
-	add	r8, r9, #60
-	add	r1, r9, #52
-	ldmia	r1, {r2-r3}	@  bg.gravity
-	ldr	r5, .L431+32
-	ldmia	r8, {r0-r1}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	r5
-	mov	r5, r1
-	mov	r4, r0
-	ldr	sl, .L431+24
-	ldr	r0, [r9, #68]	@  bg.terminalVelocity
-	stmia	r8, {r4-r5}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	sl
-	mov	r7, r1
-	mov	r6, r0
-	mov	r3, r7
-	mov	r2, r6
-	mov	r1, r5
-	mov	r0, r4
-	ldr	ip, .L431+96
-	mov	lr, pc
-	bx	ip
-	cmp	r0, #0
-	stmgtia	r8, {r6-r7}	@  bg.playerVelocity
-.L392:
-	ldr	ip, .L431+16
-	ldr	r0, [ip, #0]	@  y
-	mov	lr, pc
-	bx	sl
-	ldr	r5, .L431+32
-	ldmia	r8, {r2-r3}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	r5
-	ldr	r6, .L431+36
-	mov	lr, pc
-	bx	r6
-	ldr	r7, .L431+40
-	mov	lr, pc
-	bx	r7
-	ldr	ip, .L431+16
-	ldr	r3, [r9, #36]	@  bg.deltaY
-	str	r0, [ip, #0]	@  y
-	mov	r0, r3
-	mov	lr, pc
-	bx	sl
-	mov	r5, r1
-	mov	r4, r0
-	ldmia	r8, {r0-r1}	@  bg.playerVelocity
-	mov	lr, pc
-	bx	r6
-	mov	r3, r1
-	mov	r2, r0
-	mov	r1, r5
-	mov	r0, r4
-	ldr	r5, .L431+32
-	mov	lr, pc
-	bx	r5
-	mov	lr, pc
-	bx	r7
-	str	r0, [r9, #36]	@  bg.deltaY
-	b	.L390
-.L419:
-	mov	r3, #256
-	add	r3, r3, #3
-	mov	r2, #67108864
-	b	.L428
-.L432:
+	ldmea	fp, {fp, sp, lr}
+	b	PlaySprite
+.L442:
+	ldmea	fp, {fp, sp, lr}
+	bx	lr
+.L447:
+	ldmea	fp, {fp, sp, lr}
+	b	updateInventory
+.L448:
+	ldmea	fp, {fp, sp, lr}
+	b	updateGameOver
+.L452:
 	.align	2
-.L431:
-	.word	0
-	.word	0
-	.word	game_state
-	.word	bg
-	.word	y
-	.word	__subdf3
-	.word	__floatsidf
-	.word	__ltdf2
-	.word	__adddf3
-	.word	floor
-	.word	__fixdfsi
-	.word	x
-	.word	mapHeightTiles
-	.word	tilesFromTop
-	.word	mapWidthTiles
-	.word	bg1map
-	.word	bg0map
-	.word	tileToCopy
-	.word	locationToPaste
-	.word	map_Map
-	.word	material_Map
-	.word	n
-	.word	bg+60
-	.word	.LC2
-	.word	__gtdf2
+.L451:
+	.word	GameState
 	.size	Update, .-Update
 	.align	2
 	.global	Draw
@@ -39085,10 +13722,43 @@ Update:
 Draw:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-	@ lr needed for prologue
+	@ frame_needed = 1, uses_anonymous_args = 0
+	mov	ip, sp
+	stmfd	sp!, {fp, ip, lr, pc}
+	sub	fp, ip, #4
+	bl	WaitVBlank
+	ldr	r2, .L462
+	ldr	r3, [r2, #0]	@  GameState
+	cmp	r3, #4
+	ldrls	pc, [pc, r3, asl #2]
+	b	.L453
+	.p2align 2
+.L461:
+	.word	.L455
+	.word	.L456
+	.word	.L453
+	.word	.L458
+	.word	.L459
+.L455:
+	ldmea	fp, {fp, sp, lr}
+	b	drawTitle
+.L456:
+	bl	WaitVBlank
+	ldmea	fp, {fp, sp, lr}
+	b	UpdateSpriteMemory
+.L453:
+	ldmea	fp, {fp, sp, lr}
 	bx	lr
+.L458:
+	ldmea	fp, {fp, sp, lr}
+	b	drawInventory
+.L459:
+	ldmea	fp, {fp, sp, lr}
+	b	drawGameOver
+.L463:
+	.align	2
+.L462:
+	.word	GameState
 	.size	Draw, .-Draw
 	.align	2
 	.global	main
@@ -39102,15 +13772,25 @@ main:
 	sub	fp, ip, #4
 	bl	Initialize
 	bl	LoadContent
-.L446:
+.L472:
 	bl	Update
 	bl	Draw
-	b	.L446
+	mov	r3, #29952	@  n
+	add	r3, r3, #48	@  n,  n
+.L471:
+	sub	r3, r3, #1	@  n,  n
+	cmp	r3, #0	@  n
+	bgt	.L471
+	b	.L472
 	.size	main, .-main
-	.comm	buttons, 40, 32
+	.comm	gamesprites, 1024, 32
+	.comm	sprites, 11776, 32
+	.comm	videoBuffer, 4, 32
 	.comm	curr_state, 2, 16
 	.comm	prev_state, 2, 16
-	.comm	material_Map, 40960, 16
+	.comm	buttons, 20, 16
+	.comm	map_Map, 4, 32
+	.comm	material_Map, 4, 32
 	.comm	bg, 76, 32
 	.comm	tileToCopy, 4, 32
 	.comm	locationToPaste, 4, 32
@@ -39126,8 +13806,4 @@ main:
 	.comm	xLoop, 4, 32
 	.comm	yLoop, 4, 32
 	.comm	GameState, 4, 32
-	.comm	gamesprites, 1024, 32
-	.comm	sprites, 11776, 32
-	.comm	game_state, 4, 32
-	.comm	n, 4, 32
 	.ident	"GCC: (GNU) 3.3.2"

@@ -49,7 +49,7 @@ include $(HAMDIR)/system/master.mak
 #
 # Set the name of your desired GBA image name here
 #
-PROGNAME=Final_Project
+PROGNAME=FinalProject
 
 #
 # Compile using Krawall software (set to yes or no) ?
