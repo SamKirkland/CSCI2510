@@ -1,4 +1,5 @@
 #include "sprite.h"
+#include "background.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////GameState & bool defines
 int GameState;
@@ -57,6 +58,7 @@ void Update()
             break;
         case STATE_INGAME:
             SetMode(0 | BG0_ENABLE | BG1_ENABLE | OBJ_ENABLE | OBJ_MAP_1D);
+
             drawBackground();
             PlaySprite(0);
             

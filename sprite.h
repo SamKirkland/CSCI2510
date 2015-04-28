@@ -2,7 +2,6 @@ typedef unsigned short u16;
 typedef signed int s32;
 
 #include "global.h"
-#include "background.h"
 #include "scr.h"
 #include "title.h"
 #include "playerSprite.h"
@@ -179,9 +178,11 @@ void PlaySprite(int num) {
     WaitVBlank();
     if (sprites[num].alive == 1) {
         if (keyHeld(BUTTON_UP)) {
+            /*
             if (sprites[num].y > 0) {
                 sprites[num].y -= 1;
             }
+            */
             if (sprites[num].activeFrame == 11) {
                 sprites[num].activeFrame = 12;
             }
@@ -192,9 +193,11 @@ void PlaySprite(int num) {
 
 
         if (keyHeld(BUTTON_DOWN)) {
+            /*
             if (sprites[num].y < (160-16)) {
                 sprites[num].y += 1;
             }
+            */
             
             if (sprites[num].activeFrame == 6) {
                 sprites[num].activeFrame = 7;
@@ -205,9 +208,11 @@ void PlaySprite(int num) {
         }
 
         if (keyHeld(BUTTON_LEFT)) {
+            /*
             if (sprites[num].x > 0) {
                 sprites[num].x -= 1;
             }
+            */
             if (sprites[num].y <= 70){
                 //setting the animation for the movement above the ground.
                 if (sprites[num].activeFrame == 0) {
@@ -230,9 +235,11 @@ void PlaySprite(int num) {
 
         if (keyHeld(BUTTON_RIGHT)) {
             //setting the x value for the movement to right.
+            /*
             if (sprites[num].x < (240-16)) {
                 sprites[num].x += 1;
             }
+            */
             
             //checking if the sprite is above the ground or below.
             if (sprites[num].y <= 70) {

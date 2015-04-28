@@ -1,8 +1,15 @@
+#include "font.h"
+
+
 /////////////////////////////////////////////////////////////////////////////////////////// Sprite defines
 #define SpriteMem ((unsigned short*)0x7000000)
 #define SpriteData ((unsigned short*)0x6010000)
 unsigned short* SpriteData3 = SpriteData + 8192;
 #define SpritePal ((unsigned short*)0x5000200)
+
+#define bool int
+#define true 1
+#define false 0
 
 // misc sprite constants
 #define OBJ_MAP_2D          0x0
@@ -223,3 +230,4 @@ void DMAFastCopy(void* source, void* dest, unsigned int count,unsigned int mode)
         REG_DMA3CNT = count | mode;
     }
 }
+

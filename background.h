@@ -1,9 +1,11 @@
-#include "mapFunctions.h"
 #include <time.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
+#include "mapFunctions.h"
+
+int previousX;
 
 ////////////////////////////////////////////////////////////////This method initializes the background variables of the game.
 void initbackgrounds() {
@@ -11,6 +13,7 @@ void initbackgrounds() {
     map_Map = (unsigned short *)malloc(20480 * sizeof(unsigned short));
 
 
+    previousX = 0;
     x = 0;
 	y = 0;
 		
@@ -81,6 +84,35 @@ void drawBackground() {
         setDirt(bg.tileUnderPlayer);
     }
 			
+			
+    // don't let the player fly too high
+    if (y < 16 && bg.playerVelocity < 0) {
+        y = 16;
+        bg.playerVelocity = 0;
+    }
+    
+    // keep moving the player in their last direction until they stop on a 16x16 tile
+    bool isTileAligned = false;
+    if ((sprites[0].x + x) % 16 == 0) {
+        isTileAligned = true;
+    }
+
+    if (!keyIsDown(BUTTON_LEFT) && !keyIsDown(BUTTON_RIGHT)) {
+        if (!isTileAligned) { // keep moving them to a 16x16 tile
+            int changeInX = previousX - x - sprites[0].x;
+
+            if (changeInX > 0) {
+                sprites[0].x += 1;
+            }
+            else if (changeInX < 0) {
+                sprites[0].x -= 1;
+            }
+        }
+    }
+
+
+    	
+			
 	// if they aren't flying - apply gravity
 	if (keyIsDown(BUTTON_UP)) {
 	    // check if tile above you is empty
@@ -97,7 +129,8 @@ void drawBackground() {
             // Apply the velocity to the player
             y = floor(y + bg.playerVelocity);
             bg.deltaY += floor(bg.playerVelocity);
-        } else {
+        }
+        else {
             bg.playerVelocity = 0;
         }
     }
@@ -121,15 +154,31 @@ void drawBackground() {
 	
 	
 	//Button Detection
-	if (keyIsDown(BUTTON_LEFT) && x > 0) {
-        x--;
-        bg.deltaX--;
+	if (keyIsDown(BUTTON_LEFT)) {
+	    // move background
+        if (x > 0) {
+            x--;
+            bg.deltaX--;
+        }
+        
+        // move player
+        else if (sprites[0].x > 0) {
+            sprites[0].x -= 1;
+        }
     }
     
     
-	if (keyIsDown(BUTTON_RIGHT) && x < 16) {
-        x++;
-        bg.deltaX++;
+	if (keyIsDown(BUTTON_RIGHT)) {
+	    // move background
+        if (x < 16) {
+            x++;
+            bg.deltaX++;
+        }
+
+        // move player
+        else if (sprites[0].x < (240-16) ) {
+            sprites[0].x += 1;
+        }
     }
 
 
@@ -182,6 +231,10 @@ void drawBackground() {
             bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
         }
     }
+    
+    
+    
+    previousX = x + sprites[0].x;
 }
 
 //This method is used to draw pixels to the backgrounds.
@@ -308,4 +361,34 @@ void DrawBox3(int left, int top, int right, int bottom, unsigned short color) {
 	for(y = top; y < bottom; y++)
 	for(x = left; x < right; x++)
 	DrawPixel3(x, y, color);
+}
+
+
+
+//TEXT
+void DrawChar(int left, int top, char letter, unsigned short color)
+{
+int x, y;
+int draw;
+	for(y = 0; y < 8; y++){
+		for (x = 0; x < 8; x++)
+		{
+		// grab a pixel from the font char
+		draw = font[(letter-32) * 64 + y * 8 + x];
+			
+		// if pixel = 1, then draw it
+		if (draw)
+			DrawPixel3(left + x, top + y, color);//or other DrawPixel function
+		}
+	}
+}
+
+void Print(int left, int top, char *str, unsigned short color)
+{
+    int pos = 0;
+    while (*str)
+    {
+        DrawChar(left + pos, top, *str++, color);
+        pos += 8;
+    }
 }

@@ -2,7 +2,6 @@ typedef unsigned short u16;
 typedef signed int s32;
 
 #include "global.h"
-#include "background.h"
 #include "scr.h"
 #include "title.h"
 #include "playerSprite.h"
@@ -38,7 +37,9 @@ void setSpriteInfo(int num) {
     sprites[num].currentFrame[13] = 104;
     sprites[num].x = 240;
     sprites[num].y = 160;
+    
     sprites[num].alive = 1;
+    
     sprites[num].hullType = 50;
     sprites[num].engineType = 1;
     sprites[num].Movespeed = 1;
@@ -105,7 +106,7 @@ void flipSprite(int flip, int num) {
 }
 
 //The methods for the rotatoin of the player sprites.
-void RotateSprite(int rotDataIndex, s32 angle, s32 x_scale,s32 y_scale) {
+void RotateSprite(int rotDataIndex, s32 angle, s32 x_scale, s32 y_scale) {
 	s32 pa,pb,pc,pd;
 
 	pa = ((x_scale) * (s32)COS[angle])>>8;    //(do my fixed point multiplies and shift back down)
@@ -177,9 +178,11 @@ void PlaySprite(int num) {
     WaitVBlank();
     if (sprites[num].alive == 1) {
         if (keyHeld(BUTTON_UP)) {
+            /*
             if (sprites[num].y > 0) {
                 sprites[num].y -= 1;
             }
+            */
             if (sprites[num].activeFrame == 11) {
                 sprites[num].activeFrame = 12;
             }
@@ -190,9 +193,11 @@ void PlaySprite(int num) {
 
 
         if (keyHeld(BUTTON_DOWN)) {
+            /*
             if (sprites[num].y < (160-16)) {
                 sprites[num].y += 1;
             }
+            */
             
             if (sprites[num].activeFrame == 6) {
                 sprites[num].activeFrame = 7;

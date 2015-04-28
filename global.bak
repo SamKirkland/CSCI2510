@@ -1,16 +1,23 @@
+//#include "font.h"
+
+
 /////////////////////////////////////////////////////////////////////////////////////////// Sprite defines
 #define SpriteMem ((unsigned short*)0x7000000)
 #define SpriteData ((unsigned short*)0x6010000)
 unsigned short* SpriteData3 = SpriteData + 8192;
 #define SpritePal ((unsigned short*)0x5000200)
 
-//misc sprite constants
+#define bool int
+#define true 1
+#define false 0
+
+// misc sprite constants
 #define OBJ_MAP_2D          0x0
 #define OBJ_MAP_1D          0x40
 #define OBJ_ENABLE          0x1000
 #define BG2_ENABLE          0x400
 
-//attribute0 stuff
+// attribute0 stuff
 #define ROTATION_FLAG 		0x100
 #define SIZE_DOUBLE			0x200
 #define MODE_NORMAL     	0x0
@@ -24,7 +31,7 @@ unsigned short* SpriteData3 = SpriteData + 8192;
 #define WIDE                0x4000
 #define REG_BLDMOD          *(u16*)0x4000050
 
-//attribute1 stuff
+// attribute1 stuff
 #define ROTDATA(n)          ((n) << 9)
 #define TRANS(n)            ((n) << 10)
 #define HORIZONTAL_FLIP		0x1000
@@ -49,19 +56,19 @@ unsigned short* SpriteData3 = SpriteData + 8192;
 #define TARGET_LOW_BD       0x2000
 #define BLEND_NEG           0x40
 
-//all blends 0->14
+// all blends 0->14
 #define BLEND_LOW(n) ( (n) * 0x1 ) //dark pixels get through
 #define BLEND_HIGH(n) ( (n) * 0x100 ) //lighter pixels get through
 #define BLEND_LEVEL(n) ( BLEND_LOW(n) | BLEND_HIGH(n) ) //closest to semi-transparent levels
 
-//attribute2 stuff
+// attribute2 stuff
 #define PRIORITY(n)		((n) << 10)
 #define PALETTE(n)		((n) << 12)
 s32 angle = 0;
 s32 angle2 = 0;
 s32 zoom = 1<<8;
 
-//////////////////////////////////////////////////////////////////////////////////////////////Sprite methods and struct defines
+////////////////////////////////////////////////////////////////////////////////////////////// Sprite methods and struct defines
 typedef struct tagSprite {
 	unsigned short attribute0;
 	unsigned short attribute1;
@@ -112,7 +119,7 @@ typedef struct tagRotData {
 pRotData rotData = (pRotData)gamesprites;
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////macro defines
+///////////////////////////////////////////////////////////////////////////////////////////// macro defines
 #define BG0_ENABLE 0x100
 #define BG1_ENABLE 0x200
 #define BG2_ENABLE 0x400
@@ -128,7 +135,7 @@ pRotData rotData = (pRotData)gamesprites;
 #define DMA_32NOW (DMA_ENABLE | DMA_TIMING_IMMEDIATE | DMA_32)
 #define DMA_16NOW (DMA_ENABLE | DMA_TIMING_IMMEDIATE | DMA_16)
 
-//scrolling registers for backgrounds
+// scrolling registers for backgrounds
 #define REG_BG0HOFS *(volatile unsigned short*)0x4000010
 #define REG_BG0VOFS *(volatile unsigned short*)0x4000012
 #define REG_BG1HOFS *(volatile unsigned short*)0x4000014
@@ -139,7 +146,7 @@ pRotData rotData = (pRotData)gamesprites;
 #define REG_BG3VOFS *(volatile unsigned short*)0x400001E
 
 
-//background setup registers and data
+// background setup registers and data
 #define REG_BG0CNT *(volatile unsigned short*)0x4000008
 #define REG_BG1CNT *(volatile unsigned short*)0x400000A
 #define REG_BG2CNT *(volatile unsigned short*)0x400000C
@@ -150,37 +157,37 @@ pRotData rotData = (pRotData)gamesprites;
 #define WRAPAROUND 0x1
 
 
-//Palette for Backgrounds
+// Palette for Backgrounds
 #define BGPaletteMem ((unsigned short*)0x5000000)
 
-//background tile bitmap sizes
+// background tile bitmap sizes
 #define TEXTBG_SIZE_256x256 0x0
 #define TEXTBG_SIZE_256x512	0x8000
 #define TEXTBG_SIZE_512x256	0x4000
 #define TEXTBG_SIZE_512x512	0xC000
 
-//background memory offset macros
+// background memory offset macros
 #define CharBaseBlock(n) (((n)*0x4000)+0x6000000)
 #define ScreenBaseBlock(n) (((n)*0x800)+0x6000000)
 
 unsigned short* bg0map =(unsigned short*)ScreenBaseBlock(31);
 
-//macro to change the video mode
+// macro to change the video mode
 #define SetMode(mode) REG_DISPCNT = (mode)
 
-//create a pointer to the video buffer
+// create a pointer to the video buffer
 unsigned short* FrontBuffer = (unsigned short*)0x6000000;
 unsigned short* BackBuffer = (unsigned short*)0x600A000;
 unsigned short* videoBuffer;
 #define BACKBUFFER 0x10
 
-//define some video addresses
+// define some video addresses
 #define REG_DISPCNT *(volatile unsigned short*)0x4000000
 #define BGPaletteMem ((unsigned short*)0x5000000)
-//declare scanline counter for vertical blank
+// declare scanline counter for vertical blank
 volatile unsigned short* ScanlineCounter = (volatile unsigned short*)0x4000006;
 
-///////////////////////////////////////////////////////////////////////////////////////////////button defines
+/////////////////////////////////////////////////////////////////////////////////////////////// button defines
 volatile unsigned int *BUTTONS = (volatile unsigned int *)0X4000130; //button pointer
 unsigned short curr_state, prev_state;
 #define BUTTON_A 1
@@ -195,7 +202,7 @@ unsigned short curr_state, prev_state;
 #define BUTTON_L 512
 short buttons[10]; //button status
 
-////////////////////////////////////////////////////////////////////////////////////////////////button method defines
+//////////////////////////////////////////////////////////////////////////////////////////////// button method defines
 void keyPoll() {
 	prev_state = curr_state;
 	curr_state = ~(*BUTTONS) & 0x03FF;
@@ -223,3 +230,4 @@ void DMAFastCopy(void* source, void* dest, unsigned int count,unsigned int mode)
         REG_DMA3CNT = count | mode;
     }
 }
+
