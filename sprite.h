@@ -7,6 +7,7 @@ typedef signed int s32;
 #include "playerSprite.h"
 
 int stotal = sprite_WIDTH*sprite_HEIGHT/2;
+void updateSprite(int num);
 
 //This methods updates the sprite memory as soon as the changes are made.
 void UpdateSpriteMemory() {
@@ -43,7 +44,7 @@ void setSpriteInfo(int num) {
     sprites[num].hullType = 50;
     sprites[num].engineType = 1;
     sprites[num].Movespeed = 1;
-    sprites[num].drillType = 1;
+    sprites[num].drillType = 2;
     sprites[num].tankType = 1;
     sprites[num].money = 0;
     sprites[num].gasLevel = 50;

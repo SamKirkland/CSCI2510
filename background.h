@@ -23,8 +23,8 @@ void initbackgrounds() {
 	screenWidth = 240;
 	screenHeight = 160;
 	
-	playerXTile = 16; // 16
-	playerYTile = 10;
+	//playerXTile = 16; // 16
+	//playerYTile = 10;
 	
     xLoop = 0;
     yLoop = 0;
@@ -47,6 +47,17 @@ void initbackgrounds() {
     bg.playerVelocity = 0;
     bg.terminalVelocity = 3;
     bg.maxRocketVelocity = 2;
+    
+    bg.currentlyDigging = false;
+    bg.digProgress = 0;
+    bg.digTotal = 0;
+    bg.digDirection;
+    
+    bg.directionToKeepMovingX = 0; // stores a positive or negative number to keep the player moving left or right
+    bg.directionToKeepMovingY = 0; // same but up and down
+    bg.tileUnderPlayer = 0;
+    bg.tilesFromTop = 9;
+    bg.tilesFromLeft = 0;
     
 	bg0map = (unsigned short*)ScreenBaseBlock(23);
 	bg1map = (unsigned short*)ScreenBaseBlock(31);
@@ -83,108 +94,36 @@ void drawBackground() {
     ) {
         setDirt(bg.tileUnderPlayer);
     }
-			
-			
-    // don't let the player fly too high
-    if (y < 16 && bg.playerVelocity < 0) {
-        y = 16;
-        bg.playerVelocity = 0;
+
+
+    bg.tileUnderPlayer = bg.tilesFromTop*mapWidthTiles + bg.tilesFromLeft;
+
+    if (bg.currentlyDigging) {
+        dig();
     }
-    
-    // keep moving the player in their last direction until they stop on a 16x16 tile
-    bool isTileAligned = false;
-    if ((sprites[0].x + x) % 16 == 0) {
-        isTileAligned = true;
-    }
-
-    if (!keyIsDown(BUTTON_LEFT) && !keyIsDown(BUTTON_RIGHT)) {
-        if (!isTileAligned) { // keep moving them to a 16x16 tile
-            int changeInX = previousX - x - sprites[0].x;
-
-            if (changeInX > 0) {
-                sprites[0].x += 1;
-            }
-            else if (changeInX < 0) {
-                sprites[0].x -= 1;
-            }
-        }
-    }
-
-
+    else {
+    	if (keyIsDown(BUTTON_UP)) {
+    	    move("up");
+    	}
+    	else if (keyIsDown(BUTTON_DOWN)) {
+    	    move("down");
+    	}
+    	else if (keyIsDown(BUTTON_LEFT)) {
+    	    move("left");
+    	}
+    	else if (keyIsDown(BUTTON_RIGHT)) {
+    	    move("right");
+    	}
     	
-			
-	// if they aren't flying - apply gravity
-	if (keyIsDown(BUTTON_UP)) {
-	    // check if tile above you is empty
-	
-	    // vertical min/max
-	    if (y > 16 && y < (mapHeightTiles*8 - 16)) {
-            bg.playerVelocity -= bg.rocketPower;
-
-            // Max velocity of the player
-            if (bg.playerVelocity < -bg.maxRocketVelocity) {
-                bg.playerVelocity = -bg.maxRocketVelocity;
-            }
-
-            // Apply the velocity to the player
-            y = floor(y + bg.playerVelocity);
-            bg.deltaY += floor(bg.playerVelocity);
+    	// move to nearest X tile
+    	if (!keyIsDown(BUTTON_LEFT) && !keyIsDown(BUTTON_RIGHT)) {
+            moveToXTile();
         }
-        else {
-            bg.playerVelocity = 0;
+    	
+    	// move to nearest Y tile
+    	if (!keyIsDown(BUTTON_UP) && !keyIsDown(BUTTON_DOWN)) {
+            moveToYTile();
         }
-    }
-    else if (checkDirection("bottom") == true) {
-        bg.playerVelocity += bg.gravity;
-
-        // Max velocity of the player
-        if (bg.playerVelocity > bg.terminalVelocity) {
-            bg.playerVelocity = bg.terminalVelocity;
-        }
-
-        // Apply the velocity to the player
-        y = floor(y + bg.playerVelocity);
-        bg.deltaY += floor(bg.playerVelocity);
-    }
-    else { // they hit something
-        // check playerVelocity here to do fall damage
-
-        bg.playerVelocity = 0;
-    }
-	
-	
-	//Button Detection
-	if (keyIsDown(BUTTON_LEFT)) {
-	    // move background
-        if (x > 0) {
-            x--;
-            bg.deltaX--;
-        }
-        
-        // move player
-        else if (sprites[0].x > 0) {
-            sprites[0].x -= 1;
-        }
-    }
-    
-    
-	if (keyIsDown(BUTTON_RIGHT)) {
-	    // move background
-        if (x < 16) {
-            x++;
-            bg.deltaX++;
-        }
-
-        // move player
-        else if (sprites[0].x < (240-16) ) {
-            sprites[0].x += 1;
-        }
-    }
-
-
-	if (keyIsDown(BUTTON_DOWN) && y < (mapHeightTiles*8)) {
-        y++;
-        bg.deltaY++;
     }
 
 	REG_BG0VOFS = y;
@@ -192,49 +131,6 @@ void drawBackground() {
 	
 	REG_BG0HOFS = x;
 	REG_BG1HOFS = x;
-	
-    if (bg.deltaX <= -8) {
-        bg.deltaX = 0;
-        bg.tileUnderPlayer--;
-    }
-    else if (bg.deltaX >= 8) {
-        bg.deltaX = 0;
-        bg.tileUnderPlayer++;
-    }
-
-
-    if (bg.deltaY <= -8) { // moved up
-        tilesFromTop--;
-        bg.deltaY += 8;
-        bg.tileUnderPlayer -= mapWidthTiles;
-
-        tileToCopy = 32 * (abs(tilesFromTop - 1));
-        locationToPaste = 32 * (abs(tilesFromTop - 1) % 32);
-
-        int loopMe = 0;
-        for (loopMe = 0; loopMe < 32; loopMe++) {
-            bg0map[locationToPaste + loopMe] = map_Map[loopMe + tileToCopy];
-            bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
-        }
-    }
-    else if (bg.deltaY >= 8) { // moved down
-        tilesFromTop++;
-        bg.deltaY -= 8;
-        bg.tileUnderPlayer += mapWidthTiles;
-
-        tileToCopy = 32 * (tilesFromTop + 21);
-        locationToPaste = 32 * ((tilesFromTop + 21) % 32);
-
-        int loopMe = 0;
-        for (loopMe = 0; loopMe < 32; loopMe++) {
-            bg0map[locationToPaste + loopMe] = map_Map[loopMe + tileToCopy];
-            bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
-        }
-    }
-    
-    
-    
-    previousX = x + sprites[0].x;
 }
 
 //This method is used to draw pixels to the backgrounds.
