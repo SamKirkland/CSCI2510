@@ -1,29 +1,21 @@
-#include "sprite.h"
 #include "background.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////GameState & bool defines
-int GameState;
-#define STATE_TITLESCREEN 0
-#define STATE_INGAME 1
-#define STATE_MENU 2
-#define STATE_GAMEOVERWIN 3
-#define STATE_GAMEOVERLOSE 4
-#define bool int
-#define true 1
-#define false 0
 
 void Initialize()
 {
-    GameState = STATE_INGAME;
+    GameState = STATE_TITLESCREEN;
     initSprites();
 	initbackgrounds();
+	initShop();
+	initTitle();
 }
 
 void LoadContent()
 {
    switch(GameState){
         case STATE_TITLESCREEN:
-            loadTitle();
+            //load the title screen
             
             break;
         case STATE_INGAME:
@@ -44,39 +36,52 @@ void LoadContent()
             
             break;
         default:
-            //the end;
+            break;
    }
 }
 
 void Update()
 {
+	keyPoll();
+	WaitVBlank();
+	
     switch(GameState){
         case STATE_TITLESCREEN:
-            SetMode(4 | BG0_ENABLE);
+            SetMode(3 | BG2_ENABLE);
             updateTitle();
             
             break;
         case STATE_INGAME:
             SetMode(0 | BG0_ENABLE | BG1_ENABLE | OBJ_ENABLE | OBJ_MAP_1D);
-
+            if(setGame == 0) {
+    	        loadBackground();
+                loadSprite();
+                setGame = 1;
+            }
             drawBackground();
             PlaySprite(0);
+            if((keyIsDown(BUTTON_SELECT) && keyWasUp(BUTTON_SELECT))){
+                GameState = STATE_MENU;
+                setGame = 0;
+            }
+            
+            int i = 50000;
+            while (i > 0) { i--; }
             
             break;
         case STATE_MENU:
-            //menu or shop content
-            
+            SetMode(3 | BG2_ENABLE);
+            updateShop();
             break;
         case STATE_GAMEOVERWIN:
-            updateInventory();
-            
+            //game over win content.
             break;
         case STATE_GAMEOVERLOSE:
             updateGameOver();
-            
             break;
         default:
             //the end
+            break;
     }
 }
 
@@ -86,20 +91,18 @@ void Draw()
     switch(GameState){
         case STATE_TITLESCREEN:
             drawTitle();
-            
+
             break;
         case STATE_INGAME:
             WaitVBlank();
             UpdateSpriteMemory();
-            
+
             break;
         case STATE_MENU:
-            //menu or shop content
-            
+			drawShop();
             break;
         case STATE_GAMEOVERWIN:
-            drawInventory();
-            
+            //gameover win content.
             break;
         case STATE_GAMEOVERLOSE:
             drawGameOver();
@@ -107,5 +110,6 @@ void Draw()
             break;
         default:
             //the end;
+            break;
     }
 }

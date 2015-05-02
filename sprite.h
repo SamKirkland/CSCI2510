@@ -1,13 +1,12 @@
 typedef unsigned short u16;
 typedef signed int s32;
 
-#include "global.h"
 #include "scr.h"
 #include "title.h"
 #include "playerSprite.h"
 
 int stotal = sprite_WIDTH*sprite_HEIGHT/2;
-void updateSprite(int num);
+void updateSprite();
 
 //This methods updates the sprite memory as soon as the changes are made.
 void UpdateSpriteMemory() {
@@ -38,16 +37,19 @@ void setSpriteInfo(int num) {
     sprites[num].currentFrame[13] = 104;
     sprites[num].x = 240;
     sprites[num].y = 160;
-    
+
     sprites[num].alive = 1;
-    
-    sprites[num].hullType = 50;
-    sprites[num].engineType = 1;
+    sprites[num].aboveground = true;
+    sprites[num].rightanim = false;
+    sprites[num].belowground = false;
+    sprites[num].leftanim = false;
+    sprites[num].hullType = 4;
+    sprites[num].engineType = 4;
     sprites[num].Movespeed = 1;
-    sprites[num].drillType = 2;
-    sprites[num].tankType = 1;
+    sprites[num].drillType = 4;
+    sprites[num].tankType = 4;
     sprites[num].money = 0;
-    sprites[num].gasLevel = 50;
+    sprites[num].gasLevel = 20;
     sprites[num].activeFrame = 0;
 }
 
@@ -87,7 +89,6 @@ void loadSprite() {
     //copying the sprite data to the memory.
     CopySpritePal();
     CopySpriteData();
-    
     //updating the position and the animation of the sprite.
     updateSprite(0);
 }
@@ -175,8 +176,6 @@ void setHull(int num, int hull) {
 
 ///The methods for the player movement across the screen. Little details added.
 void PlaySprite(int num) {
-    keyPoll();
-    WaitVBlank();
     if (sprites[num].alive == 1) {
         if (keyHeld(BUTTON_UP)) {
             /*
@@ -199,7 +198,7 @@ void PlaySprite(int num) {
                 sprites[num].y += 1;
             }
             */
-            
+
             if (sprites[num].activeFrame == 6) {
                 sprites[num].activeFrame = 7;
             }
@@ -208,57 +207,59 @@ void PlaySprite(int num) {
             }
         }
 
-        if (keyHeld(BUTTON_LEFT)) {
-            /*
-            if (sprites[num].x > 0) {
-                sprites[num].x -= 1;
+        if(keyIsUp(BUTTON_UP) && keyIsUp(BUTTON_DOWN)){
+            if (sprites[num].leftanim == true) {
+                /*
+                if (sprites[num].x > 0) {
+                    sprites[num].x -= 1;
+                }
+                */
+                if (sprites[num].aboveground == true){
+                    //setting the animation for the movement above the ground.
+                    if (sprites[num].activeFrame == 0) {
+                        sprites[num].activeFrame = 1;
+                    }
+                    else {
+                        sprites[num].activeFrame = 0;
+                    }
+                }
+                else if(sprites[num].belowground == true){
+                    //setting the animation for the movement under the ground
+                    if (sprites[num].activeFrame == 4) {
+                        sprites[num].activeFrame = 5;
+                    }
+                    else {
+                        sprites[num].activeFrame = 4;
+                    }
+                }
             }
-            */
-            if (sprites[num].y <= 70){
-                //setting the animation for the movement above the ground.
-                if (sprites[num].activeFrame == 0) {
-                    sprites[num].activeFrame = 1;
-                }
-                else {
-                    sprites[num].activeFrame = 0;
-                }
-            }
-            else {
-                //setting the animation for the movement under the ground
-                if (sprites[num].activeFrame == 4) {
-                    sprites[num].activeFrame = 5;
-                }
-                else {
-                    sprites[num].activeFrame = 4;
-                }
-            }
-        }
 
-        if (keyHeld(BUTTON_RIGHT)) {
-            //setting the x value for the movement to right.
-            /*
-            if (sprites[num].x < (240-16)) {
-                sprites[num].x += 1;
-            }
-            */
-            
-            //checking if the sprite is above the ground or below.
-            if (sprites[num].y <= 70) {
-                //animation for the sprite above the ground.
-                if (sprites[num].activeFrame == 0) {
-                    sprites[num].activeFrame = 1;
+            if (sprites[num].rightanim == true) {
+                //setting the x value for the movement to right.
+                /*
+                if (sprites[num].x < (240-16)) {
+                    sprites[num].x += 1;
                 }
-                else {
-                    sprites[num].activeFrame = 0;
+                */
+
+                //checking if the sprite is above the ground or below.
+                if (sprites[num].aboveground == true) {
+                    //animation for the sprite above the ground.
+                    if (sprites[num].activeFrame == 0) {
+                        sprites[num].activeFrame = 1;
+                    }
+                    else {
+                        sprites[num].activeFrame = 0;
+                    }
                 }
-            }
-            else {
-                //animation for sprite below the ground.
-                if (sprites[num].activeFrame == 2) {
-                    sprites[num].activeFrame = 3;
-                }
-                else {
-                    sprites[num].activeFrame = 2;
+                else if(sprites[num].belowground == true){
+                    //animation for sprite below the ground.
+                    if (sprites[num].activeFrame == 2) {
+                        sprites[num].activeFrame = 3;
+                    }
+                    else {
+                        sprites[num].activeFrame = 2;
+                    }
                 }
             }
         }
@@ -267,8 +268,6 @@ void PlaySprite(int num) {
         if (keyIsUp(BUTTON_UP) && sprites[num].y < 30) {
             if (sprites[num].y != 30) {
                 sprites[num].y += 4;
-            }
-            if (sprites[num].y == 30) {
                 sprites[num].activeFrame = 0;
             }
         }
@@ -286,3 +285,5 @@ void PlaySprite(int num) {
     }
     updateSprite(num);
 }
+
+

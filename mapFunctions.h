@@ -3,6 +3,7 @@
 
 #include "map.pal.h"
 #include "map.raw.h"
+#include "sprite.h"
 //////////////////////////////////////////////////////////////////////////////////////////////map functions
 
 void move(char direction[]);
@@ -79,7 +80,7 @@ typedef struct tagscrollingBG {
 
     int tilesFromTop;
     int tilesFromLeft;
-    
+
     int directionToKeepMovingX;
     int directionToKeepMovingY;
 
@@ -88,7 +89,7 @@ typedef struct tagscrollingBG {
     double playerVelocity;
     int terminalVelocity;
     int maxRocketVelocity;
-    
+
     bool currentlyDigging;
     int digProgress;
     int digTotal;
@@ -241,7 +242,6 @@ bool isTileOpen(int tileToCheck) {
     return false;
 }
 
-
 void moveToYTile() {
     bool isTileAligned = false;
     if ((sprites[0].y + y) % 16 == 0) {
@@ -287,7 +287,7 @@ void dig() {
         // calculate dig speed
         bg.digTotal = sprites[0].engineType*16 + sprites[0].drillType*16 + 16; // how many frames the 16x16 tile should take to be dug
     }
-    
+
     // see if we are done digging
     else if (bg.digProgress == bg.digTotal) {
         bg.currentlyDigging = false;
@@ -302,33 +302,47 @@ void dig() {
         setDirt(bg.tileUnderPlayer); // set background to dirt
         // add money
         // remove gas
+        
+        // reset player animation
+        sprites[0].rightanim = false;
+        sprites[0].belowground = false;
+        sprites[0].leftanim = false;
 
         return;
     }
-    
+
     bg.digProgress++; // advance another frame
     bool digThisFrame = false;
-    
+
     if (bg.digProgress%(bg.digTotal/16) == 0) {
         digThisFrame = true;
     }
-    
+
     // move the player
     if (digThisFrame) {
         switch (bg.digDirection) {
             case 'l':
             case 'L':
                 move("left");
+                sprites[0].belowground = true;
+                sprites[0].leftanim = true;
+                sprites[0].rightanim = false;
                 break;
-            
+
             case 'r':
             case 'R':
                 move("right");
+                sprites[0].belowground = true;
+                sprites[0].leftanim = false;
+                sprites[0].rightanim = true;
                 break;
-                
+
             case 'd':
             case 'D':
                 move("down");
+                sprites[0].belowground = true;
+                sprites[0].leftanim = false;
+                sprites[0].rightanim = false;
                 break;
         }
     }
@@ -352,8 +366,19 @@ void move(char direction[]) {
                 bg.deltaY--;
             }
         }
+        
+        if (checkDirection("down")) {
+            sprites[0].aboveground = true;
+            sprites[0].belowground = false;
+        }
+        else {
+            sprites[0].aboveground = false;
+            sprites[0].belowground = true;
+        }
     }
     else if (strcmp(direction, "down") == 0) {
+        sprites[0].belowground = true;
+        
         // bottom of map bounds checking
     	if (y < (mapHeightTiles*8)-200) {
             // start to dig if the tile isn't open
@@ -364,9 +389,16 @@ void move(char direction[]) {
             else {
                 y++;
                 bg.deltaY++;
-                
+
                 bg.directionToKeepMovingY = -1;
             }
+        }
+        
+        if (checkDirection("down")) {
+            sprites[0].aboveground = true;
+        }
+        else {
+            sprites[0].aboveground = false;
         }
     }
     else if (strcmp(direction, "left") == 0) {
@@ -388,7 +420,7 @@ void move(char direction[]) {
             else if (sprites[0].x > 8) {
                 sprites[0].x--;
             }
-            
+
             bg.directionToKeepMovingX = -1;
         }
     }
@@ -415,9 +447,9 @@ void move(char direction[]) {
             bg.directionToKeepMovingX = 1;
         }
     }
-    
-    
-    
+
+
+
     if (bg.deltaX <= -8) {
         bg.deltaX = 0;
         bg.tileUnderPlayer--;
@@ -426,9 +458,9 @@ void move(char direction[]) {
         bg.deltaX = 0;
         bg.tileUnderPlayer++;
     }
-    
-    
-    
+
+
+
     if (bg.deltaY <= -8) { // moved up
         tilesFromTop--;
         bg.deltaY += 8;
@@ -480,3 +512,4 @@ bool checkDirection(char direction[]) {
 
     return isTileOpen(tileToCompare);
 }
+

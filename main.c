@@ -8,9 +8,10 @@ int main(void)
    {
        Update();
        Draw();
-       
-       int n = 30000;
-       while (n > 0) { n--; }
+       if(randseed){
+            /*int n = 30000;
+            while (n > 0) { n--; }*/
+       }
    }
    return 0;
 }
