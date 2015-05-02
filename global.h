@@ -83,10 +83,6 @@ s32 angle = 0;
 s32 angle2 = 0;
 s32 zoom = 1<<8;
 
-s32 x;
-s32 y;
-s32 n;
-
 ////////////////////////////////////////////////////////////////////////////////////////////// Sprite methods and struct defines
 typedef struct tagSprite {
 	unsigned short attribute0;
@@ -422,6 +418,7 @@ void ClearSelection(){
 }
 
 void cashToString (int money){
+    int x = 0;
 	for (x = 0; x  < 8; x++){
 		moneybuffer[x] = '\0';
 	}

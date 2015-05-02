@@ -11,7 +11,8 @@ int previousX;
 void initbackgrounds() {
     material_Map = (unsigned short *)malloc(20480 * sizeof(unsigned short));
     map_Map = (unsigned short *)malloc(20480 * sizeof(unsigned short));
-
+    lastLocation = (unsigned short *)malloc(1024 * sizeof(unsigned short));
+    lastLocationMinerals = (unsigned short *)malloc(1024 * sizeof(unsigned short));
 
     previousX = 0;
     x = 0;
@@ -75,6 +76,19 @@ void loadBackground() {
     // Load the starting position
     loadStartingPosition();
 }
+
+//////////////////////////////////////////////////////////This method reloads the background at the last position it was in
+void reloadBackground() {
+    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 1) | (0 << CHAR_SHIFT);
+	REG_BG1CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (31 << SCREEN_SHIFT);
+	
+	DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW); // copy palette into the background
+    DMAFastCopy((void*)map_Tiles, (void*)CharBaseBlock(0), 12288/4, DMA_32NOW); // copy tiles into memory
+
+    // Load the starting position
+    loadLastPosition();
+}
+
 
 /////////////////////////////////////////////////////////////This method draws the backgrouds to the screen of the game.
 void drawBackground() {

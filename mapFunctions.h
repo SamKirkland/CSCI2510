@@ -1,6 +1,9 @@
 #include <time.h>
 #include <stdlib.h>
 
+void saveLastPosition();
+void loadLastPosition();
+
 #include "map.pal.h"
 #include "map.raw.h"
 #include "sprite.h"
@@ -8,6 +11,12 @@
 
 void move(char direction[]);
 bool checkDirection(char direction[]);
+
+
+unsigned short *map_Map;
+unsigned short *material_Map;
+unsigned short *lastLocation;
+unsigned short *lastLocationMinerals;
 
 const unsigned short aboveGround[1024] = {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -65,10 +74,6 @@ const unsigned short aboveGround[1024] = {
     28, 29, 28, 29, 28, 29, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31,
     30, 31, 30, 31, 30, 31, 30, 31, 28, 29, 28, 29, 28, 29, 28, 29
 };
-
-
-unsigned short *map_Map;
-unsigned short *material_Map;
 
 typedef struct tagscrollingBG {
     int xBGAhead, xBGBehind;
@@ -219,6 +224,26 @@ void generateMap() {
     addAllMinerals();
 }
 
+void saveLastPosition() {
+    for (yLoop = 0; yLoop < 32; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            lastLocation[xLoop + yLoop*32] = bg0map[xLoop + yLoop*32];
+            lastLocationMinerals[xLoop + yLoop*32] = bg1map[xLoop + yLoop*32];
+        }
+    }
+}
+
+// loads the last position the user was at
+void loadLastPosition() {
+    for (yLoop = 0; yLoop < 32; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            bg0map[xLoop + yLoop*32] = lastLocation[xLoop + yLoop*32];
+            bg1map[xLoop + yLoop*32] = lastLocationMinerals[xLoop + yLoop*32];
+        }
+    }
+}
+
+// loads the top of the map
 void loadStartingPosition() {
     // DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW);
 

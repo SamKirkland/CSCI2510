@@ -143,6 +143,7 @@ void drawShop()
 void updateShop()
 {
     if (shopInit == 0){
+        int x, y;
 				for (y = 0; y < 160; y++){
 					for (x = 0; x < 240; x++){
 						videoBuffer[y * 240 + x] = shopmenu_Bitmap[y * 240 + x];
@@ -188,6 +189,7 @@ void updateShop()
 			if(keyIsDown(BUTTON_B) && keyWasUp(BUTTON_B)){
 			    shopInit = 0;
 				GameState = STATE_INGAME;
+				setGame = 2; // used so the background can be loaded from its last position
 			}
 			//CHEAT CODE FOR DEMO PURPOSES L + R + SELECT + START = FULL UPGRADES
 			if(keyIsDown(BUTTON_L) && keyIsDown(BUTTON_R) && keyIsDown(BUTTON_SELECT) && keyIsDown(BUTTON_START)){
@@ -311,15 +313,15 @@ void updateShop()
 
 void initGameOver()
 {
-    
+
 }
 
 void drawGameOver()
 {
-    
+
 }
 
 void updateGameOver()
 {
-    
+
 }

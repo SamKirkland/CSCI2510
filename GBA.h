@@ -4,7 +4,8 @@
 
 void Initialize()
 {
-    GameState = STATE_TITLESCREEN;
+    GameState = STATE_INGAME;
+    //GameState = STATE_TITLESCREEN;
     initSprites();
 	initbackgrounds();
 	initShop();
@@ -53,21 +54,32 @@ void Update()
             break;
         case STATE_INGAME:
             SetMode(0 | BG0_ENABLE | BG1_ENABLE | OBJ_ENABLE | OBJ_MAP_1D);
+            // first load
             if(setGame == 0) {
     	        loadBackground();
                 loadSprite();
                 setGame = 1;
             }
+            // loading from shop
+            else if (setGame == 2) {
+           	    DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW); // copy palette into the background
+                DMAFastCopy((void*)map_Tiles, (void*)CharBaseBlock(0), 12288/4, DMA_32NOW); // copy tiles into memory
+                loadLastPosition();
+                loadSprite();
+                setGame = 1;
+            }
             drawBackground();
             PlaySprite(0);
-            if((keyIsDown(BUTTON_SELECT) && keyWasUp(BUTTON_SELECT))){
+            //if((keyIsDown(BUTTON_SELECT) && keyWasUp(BUTTON_SELECT))){
+            if(keyIsDown(BUTTON_SELECT)) {
+                saveLastPosition();
                 GameState = STATE_MENU;
-                setGame = 0;
+                setGame = 1;
             }
             
             int i = 50000;
             while (i > 0) { i--; }
-            
+
             break;
         case STATE_MENU:
             SetMode(3 | BG2_ENABLE);
