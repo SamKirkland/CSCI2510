@@ -45,7 +45,7 @@ void setSpriteInfo(int num) {
     sprites[num].hullType = 4;
     sprites[num].engineType = 4;
     sprites[num].Movespeed = 1;
-    sprites[num].drillType = 2;
+    sprites[num].drillType = 4;
     sprites[num].tankType = 4;
     sprites[num].money = 0;
     sprites[num].gasLevel = 20;

@@ -94,16 +94,12 @@ void Update()
             updateShop();
             break;
         case STATE_GAMEOVERWIN:
-            //game over win content.
-            break;
-        case STATE_GAMEOVERLOSE:
             updateGameOver();
             break;
-		case STATE_GASSTATION:
+        case STATE_GAMEOVERLOSE:
 			SetMode(3 | BG2_ENABLE);
 			updateGas();
-			
-			break;
+            break;
         default:
             //the end
             break;

@@ -448,7 +448,7 @@ void move(char direction[]) {
             }
         }
     }
-    else if (strcmp(direction, "left") == 0 && canDig(direction)) {
+    else if (strcmp(direction, "left") == 0 && canDig(direction) && x > 0) {
         // start to dig if the tile isn't open
         if (!bg.currentlyDigging && !checkDirection(direction)) {
             // dont let them dig while flying
@@ -477,7 +477,7 @@ void move(char direction[]) {
             bg.directionToKeepMovingX = -1;
         }
     }
-    else if (strcmp(direction, "right") == 0 && canDig(direction)) {
+    else if (strcmp(direction, "right") == 0 && canDig(direction) && sprites[0].x < 232) {
         // start to dig if the tile isn't open
         if (!bg.currentlyDigging && !checkDirection(direction)) {
             // dont let them dig while flying
