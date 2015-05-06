@@ -106,7 +106,7 @@ typedef struct tagspritehandler {
 	int hullType;
 	int engineType;
 	int money;
-	int gasLevel;
+	double gasLevel;
 	int Movespeed;
 	int flip;
 	int trans;

@@ -34,64 +34,73 @@ void initbackgrounds() {
     materials[0].topLeftTile = 38;              // white gravel
     materials[0].minimumDrillLevel = 4;
     materials[0].value = 75;
+    materials[0].speedMultiplyer = 1;
     
     materials[1].topLeftTile = 40;              // gray gravel
     materials[1].minimumDrillLevel = 4;
     materials[1].value = 75;
-    
+    materials[1].speedMultiplyer = 1;
     
     // --------- Iron Drill ---------
     materials[2].topLeftTile = 42;              // sand
     materials[2].minimumDrillLevel = 3;
     materials[2].value = 150;
+    materials[2].speedMultiplyer = 1;
     
     materials[3].topLeftTile = 46;              // bronze
     materials[3].minimumDrillLevel = 3;
     materials[3].value = 150;
-
+    materials[3].speedMultiplyer = 1;
 
     // --------- Emerald Drill ---------
     materials[4].topLeftTile = 44;              // iron
     materials[4].minimumDrillLevel = 2;
     materials[4].value = 300;
+    materials[4].speedMultiplyer = 1;
     
     materials[5].topLeftTile = 60;              // white
     materials[5].minimumDrillLevel = 2;
     materials[5].value = 300;
-
+    materials[5].speedMultiplyer = 1;
 
     // --------- Titanium Drill ---------
     materials[6].topLeftTile = 52;              // red
     materials[6].minimumDrillLevel = 1;
     materials[6].value = 600;
+    materials[6].speedMultiplyer = 1;
 
     materials[7].topLeftTile = 54;              // purple
     materials[7].minimumDrillLevel = 1;
     materials[7].value = 600;
+    materials[7].speedMultiplyer = 1;
 
     materials[8].topLeftTile = 56;              // green
     materials[8].minimumDrillLevel = 1;
     materials[8].value = 600;
+    materials[8].speedMultiplyer = 1;
 
     materials[9].topLeftTile = 58;              // pink
     materials[9].minimumDrillLevel = 1;
     materials[9].value = 600;
-    
+    materials[9].speedMultiplyer = 1;
     
     // --------- Diamond Drill ---------
     materials[10].topLeftTile = 48;             // gold
     materials[10].minimumDrillLevel = 0;
     materials[10].value = 1000;
+    materials[10].speedMultiplyer = 1;
 
     materials[11].topLeftTile = 50;             // purple stripes
     materials[11].minimumDrillLevel = 0;
     materials[11].value = 1000;
+    materials[11].speedMultiplyer = 1;
     
     
     // --------- Other Tiles ---------
-    materials[11].topLeftTile = 36;             // empty tile
-    materials[11].minimumDrillLevel = 4;
-    materials[11].value = 0;
+    materials[12].topLeftTile = 36;             // empty tile
+    materials[12].minimumDrillLevel = 4;
+    materials[12].value = 0;
+    materials[12].speedMultiplyer = 0;
 
 
     bg.xBGBehind = 31;

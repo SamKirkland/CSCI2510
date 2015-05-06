@@ -85,7 +85,7 @@ void Update()
 				setGame = 1;
 			}
             
-            int i = 50000;
+            int i = 20000;
             while (i > 0) { i--; }
 
             break;
@@ -94,12 +94,16 @@ void Update()
             updateShop();
             break;
         case STATE_GAMEOVERWIN:
-            updateGameOver();
+            //game over win content.
             break;
         case STATE_GAMEOVERLOSE:
+            updateGameOver();
+            break;
+		case STATE_GASSTATION:
 			SetMode(3 | BG2_ENABLE);
 			updateGas();
-            break;
+			
+			break;
         default:
             //the end
             break;

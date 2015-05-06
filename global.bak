@@ -433,8 +433,7 @@ void clearGas(){
 	DrawLine3(37, 29, 37, 130, RGB(20, 20, 20));
 	DrawLine3(132, 29, 132, 130, RGB(20, 20, 20));
 	DrawLine3(82, 29, 82, 104, RGB(20, 20, 20));
-	DrawLine3(87, 29, 87, 104, RGB(20, 20, 20));
-	
+	DrawLine3(87, 29, 87, 104, RGB(20, 20, 20));	
 }
 
 void cashToString (int money){

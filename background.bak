@@ -89,9 +89,10 @@ void initbackgrounds() {
     
     
     // --------- Other Tiles ---------
-    materials[11].topLeftTile = 36;             // empty tile
-    materials[11].minimumDrillLevel = 4;
-    materials[11].value = 0;
+    materials[12].topLeftTile = 36;             // empty tile
+    materials[12].minimumDrillLevel = 4;
+    materials[12].value = 0;
+    materials[12].speedMultiplyer = 0;
 
 
     bg.xBGBehind = 31;

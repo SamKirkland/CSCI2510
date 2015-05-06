@@ -85,7 +85,7 @@ void Update()
 				setGame = 1;
 			}
             
-            int i = 50000;
+            int i = 25000;
             while (i > 0) { i--; }
 
             break;

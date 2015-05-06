@@ -135771,142 +135771,61 @@ addAllMinerals:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
-	stmfd	sp!, {r4, r5, r6, r7, fp, ip, lr, pc}
-	ldr	r5, .L556
+	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
+	ldr	r6, .L526
 	mov	r3, #28
-	str	r3, [r5, #0]	@  yLoop
-	ldr	r4, .L556+4
-	ldr	r7, .L556+8
-	ldr	r6, .L556+12
+	str	r3, [r6, #0]	@  yLoop
+	ldr	r4, .L526+4
+	ldr	r5, .L526+8
 	sub	fp, ip, #4
-.L540:
+.L520:
 	mov	r3, #0
 	str	r3, [r4, #0]	@  xLoop
-.L539:
+.L519:
 	mov	lr, pc
-	bx	r7
-	ldr	r3, .L556+16
+	bx	r5
+	ldr	r3, .L526+12
 	smull	r2, r1, r3, r0
 	mov	r2, r0, asr #31
 	rsb	r3, r2, r1, asr #5	@  r
 	add	r3, r3, r3, asl #2	@  r,  r
 	add	r3, r3, r3, asl #2
 	sub	r3, r0, r3, asl #2	@  r
-	cmp	r3, #0	@  r
-	beq	.L546
-	cmp	r3, #1	@  r
-	beq	.L546
-	cmp	r3, #2	@  r
-	beq	.L547
-	cmp	r3, #3	@  r
-	beq	.L548
-	cmp	r3, #4	@  r
-	beq	.L549
-	cmp	r3, #5	@  r
-	beq	.L550
-	cmp	r3, #6	@  r
-	beq	.L551
-	cmp	r3, #7	@  r
-	beq	.L552
-	cmp	r3, #8	@  r
-	beq	.L553
-	cmp	r3, #9	@  r
-	beq	.L554
 	cmp	r3, #10	@  r
-	beq	.L555
+	mov	lr, r3, asl #3	@  r
+	ble	.L525
 .L516:
 	ldr	r3, [r4, #0]	@  xLoop
 	add	r3, r3, #2
 	cmp	r3, #31
 	str	r3, [r4, #0]	@  xLoop
-	ble	.L539
-	ldr	r3, [r5, #0]	@  yLoop
+	ble	.L519
+	ldr	r3, [r6, #0]	@  yLoop
 	add	r3, r3, #2
 	cmp	r3, #640
-	str	r3, [r5, #0]	@  yLoop
-	blt	.L540
-	ldmea	fp, {r4, r5, r6, r7, fp, sp, lr}
+	str	r3, [r6, #0]	@  yLoop
+	blt	.L520
+	ldmea	fp, {r4, r5, r6, fp, sp, lr}
 	bx	lr
-.L555:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #60
-.L545:
+.L525:
+	ldr	r3, .L526+16
+	ldr	r1, [r6, #0]	@  yLoop
+	ldr	ip, [r3, #0]	@  mapWidthTiles
+	ldr	r2, [r4, #0]	@  xLoop
+	ldr	r3, .L526+20
+	mla	r0, ip, r1, r2
+	ldrh	r1, [lr, r3]	@  <variable>.topLeftTile
 	bl	setMineral
 	b	.L516
-.L554:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #58
-	b	.L545
-.L553:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #56
-	b	.L545
-.L552:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #54
-	b	.L545
-.L551:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #52
-	b	.L545
-.L550:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #50
-	b	.L545
-.L549:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #48
-	b	.L545
-.L548:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #46
-	b	.L545
-.L547:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #44
-	b	.L545
-.L546:
-	ldr	r1, [r5, #0]	@  yLoop
-	ldr	r2, [r6, #0]	@  mapWidthTiles
-	ldr	r3, [r4, #0]	@  xLoop
-	mla	r0, r2, r1, r3
-	mov	r1, #42
-	b	.L545
-.L557:
+.L527:
 	.align	2
-.L556:
+.L526:
 	.word	yLoop
 	.word	xLoop
 	.word	rand
-	.word	mapWidthTiles
 	.word	1374389535
+	.word	mapWidthTiles
+	.word	materials
 	.size	addAllMinerals, .-addAllMinerals
 	.align	2
 	.global	generateMap
@@ -135917,21 +135836,21 @@ generateMap:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, r7, r8, fp, ip, lr, pc}
-	ldr	lr, .L580
+	ldr	lr, .L550
 	sub	fp, ip, #4
 	mov	r0, #860
-	ldr	ip, .L580+4
+	ldr	ip, .L550+4
 	ldr	r1, [lr, #0]	@  map_Map
 	mov	r2, #0	@  i
 	add	r0, r0, #3
-.L563:
+.L533:
 	mov	r3, r2, asl #1	@  i
 	ldrh	r4, [r3, ip]	@ movhi	@  aboveGround
 	add	r2, r2, #1	@  i,  i
 	cmp	r2, r0	@  i
 	strh	r4, [r3, r1]	@ movhi 
-	ble	.L563
-	ldr	r3, .L580+8
+	ble	.L533
+	ldr	r3, .L550+8
 	ldr	r6, [r3, #0]	@  mapWidthTiles
 	mov	r2, r6, asl #1
 	add	r3, r2, r6
@@ -135939,12 +135858,12 @@ generateMap:
 	add	r4, r3, r3, asl #3
 	mov	r7, r2
 	mov	r5, #27	@  yLoop
-.L573:
+.L543:
 	add	r3, r4, r6
 	mov	r0, r3, asl #1
 	mov	lr, #0	@  xLoop
 	mov	r1, r4, asl #1
-.L572:
+.L542:
 	mov	r8, #32	@ movhi
 	strh	r8, [r1, ip]	@ movhi 
 	add	r3, r1, ip
@@ -135959,17 +135878,17 @@ generateMap:
 	add	r1, r1, #4
 	strh	r8, [r2, #2]	@ movhi 
 	add	r0, r0, #4
-	ble	.L572
+	ble	.L542
 	add	r5, r5, #2	@  yLoop,  yLoop
 	cmp	r5, #640	@  yLoop
 	add	r4, r4, r7
-	ble	.L573
+	ble	.L543
 	bl	blackoutMinerals
 	ldmea	fp, {r4, r5, r6, r7, r8, fp, sp, lr}
 	b	addAllMinerals
-.L581:
+.L551:
 	.align	2
-.L580:
+.L550:
 	.word	map_Map
 	.word	aboveGround
 	.word	mapWidthTiles
@@ -135982,25 +135901,25 @@ saveLastPosition:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
-	ldr	r3, .L598
-	ldr	r2, .L598+4
-	ldr	r6, .L598+8
+	ldr	r3, .L568
+	ldr	r2, .L568+4
+	ldr	r6, .L568+8
 	ldr	r5, [r3, #0]	@  lastLocation
 	ldr	r4, [r2, #0]	@  bg0map
-	ldr	r3, .L598+12
-	ldr	r2, .L598+16
+	ldr	r3, .L568+12
+	ldr	r2, .L568+16
 	mov	r1, #0
 	str	r1, [r6, #0]	@  yLoop
 	ldr	lr, [r3, #0]	@  lastLocationMinerals
 	ldr	r2, [r2, #0]	@  bg1map
-	ldr	r8, .L598+20
+	ldr	r8, .L568+20
 	mov	r7, r1
-.L592:
+.L562:
 	ldr	r1, [r6, #0]	@  yLoop
 	str	r7, [r8, #0]	@  xLoop
 	mov	ip, r1, asl #5
 	mov	r0, r7
-.L591:
+.L561:
 	add	r3, ip, r0
 	mov	r3, r3, asl #1
 	ldrh	sl, [r3, r4]	@ movhi
@@ -136009,17 +135928,17 @@ saveLastPosition:
 	ldrh	sl, [r3, r2]	@ movhi
 	cmp	r0, #31
 	strh	sl, [r3, lr]	@ movhi 
-	ble	.L591
+	ble	.L561
 	add	r3, r1, #1
 	cmp	r3, #31
 	str	r0, [r8, #0]	@  xLoop
 	str	r3, [r6, #0]	@  yLoop
-	ble	.L592
+	ble	.L562
 	ldmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
 	bx	lr
-.L599:
+.L569:
 	.align	2
-.L598:
+.L568:
 	.word	lastLocation
 	.word	bg0map
 	.word	yLoop
@@ -136035,25 +135954,25 @@ loadLastPosition:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
-	ldr	r3, .L616
-	ldr	r2, .L616+4
-	ldr	r6, .L616+8
+	ldr	r3, .L586
+	ldr	r2, .L586+4
+	ldr	r6, .L586+8
 	ldr	r5, [r3, #0]	@  bg0map
 	ldr	r4, [r2, #0]	@  lastLocation
-	ldr	r3, .L616+12
-	ldr	r2, .L616+16
+	ldr	r3, .L586+12
+	ldr	r2, .L586+16
 	mov	r1, #0
 	str	r1, [r6, #0]	@  yLoop
 	ldr	lr, [r3, #0]	@  bg1map
 	ldr	r2, [r2, #0]	@  lastLocationMinerals
-	ldr	r8, .L616+20
+	ldr	r8, .L586+20
 	mov	r7, r1
-.L610:
+.L580:
 	ldr	r1, [r6, #0]	@  yLoop
 	str	r7, [r8, #0]	@  xLoop
 	mov	ip, r1, asl #5
 	mov	r0, r7
-.L609:
+.L579:
 	add	r3, ip, r0
 	mov	r3, r3, asl #1
 	ldrh	sl, [r3, r4]	@ movhi
@@ -136062,17 +135981,17 @@ loadLastPosition:
 	ldrh	sl, [r3, r2]	@ movhi
 	cmp	r0, #31
 	strh	sl, [r3, lr]	@ movhi 
-	ble	.L609
+	ble	.L579
 	add	r3, r1, #1
 	cmp	r3, #31
 	str	r0, [r8, #0]	@  xLoop
 	str	r3, [r6, #0]	@  yLoop
-	ble	.L610
+	ble	.L580
 	ldmfd	sp!, {r4, r5, r6, r7, r8, sl, lr}
 	bx	lr
-.L617:
+.L587:
 	.align	2
-.L616:
+.L586:
 	.word	bg0map
 	.word	lastLocation
 	.word	yLoop
@@ -136088,23 +136007,23 @@ loadStartingPosition:
 	@ args = 0, pretend = 0, frame = 4
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
-	ldr	r3, .L634
-	ldr	r2, .L634+4
+	ldr	r3, .L604
+	ldr	r2, .L604+4
 	ldr	r7, [r3, #0]	@  bg0map
 	ldr	r2, [r2, #0]	@  mapWidthTiles
-	ldr	r3, .L634+8
+	ldr	r3, .L604+8
 	sub	sp, sp, #4
-	ldr	r8, .L634+12
+	ldr	r8, .L604+12
 	str	r2, [sp, #0]
 	ldr	r6, [r3, #0]	@  map_Map
-	ldr	r2, .L634+16
-	ldr	r3, .L634+20
+	ldr	r2, .L604+16
+	ldr	r3, .L604+20
 	mov	r1, #0
 	str	r1, [r8, #0]	@  yLoop
 	ldr	r5, [r2, #0]	@  bg1map
 	ldr	r4, [r3, #0]	@  material_Map
-	ldr	r9, .L634+24
-.L628:
+	ldr	r9, .L604+24
+.L598:
 	ldr	r1, [r8, #0]	@  yLoop
 	ldr	lr, [sp, #0]
 	mul	lr, r1, lr
@@ -136112,7 +136031,7 @@ loadStartingPosition:
 	str	r3, [r9, #0]	@  xLoop
 	mov	ip, r1, asl #5
 	mov	r0, r3
-.L627:
+.L597:
 	add	r3, r0, lr
 	mov	r3, r3, asl #1
 	ldrh	sl, [r3, r6]	@ movhi
@@ -136123,18 +136042,18 @@ loadStartingPosition:
 	ldrh	r3, [r3, r4]	@ movhi
 	cmp	r0, #31
 	strh	r3, [r2, r5]	@ movhi 
-	ble	.L627
+	ble	.L597
 	add	r3, r1, #1
 	cmp	r3, #31
 	str	r0, [r9, #0]	@  xLoop
 	str	r3, [r8, #0]	@  yLoop
-	ble	.L628
+	ble	.L598
 	add	sp, sp, #4
 	ldmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	bx	lr
-.L635:
+.L605:
 	.align	2
-.L634:
+.L604:
 	.word	bg0map
 	.word	mapWidthTiles
 	.word	map_Map
@@ -136151,7 +136070,7 @@ isTileOpen:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	ldr	r3, .L639
+	ldr	r3, .L609
 	ldr	r2, [r3, #0]	@  map_Map
 	mov	r0, r0, asl #1	@  tileToCheck
 	ldrh	r3, [r0, r2]
@@ -136173,9 +136092,9 @@ isTileOpen:
 	cmp	r3, #89
 	movne	r0, r2	@  tileToCheck,  tileToCheck
 	bx	lr
-.L640:
+.L610:
 	.align	2
-.L639:
+.L609:
 	.word	map_Map
 	.size	isTileOpen, .-isTileOpen
 	.section	.rodata.str1.4
@@ -136195,39 +136114,39 @@ moveToYTile:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {fp, ip, lr, pc}
-	ldr	r3, .L651
-	ldr	r2, .L651+4
+	ldr	r3, .L621
+	ldr	r2, .L621+4
 	ldr	r1, [r3, #4]	@  <variable>.y
 	ldr	r0, [r2, #0]	@  y
 	add	r1, r1, r0
 	mov	r3, r1, asr #31
-	ldr	r2, .L651+8
+	ldr	r2, .L621+8
 	add	r3, r1, r3, lsr #29
 	mov	r3, r3, asr #3
 	ands	r1, r1, #15
 	sub	fp, ip, #4
 	streq	r3, [r2, #44]	@  bg.tilesFromTop
 	streq	r1, [r2, #56]	@  bg.directionToKeepMovingY
-	beq	.L641
-	ldr	r3, .L651+8
+	beq	.L611
+	ldr	r3, .L621+8
 	ldr	r2, [r3, #56]	@  bg.directionToKeepMovingY
 	cmp	r2, #0
-	ldr	r0, .L651+12
-	ble	.L650
-.L649:
-	ldr	r3, .L651+16
+	ldr	r0, .L621+12
+	ble	.L620
+.L619:
+	ldr	r3, .L621+16
 	mov	lr, pc
 	bx	r3
-.L641:
+.L611:
 	ldmea	fp, {fp, sp, lr}
 	bx	lr
-.L650:
-	ldr	r0, .L651+20
-	bge	.L641
-	b	.L649
-.L652:
+.L620:
+	ldr	r0, .L621+20
+	bge	.L611
+	b	.L619
+.L622:
 	.align	2
-.L651:
+.L621:
 	.word	sprites
 	.word	y
 	.word	bg
@@ -136252,39 +136171,39 @@ moveToXTile:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {fp, ip, lr, pc}
-	ldr	r3, .L663
-	ldr	r2, .L663+4
+	ldr	r3, .L633
+	ldr	r2, .L633+4
 	ldr	r1, [r3, #0]	@  <variable>.x
 	ldr	r0, [r2, #0]	@  x
 	add	r1, r1, r0
 	mov	r3, r1, asr #31
-	ldr	r2, .L663+8
+	ldr	r2, .L633+8
 	add	r3, r1, r3, lsr #29
 	mov	r3, r3, asr #3
 	ands	r1, r1, #15
 	sub	fp, ip, #4
 	streq	r3, [r2, #48]	@  bg.tilesFromLeft
 	streq	r1, [r2, #52]	@  bg.directionToKeepMovingX
-	beq	.L653
-	ldr	r3, .L663+8
+	beq	.L623
+	ldr	r3, .L633+8
 	ldr	r2, [r3, #52]	@  bg.directionToKeepMovingX
 	cmp	r2, #0
-	ldr	r0, .L663+12
-	ble	.L662
-.L661:
-	ldr	r3, .L663+16
+	ldr	r0, .L633+12
+	ble	.L632
+.L631:
+	ldr	r3, .L633+16
 	mov	lr, pc
 	bx	r3
-.L653:
+.L623:
 	ldmea	fp, {fp, sp, lr}
 	bx	lr
-.L662:
-	ldr	r0, .L663+20
-	bge	.L653
-	b	.L661
-.L664:
+.L632:
+	ldr	r0, .L633+20
+	bge	.L623
+	b	.L631
+.L634:
 	.align	2
-.L663:
+.L633:
 	.word	sprites
 	.word	x
 	.word	bg
@@ -136292,6 +136211,8 @@ moveToXTile:
 	.word	move
 	.word	.LC54
 	.size	moveToXTile, .-moveToXTile
+	.global	__floatsidf
+	.global	__subdf3
 	.global	__modsi3
 	.align	2
 	.global	dig
@@ -136302,154 +136223,192 @@ dig:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	ldr	r4, .L682
-	ldr	r2, [r4, #100]	@  bg.digTotal
-	cmp	r2, #0
+	ldr	r6, .L660+8
+	ldr	r2, [r6, #100]	@  diggingTile,  bg.digTotal
+	cmp	r2, #0	@  diggingTile
 	sub	fp, ip, #4
-	ldr	r1, .L682+4
-	bne	.L666
-	ldr	r3, [r1, #48]	@  <variable>.drillType
-	ldr	r2, [r1, #60]	@  <variable>.engineType
-	add	r2, r2, r3
-	mov	r2, r2, asl #4
-	add	r2, r2, #16
+	bne	.L636
 	mov	r3, #1
-	str	r3, [r4, #92]	@  bg.currentlyDigging
-	str	r2, [r4, #100]	@  bg.digTotal
-.L667:
-	ldr	r1, [r4, #100]	@  bg.digTotal
-	ldr	r2, [r4, #96]	@  bg.digProgress
+	str	r3, [r6, #92]	@  bg.currentlyDigging
+	ldr	r3, .L660+12
+	ldr	lr, .L660+16
+	ldr	ip, [r3, #0]	@  mineralDiggingTile
+	mov	r0, r2	@  diggingTile,  diggingTile
+	mov	r1, r2	@  tile,  diggingTile
+.L642:
+	mov	r3, r1, asl #3	@  tile
+	ldrh	r2, [r3, lr]	@  <variable>.topLeftTile
+	cmp	r2, ip
+	moveq	r0, r1	@  diggingTile,  tile
+	add	r1, r1, #1	@  tile,  tile
+	cmp	r1, #12	@  tile
+	ble	.L642
+	ldr	r3, .L660+20
+	add	r0, lr, r0, asl #3	@  diggingTile
+	ldr	ip, [r3, #48]	@  <variable>.drillType
+	ldr	r2, [r3, #60]	@  <variable>.engineType
+	ldrh	r1, [r0, #6]	@  <variable>.speedMultiplyer
+	add	r2, r2, ip
+	mul	r3, r2, r1
+	mov	r3, r3, asl #4
+	add	r3, r3, #16
+	str	r3, [r6, #100]	@  bg.digTotal
+.L643:
+	ldr	r1, [r6, #100]	@  bg.digTotal
+	ldr	r2, [r6, #96]	@  bg.digProgress
 	mov	r3, r1, asr #31
 	add	r2, r2, #1
 	add	r1, r1, r3, lsr #28
 	mov	r1, r1, asr #4
 	mov	r0, r2
-	str	r2, [r4, #96]	@  bg.digProgress
-	ldr	r3, .L682+8
+	str	r2, [r6, #96]	@  bg.digProgress
+	ldr	r3, .L660+24
 	mov	lr, pc
 	bx	r3
 	cmp	r0, #0
-	bne	.L665
-	ldr	r2, .L682
+	bne	.L635
+	ldr	r2, .L660+8
 	ldrb	r3, [r2, #104]	@ zero_extendqisi2	@  bg.digDirection
 	sub	r3, r3, #68
 	cmp	r3, #46
 	ldrls	pc, [pc, r3, asl #2]
-	b	.L665
+	b	.L635
 	.p2align 2
-.L678:
-	.word	.L677
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L673
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L675
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L677
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L673
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L665
-	.word	.L675
-.L673:
-	ldr	r0, .L682+12
-	ldr	r3, .L682+16
+.L654:
+	.word	.L653
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L649
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L651
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L653
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L649
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L635
+	.word	.L651
+.L649:
+	ldr	r0, .L660+28
+	ldr	r3, .L660+32
 	mov	lr, pc
 	bx	r3
 	mov	r2, #4
-.L681:
-	ldr	r3, .L682+4
+.L659:
+	ldr	r3, .L660+20
 	str	r2, [r3, #92]	@  <variable>.animation
-.L665:
+.L635:
 	ldmea	fp, {r4, r5, r6, fp, sp, lr}
 	bx	lr
-.L677:
-	ldr	r0, .L682+20
-	ldr	r3, .L682+16
+.L653:
+	ldr	r0, .L660+36
+	ldr	r3, .L660+32
 	mov	lr, pc
 	bx	r3
 	mov	r2, #3
-	b	.L681
-.L675:
-	ldr	r0, .L682+24
-	ldr	r3, .L682+16
+	b	.L659
+.L651:
+	ldr	r0, .L660+40
+	ldr	r3, .L660+32
 	mov	lr, pc
 	bx	r3
 	mov	r2, #5
-	b	.L681
-.L666:
-	ldr	r3, [r4, #96]	@  bg.digProgress
-	cmp	r3, r2
-	ldr	r6, .L682+4
-	mov	r5, #0
-	bne	.L667
-	ldr	r3, .L682+28
-	ldr	r2, .L682+32
+	b	.L659
+.L636:
+	ldr	r3, [r6, #96]	@  bg.digProgress
+	cmp	r3, r2	@  diggingTile
+	bne	.L643
+	ldr	r4, .L660+20
+	ldr	r3, .L660+44
+	ldr	r2, .L660+48
 	ldr	ip, [r3, #0]	@  y
-	ldr	r1, [r6, #4]	@  <variable>.y
+	ldr	r1, [r4, #4]	@  <variable>.y
 	ldr	r0, [r2, #0]	@  x
 	add	r1, r1, ip
-	ldr	r2, [r6, #0]	@  <variable>.x
+	ldr	r2, [r4, #0]	@  <variable>.x
 	mov	r3, r1, asr #31
 	add	r2, r2, r0
 	add	r1, r1, r3, lsr #29
-	ldr	r3, .L682+36
+	ldr	r3, .L660+52
 	mov	r0, r2, asr #31
 	add	r2, r2, r0, lsr #29
 	ldr	r0, [r3, #0]	@  mapWidthTiles
 	mov	r1, r1, asr #3
 	mov	r2, r2, asr #3
 	mla	r3, r0, r1, r2
+	mov	r5, #0
 	mov	r0, r3
-	str	r1, [r4, #44]	@  bg.tilesFromTop
-	str	r2, [r4, #48]	@  bg.tilesFromLeft
-	str	r3, [r4, #40]	@  bg.tileUnderPlayer
-	str	r5, [r4, #92]	@  bg.currentlyDigging
-	str	r5, [r4, #100]	@  bg.digTotal
-	str	r5, [r4, #96]	@  bg.digProgress
+	str	r1, [r6, #44]	@  bg.tilesFromTop
+	str	r2, [r6, #48]	@  bg.tilesFromLeft
+	str	r3, [r6, #40]	@  bg.tileUnderPlayer
+	str	r5, [r6, #92]	@  bg.currentlyDigging
+	str	r5, [r6, #100]	@  bg.digTotal
+	str	r5, [r6, #96]	@  bg.digProgress
 	bl	removeMineral
-	ldr	r0, [r4, #40]	@  bg.tileUnderPlayer
+	ldr	r0, [r6, #40]	@  bg.tileUnderPlayer
 	bl	setDirt
-	str	r5, [r6, #92]	@  <variable>.animation
-	b	.L665
-.L683:
+	ldr	r3, .L660+56
+	ldr	r2, [r4, #64]	@  <variable>.money
+	ldr	r1, [r3, #0]	@  mineralDiggingValue
+	add	r2, r2, r1
+	ldr	r0, [r4, #68]	@  <variable>.gasLevel
+	str	r2, [r4, #64]	@  <variable>.money
+	ldr	r3, .L660+60
+	mov	lr, pc
+	bx	r3
+	adr	r2, .L660
+	ldmia	r2, {r2-r3}
+	ldr	ip, .L660+64
+	mov	lr, pc
+	bx	ip
+	ldr	r3, .L660+68
+	mov	lr, pc
+	bx	r3
+	str	r5, [r4, #92]	@  <variable>.animation
+	str	r0, [r4, #68]	@  <variable>.gasLevel
+	b	.L635
+.L661:
 	.align	2
-.L682:
+.L660:
+	.word	1071644672
+	.word	0
 	.word	bg
+	.word	mineralDiggingTile
+	.word	materials
 	.word	sprites
 	.word	__modsi3
 	.word	.LC54
@@ -136459,6 +136418,10 @@ dig:
 	.word	y
 	.word	x
 	.word	mapWidthTiles
+	.word	mineralDiggingValue
+	.word	__floatsidf
+	.word	__subdf3
+	.word	__fixdfsi
 	.size	dig, .-dig
 	.align	2
 	.global	move
@@ -136469,55 +136432,56 @@ move:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
-	ldr	r1, .L758+8
+	ldr	r1, .L736+8
 	sub	fp, ip, #4
-	ldr	r5, .L758+12
+	ldr	r5, .L736+12
 	mov	r2, #3
 	mov	r4, r0	@  direction
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	beq	.L750
-	ldr	r1, .L758+16
+	mov	r6, r0	@  direction
+	beq	.L728
+	ldr	r1, .L736+16
 	mov	r0, r4	@  direction
 	mov	r2, #5
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	beq	.L751
-.L690:
-	ldr	r1, .L758+20
+	beq	.L729
+.L668:
+	ldr	r1, .L736+20
 	mov	r0, r4	@  direction
 	mov	r2, #5
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	beq	.L752
-.L695:
-	ldr	r1, .L758+24
+	beq	.L730
+.L673:
+	ldr	r1, .L736+24
 	mov	r0, r4	@  direction
 	mov	r2, #6
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	beq	.L753
-.L689:
-	ldr	r4, .L758+28
+	beq	.L731
+.L667:
+	ldr	r4, .L736+28
 	ldr	r3, [r4, #32]	@  bg.deltaX
 	cmn	r3, #8
-	bgt	.L718
+	bgt	.L696
 	ldr	r3, [r4, #40]	@  bg.tileUnderPlayer
 	mov	r2, #0
 	sub	r3, r3, #1
 	str	r2, [r4, #32]	@  bg.deltaX
 	str	r3, [r4, #40]	@  bg.tileUnderPlayer
-.L719:
-	ldr	r5, .L758+28
+.L697:
+	ldr	r5, .L736+28
 	ldr	r6, [r5, #36]	@  bg.deltaY
 	cmn	r6, #8
 	mov	r7, r5
-	bgt	.L721
-	ldr	r5, .L758+32
+	bgt	.L699
+	ldr	r5, .L736+32
 	ldr	lr, [r5, #0]	@  tilesFromTop
 	sub	lr, lr, #1
 	sub	r1, lr, #1
@@ -136525,37 +136489,37 @@ move:
 	rsblt	r1, r1, #0
 	mov	r2, r1, asr #31
 	add	r2, r1, r2, lsr #27
-	ldr	r3, .L758+36
+	ldr	r3, .L736+36
 	bic	r2, r2, #31
 	ldr	r4, [r3, #0]	@  mapWidthTiles
 	rsb	r1, r2, r1
 	ldr	ip, [r7, #40]	@  bg.tileUnderPlayer
 	mov	r0, lr, asl #5
 	add	r2, r6, #8
-	ldr	r8, .L758+40
+	ldr	r8, .L736+40
 	mov	r3, r1, asl #5
 	str	lr, [r5, #0]	@  tilesFromTop
 	sub	r0, r0, #32
-	ldr	sl, .L758+44
-	ldr	r9, .L758+48
+	ldr	r9, .L736+44
+	ldr	sl, .L736+48
 	str	r2, [r7, #36]	@  bg.deltaY
-	ldr	r5, .L758+52
-	ldr	r2, .L758+56
+	ldr	r5, .L736+52
+	ldr	r2, .L736+56
 	rsb	ip, r4, ip
 	cmp	r0, #0
 	rsblt	r0, r0, #0
 	str	r3, [r8, #0]	@  locationToPaste
-	ldr	r3, .L758+60
+	ldr	r3, .L736+60
 	str	r0, [r2, #0]	@  tileToCopy
 	str	ip, [r7, #40]	@  bg.tileUnderPlayer
-	ldr	r4, [sl, #0]	@  bg0map
+	ldr	lr, [r9, #0]	@  map_Map
 	ldr	ip, [r5, #0]	@  bg1map
-	ldr	r2, [r9, #0]	@  material_Map
-	ldr	lr, [r3, #0]	@  map_Map
+	ldr	r2, [sl, #0]	@  material_Map
+	ldr	r4, [r3, #0]	@  bg0map
 	mov	r0, r0, asl #1
 	mov	r1, r1, asl #6
 	mov	r3, #31	@  loopMe
-.L726:
+.L704:
 	ldrh	r5, [r0, lr]	@ movhi
 	strh	r5, [r1, r4]	@ movhi 
 	ldrh	r5, [r0, r2]	@ movhi
@@ -136563,48 +136527,48 @@ move:
 	strh	r5, [r1, ip]	@ movhi 
 	add	r0, r0, #2
 	add	r1, r1, #2
-	bpl	.L726
-.L684:
+	bpl	.L704
+.L662:
 	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
 	bx	lr
-.L721:
+.L699:
 	cmp	r6, #7
-	ble	.L684
-	ldr	r5, .L758+32
+	ble	.L662
+	ldr	r5, .L736+32
 	ldr	r0, [r5, #0]	@  tilesFromTop
 	add	lr, r0, #22
 	mov	r2, lr, asr #31
-	ldr	r3, .L758+36
+	ldr	r3, .L736+36
 	add	r2, lr, r2, lsr #27
 	ldr	r4, [r3, #0]	@  mapWidthTiles
 	bic	r2, r2, #31
 	ldr	r1, [r7, #40]	@  bg.tileUnderPlayer
 	rsb	lr, r2, lr
-	ldr	r8, .L758+40
+	ldr	r8, .L736+40
 	sub	r2, r6, #8
 	add	r0, r0, #1
 	add	r1, r1, r4
 	mov	r3, lr, asl #5
-	ldr	sl, .L758+44
-	ldr	r9, .L758+48
+	ldr	r9, .L736+44
+	ldr	sl, .L736+48
 	str	r2, [r7, #36]	@  bg.deltaY
-	ldr	r2, .L758+60
+	ldr	r2, .L736+60
 	mov	ip, r0, asl #5
 	str	r1, [r7, #40]	@  bg.tileUnderPlayer
 	str	r3, [r8, #0]	@  locationToPaste
-	ldr	r1, .L758+56
-	ldr	r3, .L758+52
+	ldr	r1, .L736+56
+	ldr	r3, .L736+52
 	add	ip, ip, #672
 	str	r0, [r5, #0]	@  tilesFromTop
-	ldr	r4, [sl, #0]	@  bg0map
-	ldr	r0, [r2, #0]	@  map_Map
-	ldr	r2, [r9, #0]	@  material_Map
+	ldr	r4, [r2, #0]	@  bg0map
+	ldr	r0, [r9, #0]	@  map_Map
+	ldr	r2, [sl, #0]	@  material_Map
 	str	ip, [r1, #0]	@  tileToCopy
 	mov	lr, lr, asl #6
 	ldr	r1, [r3, #0]	@  bg1map
 	mov	ip, ip, asl #1
 	mov	r3, #31	@  loopMe
-.L733:
+.L711:
 	ldrh	r5, [ip, r0]	@ movhi
 	strh	r5, [lr, r4]	@ movhi 
 	ldrh	r5, [ip, r2]	@ movhi
@@ -136612,46 +136576,48 @@ move:
 	strh	r5, [lr, r1]	@ movhi 
 	add	ip, ip, #2
 	add	lr, lr, #2
-	bpl	.L733
-	b	.L684
-.L718:
+	bpl	.L711
+	b	.L662
+.L696:
 	cmp	r3, #7
 	ldrgt	r3, [r4, #40]	@  bg.tileUnderPlayer
 	movgt	r2, #0
 	addgt	r3, r3, #1
 	strgt	r3, [r4, #40]	@  bg.tileUnderPlayer
 	strgt	r2, [r4, #32]	@  bg.deltaX
-	b	.L719
-.L753:
+	b	.L697
+.L731:
 	mov	r0, r4	@  direction
-	ldr	r3, .L758+64
+	ldr	r3, .L736+64
 	mov	lr, pc
 	bx	r3
 	cmp	r0, #0	@  direction
-	beq	.L689
-	ldr	r5, .L758+28
+	beq	.L667
+	ldr	r5, .L736+28
 	ldr	r3, [r5, #92]	@  bg.currentlyDigging
 	cmp	r3, #0
-	ldrne	r5, .L758+68
-	beq	.L754
-.L708:
-	ldr	r4, .L758+72
-	ldr	r3, [r4, #0]	@  <variable>.x
-	cmp	r3, #119
-	ble	.L745
-	ldr	r1, .L758+76
-	ldr	r2, [r1, #0]	@  x
-	cmp	r2, #15
+	ldrne	r5, .L736+68
+	beq	.L732
+.L722:
+	ldr	r4, .L736+72
+.L686:
+	ldr	r2, [r4, #0]	@  <variable>.x
+	cmp	r2, #119
 	addle	r3, r2, #1
+	strle	r3, [r4, #0]	@  <variable>.x
+	ble	.L690
+	ldr	r1, .L736+76
+	ldr	r3, [r1, #0]	@  x
+	cmp	r3, #15
+	addle	r3, r3, #1
 	strle	r3, [r1, #0]	@  x
-	ble	.L712
-	cmp	r3, #231
-	bgt	.L712
-.L745:
-	add	r3, r3, #1
-	str	r3, [r4, #0]	@  <variable>.x
-.L712:
-	ldr	r0, .L758+16
+	ble	.L690
+	cmp	r2, #223
+	ldrle	r3, .L736+72
+	addle	r2, r2, #1
+	strle	r2, [r3, #0]	@  <variable>.x
+.L690:
+	ldr	r0, .L736+16
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
@@ -136659,54 +136625,61 @@ move:
 	moveq	r3, #1
 	str	r3, [r4, #92]	@  <variable>.animation
 	mov	r3, #1
-.L747:
-	ldr	r2, .L758+28
+.L725:
+	ldr	r2, .L736+28
 	str	r3, [r2, #52]	@  bg.directionToKeepMovingX
-	b	.L689
-.L754:
-	ldr	r5, .L758+68
+	b	.L667
+.L732:
+	ldr	r5, .L736+68
 	mov	r0, r4	@  direction
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	bne	.L708
-	ldr	r0, .L758+16
+	bne	.L722
+	ldr	r4, .L736+72
+	ldr	r3, [r4, #0]	@  <variable>.x
+	cmp	r3, #223
+	bgt	.L686
+	ldr	r0, .L736+16
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	bne	.L689
+	bne	.L667
 	mov	r3, #114
-.L748:
-	ldr	r1, .L758+28
+.L726:
+	ldr	r1, .L736+28
 	strb	r3, [r1, #104]	@  bg.digDirection
-.L749:
+.L727:
 	bl	dig
-	b	.L689
-.L752:
+	b	.L667
+.L730:
 	mov	r0, r4	@  direction
-	ldr	r3, .L758+64
+	ldr	r3, .L736+64
 	mov	lr, pc
 	bx	r3
 	cmp	r0, #0	@  direction
-	beq	.L695
-	ldr	r5, .L758+28
+	beq	.L673
+	ldr	r5, .L736+28
 	ldr	r3, [r5, #92]	@  bg.currentlyDigging
 	cmp	r3, #0
-	ldrne	r5, .L758+68
-	beq	.L755
-.L696:
-	ldr	r4, .L758+72
-	ldr	r3, [r4, #0]	@  <variable>.x
-	cmp	r3, #120
-	bgt	.L743
-	ldr	r1, .L758+76
-	ldr	r2, [r1, #0]	@  x
-	cmp	r2, #0
+	ldrne	r5, .L736+68
+	beq	.L733
+.L718:
+	ldr	r4, .L736+72
+.L674:
+	ldr	r2, [r4, #0]	@  <variable>.x
+	cmp	r2, #120
 	subgt	r3, r2, #1
+	strgt	r3, [r4, #0]	@  <variable>.x
+	bgt	.L678
+	ldr	r1, .L736+76
+	ldr	r3, [r1, #0]	@  x
+	cmp	r3, #0
+	subgt	r3, r3, #1
 	strgt	r3, [r1, #0]	@  x
-	ble	.L756
-.L700:
-	ldr	r0, .L758+16
+	ble	.L734
+.L678:
+	ldr	r0, .L736+16
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
@@ -136714,49 +136687,52 @@ move:
 	moveq	r3, #1
 	str	r3, [r4, #92]	@  <variable>.animation
 	mvn	r3, #0
-	b	.L747
-.L756:
-	cmp	r3, #8
-	ble	.L700
-.L743:
-	sub	r3, r3, #1
-	str	r3, [r4, #0]	@  <variable>.x
-	b	.L700
-.L755:
-	ldr	r5, .L758+68
+	b	.L725
+.L734:
+	cmp	r2, #0
+	ldrgt	r3, .L736+72
+	subgt	r2, r2, #1
+	strgt	r2, [r3, #0]	@  <variable>.x
+	b	.L678
+.L733:
+	ldr	r5, .L736+68
 	mov	r0, r4	@  direction
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
-	bne	.L696
-	ldr	r0, .L758+16
+	bne	.L718
+	ldr	r4, .L736+72
+	ldr	r3, [r4, #0]	@  <variable>.x
+	cmp	r3, #0
+	ble	.L674
+	ldr	r0, .L736+16
 	mov	lr, pc
 	bx	r5
 	cmp	r0, #0	@  direction
 	moveq	r3, #108
-	bne	.L689
-	b	.L748
-.L751:
+	bne	.L667
+	b	.L726
+.L729:
 	mov	r0, r4	@  direction
-	ldr	r3, .L758+64
+	ldr	r3, .L736+64
 	mov	lr, pc
 	bx	r3
 	cmp	r0, #0	@  direction
-	beq	.L690
-	ldr	r3, .L758+80
-	ldr	r5, .L758+84
+	beq	.L668
+	ldr	r3, .L736+80
+	ldr	r5, .L736+84
 	ldr	r2, [r3, #0]	@  mapHeightTiles
 	ldr	r3, [r5, #0]	@  y
 	mov	r2, r2, asl #3
-	sub	r2, r2, #200
+	sub	r2, r2, #160
 	cmp	r3, r2
-	bge	.L689
-	ldr	r1, .L758+28
+	bge	.L667
+	ldr	r1, .L736+28
 	ldr	r3, [r1, #92]	@  bg.currentlyDigging
 	cmp	r3, #0
-	beq	.L757
-.L692:
-	ldr	r4, .L758+28
+	beq	.L735
+.L670:
+	ldr	r4, .L736+28
 	ldr	r3, [r5, #0]	@  y
 	ldr	r2, [r4, #36]	@  bg.deltaY
 	add	r3, r3, #1
@@ -136765,53 +136741,54 @@ move:
 	mvn	r3, #0
 	str	r2, [r4, #36]	@  bg.deltaY
 	str	r3, [r4, #56]	@  bg.directionToKeepMovingY
-	b	.L689
-.L757:
-	ldr	r3, .L758+68
+	b	.L667
+.L735:
+	ldr	r3, .L736+68
 	mov	r0, r4	@  direction
 	mov	lr, pc
 	bx	r3
 	cmp	r0, #0	@  direction
-	ldreq	r2, .L758+28
+	ldreq	r2, .L736+28
 	moveq	r3, #100
 	streqb	r3, [r2, #104]	@  bg.digDirection
-	bne	.L692
-	b	.L749
-.L750:
+	bne	.L670
+	b	.L727
+.L728:
 	mov	r0, r4	@  direction
-	ldr	r3, .L758+68
+	ldr	r3, .L736+68
 	mov	lr, pc
 	bx	r3
 	cmp	r0, #0	@  direction
-	beq	.L689
-	ldr	r0, .L758+84
+	beq	.L667
+	ldr	r0, .L736+84
 	ldr	r1, [r0, #0]	@  y
-	ldr	r3, .L758+72
+	ldr	r3, .L736+72
 	mov	r2, #2
-	cmp	r1, #15
+	cmp	r1, #16
 	str	r2, [r3, #92]	@  <variable>.animation
-	bgt	.L687
+	bgt	.L665
+	ldr	r1, .L736+28
 	mov	r3, #16
-	ldr	r1, .L758+28
 	str	r3, [r0, #0]	@  y
-	adr	r3, .L758
+	adr	r3, .L736
 	ldmia	r3, {r3-r4}
 	add	r2, r1, #76
 	stmia	r2, {r3-r4}	@  bg.playerVelocity
-	b	.L689
-.L687:
-	ldr	r4, .L758+28
+	str	r6, [r1, #56]	@  direction,  bg.directionToKeepMovingY
+	b	.L667
+.L665:
+	ldr	r4, .L736+28
 	ldr	r3, [r4, #36]	@  bg.deltaY
-	sub	r1, r1, #1
-	sub	r3, r3, #1
+	sub	r1, r1, #2
+	sub	r3, r3, #2
 	mov	r2, #1
 	str	r1, [r0, #0]	@  y
 	str	r2, [r4, #56]	@  bg.directionToKeepMovingY
 	str	r3, [r4, #36]	@  bg.deltaY
-	b	.L689
-.L759:
+	b	.L667
+.L737:
 	.align	2
-.L758:
+.L736:
 	.word	0
 	.word	0
 	.word	.LC51
@@ -136823,11 +136800,11 @@ move:
 	.word	tilesFromTop
 	.word	mapWidthTiles
 	.word	locationToPaste
-	.word	bg0map
+	.word	map_Map
 	.word	material_Map
 	.word	bg1map
 	.word	tileToCopy
-	.word	map_Map
+	.word	bg0map
 	.word	canDig
 	.word	checkDirection
 	.word	sprites
@@ -136844,55 +136821,55 @@ checkDirection:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	ldr	r3, .L768
-	ldr	r1, .L768+4
+	ldr	r3, .L746
+	ldr	r1, .L746+4
 	mov	r2, #3
 	sub	fp, ip, #4
-	ldr	r6, .L768+8
+	ldr	r6, .L746+8
 	ldr	r4, [r3, #40]	@  tileToCompare,  bg.tileUnderPlayer
 	mov	r5, r0	@  direction
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	ldreq	r3, .L768+12
+	ldreq	r3, .L746+12
 	mov	r2, #6
 	ldreq	r2, [r3, #0]	@  mapWidthTiles
-	ldr	r1, .L768+16
+	ldr	r1, .L746+16
 	mov	r0, r5	@  direction
 	subeq	r4, r4, r2, asl #1	@  tileToCompare,  tileToCompare
-	beq	.L762
+	beq	.L740
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
 	mov	r0, r5	@  direction
-	ldr	r1, .L768+20
+	ldr	r1, .L746+20
 	mov	r2, #5
 	addeq	r4, r4, #2	@  tileToCompare,  tileToCompare
-	beq	.L762
+	beq	.L740
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	ldreq	r3, .L768+12
+	ldreq	r3, .L746+12
 	mov	r2, #5
 	ldreq	r2, [r3, #0]	@  mapWidthTiles
 	mov	r0, r5	@  direction
-	ldr	r1, .L768+24
+	ldr	r1, .L746+24
 	addeq	r4, r4, r2, asl #1	@  tileToCompare,  tileToCompare
-	beq	.L762
+	beq	.L740
 	mov	lr, pc
 	bx	r6
 	cmp	r0, #0	@  direction
 	subeq	r4, r4, #2	@  tileToCompare,  tileToCompare
-.L762:
+.L740:
 	mov	r0, r4	@  tileToCompare
 	ldmea	fp, {r4, r5, r6, fp, sp, lr}
 	b	isTileOpen
-.L769:
+.L747:
 	.align	2
-.L768:
+.L746:
 	.word	bg
 	.word	.LC51
 	.word	memcmp
@@ -136910,55 +136887,66 @@ canDig:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
-	ldr	r3, .L778
-	ldr	r1, .L778+4
+	ldr	r3, .L756
+	ldr	r1, .L756+4
 	mov	r2, #3
 	sub	fp, ip, #4
-	ldr	r6, .L778+8
-	ldr	r4, [r3, #40]	@  tileToCompare,  bg.tileUnderPlayer
-	mov	r5, r0	@  direction
+	ldr	r6, .L756+8
+	ldr	r5, [r3, #40]	@  tileToCompare,  bg.tileUnderPlayer
+	mov	r4, r0	@  direction
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	ldreq	r3, .L778+12
+	ldreq	r3, .L756+12
 	mov	r2, #6
 	ldreq	r2, [r3, #0]	@  mapWidthTiles
-	ldr	r1, .L778+16
-	mov	r0, r5	@  direction
-	subeq	r4, r4, r2, asl #1	@  tileToCompare,  tileToCompare
-	beq	.L772
+	ldr	r1, .L756+16
+	mov	r0, r4	@  direction
+	subeq	r5, r5, r2, asl #1	@  tileToCompare,  tileToCompare
+	beq	.L750
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	mov	r0, r5	@  direction
-	ldr	r1, .L778+20
+	mov	r0, r4	@  direction
+	ldr	r1, .L756+20
 	mov	r2, #5
-	addeq	r4, r4, #2	@  tileToCompare,  tileToCompare
-	beq	.L772
+	addeq	r5, r5, #2	@  tileToCompare,  tileToCompare
+	beq	.L750
 	mov	lr, pc
 	bx	r6
 	mov	r3, r0	@  direction
 	cmp	r3, #0	@  direction
-	ldreq	r3, .L778+12
+	ldreq	r3, .L756+12
 	mov	r2, #5
 	ldreq	r2, [r3, #0]	@  mapWidthTiles
-	mov	r0, r5	@  direction
-	ldr	r1, .L778+24
-	addeq	r4, r4, r2, asl #1	@  tileToCompare,  tileToCompare
-	beq	.L772
+	mov	r0, r4	@  direction
+	ldr	r1, .L756+24
+	addeq	r5, r5, r2, asl #1	@  tileToCompare,  tileToCompare
+	beq	.L750
 	mov	lr, pc
 	bx	r6
 	cmp	r0, #0	@  direction
-	subeq	r4, r4, #2	@  tileToCompare,  tileToCompare
-.L772:
-	mov	r0, r4	@  tileToCompare
+	subeq	r5, r5, #2	@  tileToCompare,  tileToCompare
+.L750:
+	mov	r0, r5	@  tileToCompare
+	bl	mineralValue
+	ldr	r3, .L756+28
+	ldr	r1, [r3, #0]	@  material_Map
+	mov	r2, r5, asl #1	@  tileToCompare
+	ldrh	ip, [r2, r1]
+	ldr	r3, .L756+32
+	ldr	r2, .L756+36
+	mov	r4, r0	@  direction
+	mov	r0, r5	@  tileToCompare
+	str	r4, [r3, #0]	@  direction,  mineralDiggingValue
+	str	ip, [r2, #0]	@  mineralDiggingTile
 	ldmea	fp, {r4, r5, r6, fp, sp, lr}
 	b	mineralDiggable
-.L779:
+.L757:
 	.align	2
-.L778:
+.L756:
 	.word	bg
 	.word	.LC51
 	.word	memcmp
@@ -136966,6 +136954,9 @@ canDig:
 	.word	.LC53
 	.word	.LC52
 	.word	.LC54
+	.word	material_Map
+	.word	mineralDiggingValue
+	.word	mineralDiggingTile
 	.size	canDig, .-canDig
 	.align	2
 	.global	initbackgrounds
@@ -136978,164 +136969,181 @@ initbackgrounds:
 	stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
 	mov	r0, #40960
 	sub	fp, ip, #4
-	ldr	r4, .L781+24
+	ldr	r4, .L759+24
 	mov	lr, pc
 	bx	r4
-	ldr	r3, .L781+28
+	ldr	r3, .L759+28
 	mov	r2, r0
 	str	r2, [r3, #0]	@  material_Map
 	mov	r0, #40960
 	mov	lr, pc
 	bx	r4
-	ldr	r3, .L781+32
+	ldr	r3, .L759+32
 	mov	r2, r0
 	str	r2, [r3, #0]	@  map_Map
 	mov	r0, #2048
 	mov	lr, pc
 	bx	r4
-	ldr	r3, .L781+36
+	ldr	r3, .L759+36
 	mov	r2, r0
 	str	r2, [r3, #0]	@  lastLocation
 	mov	r0, #2048
 	mov	lr, pc
 	bx	r4
-	ldr	r2, .L781+40
+	ldr	r2, .L759+40
 	str	r0, [r2, #0]	@  lastLocationMinerals
-	ldr	r2, .L781+44
+	ldr	r2, .L759+44
 	mov	r1, #640
 	str	r1, [r2, #0]	@  mapHeightTiles
-	ldr	r2, .L781+48
+	ldr	r2, .L759+48
 	mov	r0, #240
 	str	r0, [r2, #0]	@  screenWidth
-	ldr	r2, .L781+52
+	ldr	r2, .L759+52
 	mov	ip, #160
 	str	ip, [r2, #0]	@  screenHeight
-	ldr	r1, .L781+56
-	ldr	r2, .L781+60
-	mov	r4, #0
-	str	r4, [r1, #0]	@  previousX
-	str	r4, [r2, #0]	@  x
-	ldr	r1, .L781+64
-	ldr	r2, .L781+68
-	mov	r9, #32
-	str	r4, [r1, #0]	@  y
-	str	r9, [r2, #0]	@  mapWidthTiles
-	ldr	r1, .L781+72
-	ldr	r2, .L781+76
-	ldr	r3, .L781+80
-	str	r4, [r1, #0]	@  xLoop
-	str	r4, [r2, #0]	@  yLoop
-	mov	r0, #38	@ movhi
-	mov	r1, #40	@ movhi
-	mov	r2, #42	@ movhi
-	strh	r0, [r3, #0]	@ movhi 	@  <variable>.topLeftTile
-	strh	r1, [r3, #8]	@ movhi 	@  <variable>.topLeftTile
-	strh	r2, [r3, #16]	@ movhi 	@  <variable>.topLeftTile
-	mov	r0, #3	@ movhi
-	mov	r1, #46	@ movhi
-	mov	r2, #44	@ movhi
-	ldr	lr, .L781+84
-	strh	r0, [r3, #18]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r1, [r3, #24]	@ movhi 	@  <variable>.topLeftTile
-	strh	r0, [r3, #26]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r2, [r3, #32]	@ movhi 	@  <variable>.topLeftTile
-	mov	r0, #2	@ movhi
-	mov	r1, #60	@ movhi
-	mov	r2, #52	@ movhi
-	mov	r6, #1
-	mov	r5, #4
-	strh	r0, [r3, #34]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r1, [r3, #40]	@ movhi 	@  <variable>.topLeftTile
-	strh	r0, [r3, #42]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r2, [r3, #48]	@ movhi 	@  <variable>.topLeftTile
-	mov	r0, #600	@ movhi
+	ldr	r1, .L759+56
+	ldr	r2, .L759+60
+	mov	r5, #0
+	str	r5, [r1, #0]	@  previousX
+	str	r5, [r2, #0]	@  x
+	ldr	r1, .L759+64
+	ldr	r2, .L759+68
+	mov	r0, #32
+	str	r0, [r2, #0]	@  mapWidthTiles
+	str	r5, [r1, #0]	@  y
+	ldr	r2, .L759+72
+	ldr	r1, .L759+76
+	ldr	r3, .L759+80
+	str	r5, [r1, #0]	@  xLoop
+	str	r5, [r2, #0]	@  yLoop
+	mov	r1, #38	@ movhi
+	mov	r2, #40	@ movhi
+	strh	r1, [r3, #0]	@ movhi 	@  <variable>.topLeftTile
+	strh	r2, [r3, #8]	@ movhi 	@  <variable>.topLeftTile
+	mov	r1, #3	@ movhi
+	mov	r2, #46	@ movhi
+	ldr	lr, .L759+84
+	strh	r1, [r3, #18]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r2, [r3, #24]	@ movhi 	@  <variable>.topLeftTile
+	strh	r1, [r3, #26]	@ movhi 	@  <variable>.minimumDrillLevel
+	mov	r0, #42	@ movhi
+	mov	r1, #2	@ movhi
+	mov	r2, #60	@ movhi
+	mov	r4, #1
+	mov	r6, #4
+	strh	r0, [r3, #16]	@ movhi 	@  <variable>.topLeftTile
+	strh	r1, [r3, #34]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r2, [r3, #40]	@ movhi 	@  <variable>.topLeftTile
+	strh	r1, [r3, #42]	@ movhi 	@  <variable>.minimumDrillLevel
 	mov	sl, #75
-	mov	r8, #150
-	mov	r7, #300
-	mov	r1, #54	@ movhi
+	mov	r9, #150
+	mov	r8, #300
+	mov	r0, #44	@ movhi
 	mov	r2, #31
-	strh	r0, [r3, #52]	@ movhi 	@  <variable>.value
-	strh	r1, [r3, #56]	@ movhi 	@  <variable>.topLeftTile
-	strh	sl, [r3, #12]	@ movhi 	@  <variable>.value
-	strh	r8, [r3, #28]	@ movhi 	@  <variable>.value
-	strh	r7, [r3, #44]	@ movhi 	@  <variable>.value
-	strh	r5, [r3, #2]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	sl, [r3, #4]	@ movhi 	@  <variable>.value
-	strh	r5, [r3, #10]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r8, [r3, #20]	@ movhi 	@  <variable>.value
-	strh	r7, [r3, #36]	@ movhi 	@  <variable>.value
-	strh	r6, [r3, #50]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r6, [r3, #58]	@ movhi 	@  <variable>.minimumDrillLevel
 	mov	r1, #30
-	strh	r0, [r3, #60]	@ movhi 	@  <variable>.value
-	str	r2, [lr, #4]	@  bg.xBGBehind
-	mvn	r2, #0
-	strh	r0, [r3, #76]	@ movhi 	@  <variable>.value
-	str	r1, [lr, #0]	@  bg.xBGAhead
-	str	r2, [lr, #20]	@  bg.yMapBehind
-	adr	r0, .L781
-	ldmia	r0, {r0-r1}
-	ldr	r2, .L781+88
-	stmia	r2, {r0-r1}	@  bg.rocketPower
-	adr	r0, .L781+8
-	ldmia	r0, {r0-r1}
-	ldr	r2, .L781+92
-	stmia	r2, {r0-r1}	@  bg.gravity
-	adr	r0, .L781+16
-	ldmia	r0, {r0-r1}
-	ldr	r2, .L781+96
-	stmia	r2, {r0-r1}	@  bg.playerVelocity
-	mov	r0, #3
-	mov	r1, #2
-	str	r0, [lr, #84]	@  bg.terminalVelocity
-	str	r1, [lr, #88]	@  bg.maxRocketVelocity
-	mov	r2, #56	@ movhi
-	mov	r0, #600	@ movhi
-	mov	r1, #58	@ movhi
-	strh	r2, [r3, #64]	@ movhi 	@  <variable>.topLeftTile
-	strh	r0, [r3, #68]	@ movhi 	@  <variable>.value
-	strh	r1, [r3, #72]	@ movhi 	@  <variable>.topLeftTile
-	mov	r2, #48	@ movhi
+	strh	r4, [r3, #6]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r4, [r3, #14]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r4, [r3, #22]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r4, [r3, #30]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r0, [r3, #32]	@ movhi 	@  <variable>.topLeftTile
+	strh	r4, [r3, #38]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	sl, [r3, #12]	@ movhi 	@  <variable>.value
+	strh	r9, [r3, #28]	@ movhi 	@  <variable>.value
+	strh	r8, [r3, #44]	@ movhi 	@  <variable>.value
+	strh	r6, [r3, #2]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	sl, [r3, #4]	@ movhi 	@  <variable>.value
+	strh	r6, [r3, #10]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r9, [r3, #20]	@ movhi 	@  <variable>.value
+	strh	r8, [r3, #36]	@ movhi 	@  <variable>.value
 	mov	r0, #1000	@ movhi
-	mov	r1, #36	@ movhi
-	strh	r2, [r3, #80]	@ movhi 	@  <variable>.topLeftTile
-	strh	r0, [r3, #84]	@ movhi 	@  <variable>.value
-	strh	r1, [r3, #88]	@ movhi 	@  <variable>.topLeftTile
-	strh	r6, [r3, #74]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r4, [r3, #46]	@ movhi 	@  <variable>.speedMultiplyer
+	stmia	lr, {r1, r2}	@ phole stm
+	mov	r2, #52	@ movhi
+	mvn	r1, #0
+	strh	r0, [r3, #92]	@ movhi 	@  <variable>.value
+	str	r1, [lr, #20]	@  bg.yMapBehind
+	strh	r2, [r3, #48]	@ movhi 	@  <variable>.topLeftTile
+	mov	r0, #54	@ movhi
+	mov	r1, #56	@ movhi
+	mov	r2, #58	@ movhi
+	mov	r7, #600
+	strh	r4, [r3, #94]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r4, [r3, #50]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r4, [r3, #54]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r0, [r3, #56]	@ movhi 	@  <variable>.topLeftTile
+	strh	r4, [r3, #58]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r4, [r3, #62]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r1, [r3, #64]	@ movhi 	@  <variable>.topLeftTile
+	strh	r4, [r3, #66]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r4, [r3, #70]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r2, [r3, #72]	@ movhi 	@  <variable>.topLeftTile
+	strh	r4, [r3, #74]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r4, [r3, #78]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r4, [r3, #86]	@ movhi 	@  <variable>.speedMultiplyer
+	mov	r0, #48	@ movhi
+	mov	r1, #1000	@ movhi
+	mov	r2, #50	@ movhi
+	mov	r4, #36	@ movhi
+	strh	r0, [r3, #80]	@ movhi 	@  <variable>.topLeftTile
+	strh	r1, [r3, #84]	@ movhi 	@  <variable>.value
+	strh	r2, [r3, #88]	@ movhi 	@  <variable>.topLeftTile
+	strh	r4, [r3, #96]	@ movhi 	@  <variable>.topLeftTile
+	strh	r7, [r3, #76]	@ movhi 	@  <variable>.value
+	strh	r6, [r3, #98]	@ movhi 	@  <variable>.minimumDrillLevel
+	strh	r5, [r3, #102]	@ movhi 	@  <variable>.speedMultiplyer
+	strh	r7, [r3, #52]	@ movhi 	@  <variable>.value
+	strh	r7, [r3, #60]	@ movhi 	@  <variable>.value
+	strh	r7, [r3, #68]	@ movhi 	@  <variable>.value
+	strh	r5, [r3, #82]	@ movhi 	@  <variable>.minimumDrillLevel
 	strh	r5, [r3, #90]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r4, [r3, #92]	@ movhi 	@  <variable>.value
-	strh	r6, [r3, #66]	@ movhi 	@  <variable>.minimumDrillLevel
-	strh	r4, [r3, #82]	@ movhi 	@  <variable>.minimumDrillLevel
-	mvn	r2, #0
+	strh	r5, [r3, #100]	@ movhi 	@  <variable>.value
+	mov	r2, #100663296
+	ldr	r3, .L759+88
+	mov	r1, #32
+	mvn	r0, #0
+	add	r2, r2, #47104
+	str	r0, [lr, #12]	@  bg.xMapBehind
+	str	r1, [lr, #8]	@  bg.xMapAhead
+	str	r1, [lr, #16]	@  bg.yMapAhead
+	str	r2, [r3, #0]	@  bg0map
+	ldr	r2, .L759+92
+	mov	r3, #100663296
+	add	r3, r3, #63488
+	mov	r0, #2
+	str	r3, [r2, #0]	@  bg1map
+	str	r0, [lr, #88]	@  bg.maxRocketVelocity
 	mov	r3, #9
-	str	r2, [lr, #12]	@  bg.xMapBehind
-	str	r9, [lr, #16]	@  bg.yMapAhead
-	str	r9, [lr, #8]	@  bg.xMapAhead
-	str	r4, [lr, #24]	@  bg.ulx
-	str	r4, [lr, #28]	@  bg.uly
-	str	r4, [lr, #32]	@  bg.deltaX
-	str	r4, [lr, #36]	@  bg.deltaY
-	str	r4, [lr, #92]	@  bg.currentlyDigging
-	str	r4, [lr, #96]	@  bg.digProgress
-	str	r4, [lr, #100]	@  bg.digTotal
-	str	r4, [lr, #52]	@  bg.directionToKeepMovingX
-	str	r4, [lr, #56]	@  bg.directionToKeepMovingY
-	str	r4, [lr, #40]	@  bg.tileUnderPlayer
-	mov	r0, #100663296
+	adr	r0, .L759
+	ldmia	r0, {r0-r1}
+	mov	r4, #3
 	str	r3, [lr, #44]	@  bg.tilesFromTop
-	ldr	r2, .L781+100
-	ldr	r3, .L781+104
-	mov	r1, #100663296
-	add	r0, r0, #47104
-	add	r1, r1, #63488
-	str	r4, [lr, #48]	@  bg.tilesFromLeft
-	str	r0, [r3, #0]	@  bg0map
-	str	r1, [r2, #0]	@  bg1map
+	add	r3, lr, #60
+	str	r4, [lr, #84]	@  bg.terminalVelocity
+	stmia	r3, {r0-r1}	@  bg.rocketPower
+	adr	r3, .L759+8
+	ldmia	r3, {r3-r4}
+	adr	r0, .L759+16
+	ldmia	r0, {r0-r1}
+	add	r2, lr, #68
+	str	r5, [lr, #48]	@  bg.tilesFromLeft
+	str	r5, [lr, #24]	@  bg.ulx
+	str	r5, [lr, #28]	@  bg.uly
+	str	r5, [lr, #32]	@  bg.deltaX
+	str	r5, [lr, #36]	@  bg.deltaY
+	str	r5, [lr, #92]	@  bg.currentlyDigging
+	str	r5, [lr, #96]	@  bg.digProgress
+	str	r5, [lr, #100]	@  bg.digTotal
+	str	r5, [lr, #52]	@  bg.directionToKeepMovingX
+	str	r5, [lr, #56]	@  bg.directionToKeepMovingY
+	str	r5, [lr, #40]	@  bg.tileUnderPlayer
+	add	lr, lr, #76
+	stmia	r2, {r3-r4}	@  bg.gravity
+	stmia	lr, {r0-r1}	@  bg.playerVelocity
 	ldmea	fp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
 	bx	lr
-.L782:
+.L760:
 	.align	2
-.L781:
+.L759:
 	.word	1069757235
 	.word	858993459
 	.word	1069128089
@@ -137154,15 +137162,12 @@ initbackgrounds:
 	.word	x
 	.word	y
 	.word	mapWidthTiles
-	.word	xLoop
 	.word	yLoop
+	.word	xLoop
 	.word	materials
 	.word	bg
-	.word	bg+60
-	.word	bg+68
-	.word	bg+76
-	.word	bg1map
 	.word	bg0map
+	.word	bg1map
 	.size	initbackgrounds, .-initbackgrounds
 	.align	2
 	.global	loadBackground
@@ -137180,12 +137185,12 @@ loadBackground:
 	mov	r3, #8064	@ movhi
 	sub	fp, ip, #4
 	strh	r3, [r2, #10]	@ movhi 
-	ldr	r0, .L784
+	ldr	r0, .L762
 	mov	r1, #83886080
 	mov	r2, #256
 	mov	r3, #-2147483648
 	bl	DMAFastCopy
-	ldr	r0, .L784+4
+	ldr	r0, .L762+4
 	mov	r1, #100663296
 	mov	r2, #3072
 	mov	r3, #-2080374784
@@ -137193,9 +137198,9 @@ loadBackground:
 	bl	generateMap
 	ldmea	fp, {fp, sp, lr}
 	b	loadStartingPosition
-.L785:
+.L763:
 	.align	2
-.L784:
+.L762:
 	.word	map_Palette
 	.word	map_Tiles
 	.size	loadBackground, .-loadBackground
@@ -137215,21 +137220,21 @@ reloadBackground:
 	mov	r3, #8064	@ movhi
 	sub	fp, ip, #4
 	strh	r3, [r2, #10]	@ movhi 
-	ldr	r0, .L787
+	ldr	r0, .L765
 	mov	r1, #83886080
 	mov	r2, #256
 	mov	r3, #-2147483648
 	bl	DMAFastCopy
-	ldr	r0, .L787+4
+	ldr	r0, .L765+4
 	mov	r1, #100663296
 	mov	r2, #3072
 	mov	r3, #-2080374784
 	bl	DMAFastCopy
 	ldmea	fp, {fp, sp, lr}
 	b	loadLastPosition
-.L788:
+.L766:
 	.align	2
-.L787:
+.L765:
 	.word	map_Palette
 	.word	map_Tiles
 	.size	reloadBackground, .-reloadBackground
@@ -137245,8 +137250,8 @@ drawBackground:
 	sub	fp, ip, #4
 	bl	keyPoll
 	bl	WaitVBlank
-	ldr	lr, .L810
-	ldr	r3, .L810+4
+	ldr	lr, .L788
+	ldr	r3, .L788+4
 	ldr	r1, [lr, #44]	@  bg.tilesFromTop
 	ldr	r0, [r3, #0]	@  mapWidthTiles
 	ldr	r3, [lr, #48]	@  bg.tilesFromLeft
@@ -137254,43 +137259,43 @@ drawBackground:
 	ldr	r2, [lr, #92]	@  bg.currentlyDigging
 	cmp	r2, #0
 	str	ip, [lr, #40]	@  bg.tileUnderPlayer
-	bne	.L807
+	bne	.L785
 	ldr	r3, [lr, #52]	@  bg.directionToKeepMovingX
 	cmp	r3, #0
-	bne	.L792
+	bne	.L770
 	ldr	r3, [lr, #56]	@  bg.directionToKeepMovingY
 	cmp	r3, #0
-	bne	.L792
-	ldr	r0, .L810+8
+	bne	.L770
+	ldr	r0, .L788+8
 	bl	checkDirection
 	cmp	r0, #0
-	ldrne	r3, .L810+12
-	ldreq	r3, .L810+12
+	ldrne	r3, .L788+12
+	ldreq	r3, .L788+12
 	movne	r2, #2
 	streq	r0, [r3, #92]	@  <variable>.animation
 	strne	r2, [r3, #92]	@  <variable>.animation
 	mov	r0, #64
 	bl	keyIsDown
 	cmp	r0, #0
-	ldrne	r0, .L810+16
-	bne	.L806
+	ldrne	r0, .L788+16
+	bne	.L784
 	mov	r0, #128
 	bl	keyIsDown
 	cmp	r0, #0
-	ldrne	r0, .L810+8
-	bne	.L806
+	ldrne	r0, .L788+8
+	bne	.L784
 	mov	r0, #32
 	bl	keyIsDown
 	cmp	r0, #0
-	ldrne	r0, .L810+20
-	bne	.L806
+	ldrne	r0, .L788+20
+	bne	.L784
 	mov	r0, #16
 	bl	keyIsDown
 	cmp	r0, #0
-	bne	.L808
-.L791:
-	ldr	r3, .L810+24
-	ldr	r2, .L810+28
+	bne	.L786
+.L769:
+	ldr	r3, .L788+24
+	ldr	r2, .L788+28
 	ldrh	r1, [r3, #0]	@  y
 	ldrh	r0, [r2, #0]	@  x
 	mov	r3, #67108864
@@ -137300,30 +137305,30 @@ drawBackground:
 	strh	r0, [r3, #20]	@ movhi 
 	ldmea	fp, {fp, sp, lr}
 	bx	lr
-.L808:
-	ldr	r0, .L810+32
-.L806:
+.L786:
+	ldr	r0, .L788+32
+.L784:
 	bl	move
-	b	.L791
-.L792:
+	b	.L769
+.L770:
 	ldr	r3, [lr, #52]	@  bg.directionToKeepMovingX
 	cmp	r3, #0
-	bne	.L809
-	ldr	r3, .L810
+	bne	.L787
+	ldr	r3, .L788
 	ldr	r2, [r3, #56]	@  bg.directionToKeepMovingY
 	cmp	r2, #0
-	beq	.L791
+	beq	.L769
 	bl	moveToYTile
-	b	.L791
-.L809:
+	b	.L769
+.L787:
 	bl	moveToXTile
-	b	.L791
-.L807:
+	b	.L769
+.L785:
 	bl	dig
-	b	.L791
-.L811:
+	b	.L769
+.L789:
 	.align	2
-.L810:
+.L788:
 	.word	bg
 	.word	mapWidthTiles
 	.word	.LC52
@@ -137341,7 +137346,7 @@ Initialize:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
-	ldr	r3, .L813
+	ldr	r3, .L791
 	mov	ip, sp
 	mov	r2, #0
 	stmfd	sp!, {fp, ip, lr, pc}
@@ -137352,9 +137357,9 @@ Initialize:
 	bl	initShop
 	ldmea	fp, {fp, sp, lr}
 	b	initTitle
-.L814:
+.L792:
 	.align	2
-.L813:
+.L791:
 	.word	GameState
 	.size	Initialize, .-Initialize
 	.align	2
@@ -137366,30 +137371,30 @@ LoadContent:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {fp, ip, lr, pc}
-	ldr	r2, .L825
+	ldr	r2, .L803
 	ldr	r3, [r2, #0]	@  GameState
 	sub	fp, ip, #4
 	cmp	r3, #5
 	ldrls	pc, [pc, r3, asl #2]
-	b	.L815
+	b	.L793
 	.p2align 2
-.L824:
-	.word	.L815
-	.word	.L818
-	.word	.L815
-	.word	.L815
-	.word	.L815
-	.word	.L815
-.L818:
+.L802:
+	.word	.L793
+	.word	.L796
+	.word	.L793
+	.word	.L793
+	.word	.L793
+	.word	.L793
+.L796:
 	bl	loadBackground
 	ldmea	fp, {fp, sp, lr}
 	b	loadSprite
-.L815:
+.L793:
 	ldmea	fp, {fp, sp, lr}
 	bx	lr
-.L826:
+.L804:
 	.align	2
-.L825:
+.L803:
 	.word	GameState
 	.size	LoadContent, .-LoadContent
 	.align	2
@@ -137401,116 +137406,116 @@ Update:
 	@ frame_needed = 1, uses_anonymous_args = 0
 	mov	ip, sp
 	stmfd	sp!, {r4, r5, fp, ip, lr, pc}
-	ldr	r5, .L853
+	ldr	r5, .L831
 	sub	fp, ip, #4
 	bl	keyPoll
 	bl	WaitVBlank
 	ldr	r3, [r5, #0]	@  GameState
 	cmp	r3, #5
 	ldrls	pc, [pc, r3, asl #2]
-	b	.L827
+	b	.L805
 	.p2align 2
-.L845:
-	.word	.L829
-	.word	.L830
-	.word	.L840
-	.word	.L827
-	.word	.L842
-	.word	.L843
-.L829:
+.L823:
+	.word	.L807
+	.word	.L808
+	.word	.L818
+	.word	.L805
+	.word	.L820
+	.word	.L821
+.L807:
 	mov	r3, #1024
 	add	r3, r3, #3
 	mov	r2, #67108864
 	strh	r3, [r2, #0]	@ movhi 
 	ldmea	fp, {r4, r5, fp, sp, lr}
 	b	updateTitle
-.L830:
-	ldr	r4, .L853+4
+.L808:
+	ldr	r4, .L831+4
 	ldr	r2, [r4, #0]	@  setGame
 	mov	r3, #67108864
 	mov	r1, #4928	@ movhi
 	cmp	r2, #0
 	strh	r1, [r3, #0]	@ movhi 
-	beq	.L849
+	beq	.L827
 	cmp	r2, #2
-	beq	.L850
-.L832:
+	beq	.L828
+.L810:
 	bl	drawBackground
 	mov	r0, #0
 	bl	PlaySprite
 	mov	r0, #4
 	bl	keyIsDown
 	cmp	r0, #0
-	bne	.L851
-.L834:
+	bne	.L829
+.L812:
 	mov	r0, #8
 	bl	keyIsDown
 	cmp	r0, #0
-	bne	.L852
-.L835:
-	mov	r3, #49920	@  i
-	add	r3, r3, #80	@  i,  i
-.L839:
+	bne	.L830
+.L813:
+	mov	r3, #24832	@  i
+	add	r3, r3, #168	@  i,  i
+.L817:
 	sub	r3, r3, #1	@  i,  i
 	cmp	r3, #0	@  i
-	bgt	.L839
-.L827:
+	bgt	.L817
+.L805:
 	ldmea	fp, {r4, r5, fp, sp, lr}
 	bx	lr
-.L852:
+.L830:
 	bl	saveLastPosition
 	mov	r3, #5
 	mov	r2, #1
 	str	r3, [r5, #0]	@  GameState
 	str	r2, [r4, #0]	@  setGame
-	b	.L835
-.L851:
+	b	.L813
+.L829:
 	bl	saveLastPosition
 	mov	r3, #2
 	mov	r2, #1
 	str	r3, [r5, #0]	@  GameState
 	str	r2, [r4, #0]	@  setGame
-	b	.L834
-.L850:
-	ldr	r0, .L853+8
+	b	.L812
+.L828:
+	ldr	r0, .L831+8
 	mov	r1, #83886080
 	mov	r2, #256
 	mov	r3, #-2147483648
 	bl	DMAFastCopy
-	ldr	r0, .L853+12
+	ldr	r0, .L831+12
 	mov	r1, #100663296
 	mov	r2, #3072
 	mov	r3, #-2080374784
 	bl	DMAFastCopy
 	bl	loadLastPosition
-.L848:
+.L826:
 	bl	loadSprite
 	mov	r3, #1
 	str	r3, [r4, #0]	@  setGame
-	b	.L832
-.L849:
+	b	.L810
+.L827:
 	bl	loadBackground
-	b	.L848
-.L840:
+	b	.L826
+.L818:
 	mov	r3, #1024
 	add	r3, r3, #3
 	mov	r2, #67108864
 	strh	r3, [r2, #0]	@ movhi 
 	ldmea	fp, {r4, r5, fp, sp, lr}
 	b	updateShop
-.L842:
+.L820:
 	ldmea	fp, {r4, r5, fp, sp, lr}
 	b	updateGameOver
-.L843:
+.L821:
 	mov	r3, #1024
 	add	r3, r3, #3
 	mov	r2, #67108864
 	strh	r3, [r2, #0]	@ movhi 
 	ldmea	fp, {r4, r5, fp, sp, lr}
 	b	updateGas
-.L854:
+.L832:
 	.align	2
-.L853:
+.L831:
 	.word	GameState
 	.word	setGame
 	.word	map_Palette
@@ -137527,41 +137532,41 @@ Draw:
 	stmfd	sp!, {fp, ip, lr, pc}
 	sub	fp, ip, #4
 	bl	WaitVBlank
-	ldr	r2, .L865
+	ldr	r2, .L843
 	ldr	r3, [r2, #0]	@  GameState
 	cmp	r3, #5
 	ldrls	pc, [pc, r3, asl #2]
-	b	.L855
+	b	.L833
 	.p2align 2
-.L864:
-	.word	.L857
-	.word	.L858
-	.word	.L859
-	.word	.L855
-	.word	.L861
-	.word	.L862
-.L857:
+.L842:
+	.word	.L835
+	.word	.L836
+	.word	.L837
+	.word	.L833
+	.word	.L839
+	.word	.L840
+.L835:
 	ldmea	fp, {fp, sp, lr}
 	b	drawTitle
-.L858:
+.L836:
 	bl	WaitVBlank
 	ldmea	fp, {fp, sp, lr}
 	b	UpdateSpriteMemory
-.L859:
+.L837:
 	ldmea	fp, {fp, sp, lr}
 	b	drawShop
-.L855:
+.L833:
 	ldmea	fp, {fp, sp, lr}
 	bx	lr
-.L861:
+.L839:
 	ldmea	fp, {fp, sp, lr}
 	b	drawGameOver
-.L862:
+.L840:
 	ldmea	fp, {fp, sp, lr}
 	b	drawGas
-.L866:
+.L844:
 	.align	2
-.L865:
+.L843:
 	.word	GameState
 	.size	Draw, .-Draw
 	.align	2
@@ -137576,10 +137581,10 @@ main:
 	sub	fp, ip, #4
 	bl	Initialize
 	bl	LoadContent
-.L872:
+.L850:
 	bl	Update
 	bl	Draw
-	b	.L872
+	b	.L850
 	.size	main, .-main
 	.comm	GameState, 4, 32
 	.comm	setGame, 4, 32
@@ -137618,5 +137623,7 @@ main:
 	.comm	bg1map, 4, 32
 	.comm	xLoop, 4, 32
 	.comm	yLoop, 4, 32
+	.comm	mineralDiggingValue, 4, 32
+	.comm	mineralDiggingTile, 4, 32
 	.comm	previousX, 4, 32
 	.ident	"GCC: (GNU) 3.3.2"
