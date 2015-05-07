@@ -202,7 +202,7 @@ int mineralDiggingTile;
 
 // Draw Depth
 void drawDepth() {
-    int number = y - 128;
+    int number = y - 112;
 
     if (number <= 0) {
         bg2map[32*19+23] = 150;
@@ -221,7 +221,7 @@ void drawDepth() {
 
 // Draw Fuel
 void drawFuel() {
-    int number = sprites[0].gasLevel; // = some int
+    int number = ceil(sprites[0].gasLevel); // = some int
 
     int i = 0;
     for (i = 0; i < 2; i++) {
@@ -232,7 +232,23 @@ void drawFuel() {
 
 // Draw Health
 void drawHealth() {
-    int number = sprites[0].money; // = some int
+    int number = 20;
+
+    if (sprites[0].hullType == 0) {
+        number = 99;
+    }
+    else if (sprites[0].hullType == 1) {
+        number = 80;
+    }
+    else if (sprites[0].hullType == 2) {
+        number = 60;
+    }
+    else if (sprites[0].hullType == 3) {
+        number = 40;
+    }
+    else {
+        number = 20;
+    }
 
     int i = 0;
     for (i = 0; i < 2; i++) {
@@ -243,7 +259,8 @@ void drawHealth() {
 
 // Draw HUD money
 void drawMoney() {
-    int number = sprites[0].money; // = some int
+    int number = sprites[0].money;
+
 
     int i = 0;
     for (i = 0; i < 7; i++) {
@@ -430,6 +447,7 @@ void generateMap() {
     }
 
 
+    // add dirt
     int xLoop, yLoop;
     for (yLoop = 27; yLoop <= 640; yLoop += 2) {
         for (xLoop = 0; xLoop < 32; xLoop += 2) {
@@ -442,10 +460,24 @@ void generateMap() {
         }
     }
 
-
     // generate mineral map
     blackoutMinerals();
     addAllMinerals();
+    
+    // add finish line
+    for (yLoop = 622; yLoop <= 625; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            map_Map[yLoop*32 + xLoop] = 123; // finish flag tile
+        }
+    }
+    
+    // remove minerals around finish line
+    for (yLoop = 618; yLoop <= 629; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            material_Map[yLoop*32 + xLoop] = 94;// remove minerals if they are above the flag
+        }
+    }
+    
 }
 
 void saveLastPosition() {
@@ -630,19 +662,16 @@ void move(char direction[]) {
         }
     }
     else if (strcmp(direction, "down") == 0 && canDig(direction)) {
-        // bottom of map bounds checking
-    	if (y < (mapHeightTiles*8)-160) {
-            // start to dig if the tile isn't open & is diggable
-            if (!bg.currentlyDigging && !checkDirection(direction)) {
-                bg.digDirection = 'd'; // down
-                dig();
-            }
-            else {
-                y++;
-                bg.deltaY++;
+        // start to dig if the tile isn't open & is diggable
+        if (!bg.currentlyDigging && !checkDirection(direction)) {
+            bg.digDirection = 'd'; // down
+            dig();
+        }
+        else {
+            y++;
+            bg.deltaY++;
 
-                bg.directionToKeepMovingY = -1;
-            }
+            bg.directionToKeepMovingY = -1;
         }
     }
     else if (strcmp(direction, "left") == 0 && canDig(direction)) {

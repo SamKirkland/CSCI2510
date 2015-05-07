@@ -76,8 +76,8 @@ void initSprites() {
 	}
 
     //declaring the x and y for the sprites.
-    sprites[0].x = 0;
-    sprites[0].y = 70;
+    sprites[0].x = 128;
+    sprites[0].y = 80;
 }
 
 //Method to load the player sprites.
@@ -236,15 +236,25 @@ void PlaySprite(int num) {
     else if(sprites[num].alive == 0) {
         if (sprites[num].activeFrame == 8) {
             sprites[num].activeFrame = 9;
+
+            int i = 750000;
+            while (i > 0) { i--; }
         }
         else if (sprites[num].activeFrame == 9) {
             sprites[num].activeFrame = 10;
+            
+            int i = 750000;
+            while (i > 0) { i--; }
         }
         else if (sprites[num].activeFrame == 10) {
             sprites[num].activeFrame = 11;
+            
+            int i = 750000;
+            while (i > 0) { i--; }
         }
         else if (sprites[num].activeFrame == 11) {
             ////drawGameOver();
+            GameState = STATE_GAMEOVERLOSE;
         }
         else {
             sprites[num].activeFrame = 8;

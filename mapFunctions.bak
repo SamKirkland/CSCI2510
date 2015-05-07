@@ -1,0 +1,825 @@
+#include <time.h>
+#include <stdlib.h>
+
+void saveLastPosition();
+void loadLastPosition();
+
+#include "map.pal.h"
+#include "map.raw.h"
+#include "sprite.h"
+//////////////////////////////////////////////////////////////////////////////////////////////map functions
+
+void move(char direction[]);
+bool checkDirection(char direction[]);
+bool canDig(char direction[]);
+void numberToTile(int number, int tileX, int tileY, char color[]);
+
+unsigned short *map_Map;
+unsigned short *material_Map;
+unsigned short *lastLocation;
+unsigned short *lastLocationMinerals;
+
+const unsigned short aboveGround[1024] = {
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0001, 0x0002, 0x0003, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0004, 0x0005, 0x0006, 0x0007, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0008, 0x0009, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x000a, 0x040a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x000a, 0x040a, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x000b, 0x000c, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x000d, 0x000e, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x000d, 0x000e, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0002, 0x0003, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0004, 0x0005, 0x0006, 0x0007,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x000f, 0x0010, 0x0011, 0x0012,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0008, 0x0009,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0013, 0x0014, 0x0015, 0x0016,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x000b, 0x000c,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x000a, 0x040a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x000a, 0x040a, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x000d, 0x000e, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x000d, 0x000e, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x000f, 0x0010, 0x0011, 0x0012, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0013, 0x0014, 0x0015, 0x0016, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x000a, 0x040a, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x000d, 0x000e, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0008, 0x0009, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x000a, 0x040a, 0x0000, 0x0000,
+    0x000b, 0x000c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x000d, 0x000e, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x000f, 0x0010, 0x0011, 0x0012,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0002,
+    0x0003, 0x0000, 0x0000, 0x0000, 0x0017, 0x0417, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0013, 0x0014, 0x0015, 0x0016,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0004, 0x0005,
+    0x0006, 0x0007, 0x0000, 0x0000, 0x0817, 0x0c17, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0018,
+    0x0019, 0x001a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x001b, 0x001c, 0x001d, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x001e,
+    0x001f, 0x0020, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0420, 0x041f, 0x041e, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0021, 0x0022, 0x0023, 0x0024, 0x0025, 0x0026, 0x0027, 0x0028,
+    0x0029, 0x0421, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x002a, 0x002b, 0x002c, 0x002d, 0x002e, 0x002f, 0x0030, 0x0421,
+    0x0031, 0x0032, 0x0033, 0x0034, 0x0035, 0x0036, 0x0037, 0x0037,
+    0x0037, 0x0038, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0039, 0x0032, 0x0033, 0x0034, 0x0035, 0x003a, 0x003b, 0x003c,
+    0x003d, 0x003e, 0x003f, 0x0040, 0x0041, 0x0042, 0x0043, 0x0043,
+    0x0043, 0x0044, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0045, 0x0046, 0x0047, 0x0048, 0x0049, 0x004a, 0x004b, 0x004c,
+    0x004d, 0x004e, 0x004f, 0x0050, 0x0051, 0x0052, 0x0843, 0x0843,
+    0x0843, 0x0844, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
+    0x0053, 0x0054, 0x0055, 0x0056, 0x0057, 0x0057, 0x0058, 0x0453,
+    0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a,
+    0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a,
+    0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a,
+    0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a, 0x0059, 0x005a,
+    0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c,
+    0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c,
+    0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c,
+    0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c,
+    0x005d, 0x005d, 0x005e, 0x005e, 0x005f, 0x0060, 0x0061, 0x0062,
+    0x0063, 0x0064, 0x0065, 0x0066, 0x0067, 0x0068, 0x0069, 0x006a,
+    0x006b, 0x006c, 0x006d, 0x006e, 0x006f, 0x0070, 0x0071, 0x0072,
+    0x0073, 0x0074, 0x0075, 0x0076, 0x0077, 0x0078, 0x0079, 0x007a,
+    0x007b, 0x005e, 0x005e, 0x005e, 0x005b, 0x005c, 0x007c, 0x007d,
+    0x007e, 0x007f, 0x0080, 0x0081, 0x0082, 0x0083, 0x0084, 0x0085,
+    0x0086, 0x0087, 0x0088, 0x0089, 0x008a, 0x008b, 0x008c, 0x008d,
+    0x008e, 0x008f, 0x0090, 0x0091, 0x0092, 0x0093, 0x0094, 0x0095,
+    0x0096, 0x0097, 0x0897, 0x0497, 0x0098, 0x0898, 0x0099, 0x009a,
+    0x0c9a, 0x005e, 0x005e, 0x005e, 0x005f, 0x0060, 0x005f, 0x0060,
+    0x005f, 0x0060, 0x005f, 0x0060, 0x005f, 0x0060, 0x005f, 0x0060,
+    0x005f, 0x0060, 0x005f, 0x0060, 0x005f, 0x0060, 0x005f, 0x0060,
+    0x009b, 0x009c, 0x009d, 0x009e, 0x009f, 0x00a0, 0x00a1, 0x00a2,
+    0x00a3, 0x00a4, 0x00a5, 0x005e, 0x005b, 0x005c, 0x005b, 0x005c,
+    0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c,
+    0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c, 0x005b, 0x005c
+};
+
+
+typedef struct tagmaterial {
+    unsigned short topLeftTile;         // number of the top left tile
+    unsigned short minimumDrillLevel;   // minimum drill level to mine the mineral
+    unsigned short value;               // money received when mining complete
+    unsigned short speedMultiplyer;     // how fast the mineral should be dug
+}material;
+
+typedef struct tagscrollingBG {
+    int xBGAhead, xBGBehind;
+    int xMapAhead, xMapBehind;
+    int yMapAhead, yMapBehind;
+    int ulx, uly;
+    int deltaX, deltaY;
+    int tileUnderPlayer; // the current tile thats in map thats under the players position
+
+    int tilesFromTop;
+    int tilesFromLeft;
+
+    int directionToKeepMovingX;
+    int directionToKeepMovingY;
+
+    double rocketPower;
+    double gravity;
+    double playerVelocity;
+    int terminalVelocity;
+    int maxRocketVelocity;
+
+    bool currentlyDigging;
+    int digProgress;
+    int digTotal;
+    char digDirection;
+}scrollingBG;
+
+scrollingBG bg;
+material materials[15];  // create array of all materials
+
+int tileToCopy, locationToPaste;
+int x, y;
+int mapWidthTiles, mapHeightTiles;
+int screenWidth, screenHeight;
+unsigned short* bg0map;
+unsigned short* bg1map;
+int tilesFromTop = 0;
+int xLoop, yLoop;
+
+int mineralDiggingValue;
+int mineralDiggingTile;
+
+
+// Draw Depth
+void drawDepth() {
+    int number = y - 112;
+
+    if (number <= 0) {
+        bg2map[32*19+23] = 150;
+    }
+    else {
+        bg2map[32*19+23] = 190;
+    }
+
+    number = abs(number);
+    int i = 0;
+    for (i = 0; i < 4; i++) {
+        numberToTile(number % 10, 27 - i, 19, "white");
+        number = number / 10;
+    }
+}
+
+// Draw Fuel
+void drawFuel() {
+    int number = ceil(sprites[0].gasLevel); // = some int
+
+    int i = 0;
+    for (i = 0; i < 2; i++) {
+        numberToTile(number % 10, 5 - i, 19, "red");
+        number = number / 10;
+    }
+}
+
+// Draw Health
+void drawHealth() {
+    int number = sprites[0].money;
+
+    int i = 0;
+    for (i = 0; i < 2; i++) {
+        numberToTile(number % 10, 2 - i, 19, "red");
+        number = number / 10;
+    }
+}
+
+// Draw HUD money
+void drawMoney() {
+    int number = 20;
+    
+    if (sprites[0].hullType == 0) {
+        number = 99;
+    }
+    else if (sprites[0].hullType == 1) {
+        number = 80;
+    }
+    else if (sprites[0].hullType == 2) {
+        number = 60;
+    }
+    else if (sprites[0].hullType == 3) {
+        number = 40;
+    }
+    else {
+        number = 20;
+    }
+
+
+    int i = 0;
+    for (i = 0; i < 7; i++) {
+        numberToTile(number % 10, 29 - i, 0, "green");
+        number = number / 10;
+    }
+}
+
+void numberToTile(int number, int tileX, int tileY, char color[]) {
+    int startingTile = 0;
+    int tileToPrint = 0;
+
+    if (strcmp(color, "red") == 0) { // top
+        startingTile = 167;
+    }
+    else if (strcmp(color, "green") == 0) { // right
+        startingTile = 156;
+    }
+    else if (strcmp(color, "white") == 0) { // right
+        startingTile = 178;
+    }
+    
+    tileToPrint = startingTile + number;
+    
+    bg2map[tileY*32 + tileX] = tileToPrint;
+}
+
+// creates the starting HUD
+void initHUD() {
+    int i = 0;
+    
+    // sets the background to clear
+    for (i = 0; i < 32*32; i++) {
+        bg2map[i] = 94;
+    }
+    
+    // draw top right
+    bg2map[21] = 0x0897;
+    bg2map[22] = 0x009B; // Draw $
+    bg2map[32+22] = 0x0899;
+    bg2map[32+23] = 0x0898;
+    bg2map[32+24] = 0x0898;
+    bg2map[32+25] = 0x0898;
+    bg2map[32+26] = 0x0898;
+    bg2map[32+27] = 0x0898;
+    bg2map[32+28] = 0x0898;
+    bg2map[32+29] = 0x0898;
+    
+    drawMoney(); // Draw money
+    
+    
+    
+    // draw bottom left
+    bg2map[32*19+6] = 0x0497;
+    bg2map[32*18] = 0x0098;
+    bg2map[32*18+1] = 0x0098;
+    bg2map[32*18+2] = 0x0098;
+    bg2map[32*18+3] = 0x0098;
+    bg2map[32*18+4] = 0x0098;
+    bg2map[32*18+5] = 0x4499;
+    
+    
+    
+    // Draw heart
+    bg2map[32*19] = 0x00A6;
+    drawHealth(); // Draw health
+    
+    
+    // Draw gas
+    bg2map[32*19+3] = 0x00B1;
+    drawFuel(); // Draw fuel
+    
+    
+    // draw bottom right
+    bg2map[32*19+22] = 0x0097;
+    bg2map[32*18+23] = 0x0099;
+    bg2map[32*18+24] = 0x0098;
+    bg2map[32*18+25] = 0x0098;
+    bg2map[32*18+26] = 0x0098;
+    bg2map[32*18+27] = 0x0098;
+    bg2map[32*18+28] = 0x0098;
+    bg2map[32*18+29] = 0x0098;
+    
+    // Draw Depth
+    bg2map[32*19+28] = 0x00BC;
+    bg2map[32*19+29] = 0x00BD;
+    drawDepth(); // Dtaw depth
+}
+
+
+
+
+// returns the value of the material with the given tile
+int mineralValue(int position) {
+    for (xLoop = 0; xLoop < 15; xLoop++) {
+        if (materials[xLoop].topLeftTile == material_Map[position]) {
+            return materials[xLoop].value;
+        }
+    }
+    
+    return 0;
+}
+
+// returns true if the current players drill can drill the given mineral
+bool mineralDiggable(int position) {
+    for (xLoop = 0; xLoop < 15; xLoop++) {
+        if (materials[xLoop].topLeftTile == material_Map[position]) {
+            // checks to make sure the drill is high enough to drill material
+            if (sprites[0].drillType <= materials[xLoop].minimumDrillLevel) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+    
+    return false;
+}
+
+
+void setMineral(int position, int tile) {
+    material_Map[position] = tile;                      // upper left
+    material_Map[position+1] = tile+1;                  // upper right
+    material_Map[position+mapWidthTiles] = tile+27;      // bottom left
+    material_Map[position+mapWidthTiles+1] = tile+28;    // bottom right
+}
+
+void setDirt(int position) {
+    int tile = 97;
+
+    map_Map[position] = tile;                           // upper left
+    map_Map[position+1] = tile+1;                       // upper right
+    map_Map[position+mapWidthTiles] = tile+27;          // bottom left
+    map_Map[position+mapWidthTiles+1] = tile+28;        // bottom right
+
+    bg0map[(position%1024)] = tile;                     // upper left
+    bg0map[(position%1024)+1] = tile+1;                 // upper right
+    bg0map[(position%1024)+mapWidthTiles] = tile+27;    // bottom left
+    bg0map[(position%1024)+mapWidthTiles+1] = tile+28;  // bottom right
+}
+
+void removeMineral(int position) {
+    int tile = 94;
+
+    material_Map[position] = tile;                      // upper left
+    material_Map[position+1] = tile;                    // upper right
+    material_Map[position+mapWidthTiles] = tile;        // bottom left
+    material_Map[position+mapWidthTiles+1] = tile;      // bottom right
+
+    bg1map[(position%1024)] = tile;                     // upper left
+    bg1map[(position%1024)+1] = tile;                   // upper right
+    bg1map[(position%1024)+mapWidthTiles] = tile;       // bottom left
+    bg1map[(position%1024)+mapWidthTiles+1] = tile;     // bottom right
+}
+
+void blackoutMinerals() {
+    for (yLoop = 0; yLoop < 640; yLoop++) {
+        for (xLoop = 0; xLoop < mapWidthTiles; xLoop++) {
+            material_Map[xLoop + yLoop*32] = 94;
+        }
+    }
+}
+
+void addAllMinerals() {
+    // we start at tile 28 because we dont want minerals above the surface
+    for (yLoop = 28; yLoop < 640; yLoop+=2) {
+        for (xLoop = 0; xLoop < 32; xLoop+=2) {
+            int r = rand() % 100; // 0 and 99
+
+            // pick random mineral to add
+            if (r < 11) {
+                setMineral(xLoop + yLoop*mapWidthTiles, materials[r].topLeftTile);
+            }
+		}
+    }
+}
+
+void generateMap() {
+    // generate dirt/cloud map
+    int i = 0;
+    for (i = 0; i < 27*32; i++) {
+        map_Map[i] = aboveGround[i];
+    }
+
+
+    // add dirt
+    int xLoop, yLoop;
+    for (yLoop = 27; yLoop <= 640; yLoop += 2) {
+        for (xLoop = 0; xLoop < 32; xLoop += 2) {
+            int currentPosition = mapWidthTiles*yLoop + xLoop;
+            
+            map_Map[currentPosition] = 91;
+            map_Map[currentPosition+1] = 92;
+            map_Map[currentPosition+mapWidthTiles] = 95;
+            map_Map[currentPosition+mapWidthTiles+1] = 96;
+        }
+    }
+
+    // generate mineral map
+    blackoutMinerals();
+    addAllMinerals();
+    
+    // add finish line
+    for (yLoop = 622; yLoop <= 625; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            map_Map[yLoop*32 + xLoop] = 123; // finish flag tile
+        }
+    }
+    
+    // remove minerals around finish line
+    for (yLoop = 618; yLoop <= 629; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            material_Map[yLoop*32 + xLoop] = 94;// remove minerals if they are above the flag
+        }
+    }
+    
+}
+
+void saveLastPosition() {
+    for (yLoop = 0; yLoop < 32; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            lastLocation[xLoop + yLoop*32] = bg0map[xLoop + yLoop*32];
+            lastLocationMinerals[xLoop + yLoop*32] = bg1map[xLoop + yLoop*32];
+        }
+    }
+}
+
+// loads the last position the user was at
+void loadLastPosition() {
+    for (yLoop = 0; yLoop < 32; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            bg0map[xLoop + yLoop*32] = lastLocation[xLoop + yLoop*32];
+            bg1map[xLoop + yLoop*32] = lastLocationMinerals[xLoop + yLoop*32];
+        }
+    }
+}
+
+// loads the top of the map
+void loadStartingPosition() {
+    // DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW);
+
+    for (yLoop = 0; yLoop < 32; yLoop++) {
+        for (xLoop = 0; xLoop < 32; xLoop++) {
+            bg0map[xLoop + yLoop*32] = map_Map[xLoop + yLoop*mapWidthTiles]; // xLoop + 16
+            bg1map[xLoop + yLoop*32] = material_Map[xLoop + yLoop*mapWidthTiles]; // xLoop + 16
+        }
+    }
+}
+
+
+bool isTileOpen(int tileToCheck) {
+    if (map_Map[tileToCheck] <= 88 ||
+        map_Map[tileToCheck] == 97 ||
+        map_Map[tileToCheck] == 98 ||
+        map_Map[tileToCheck] == 124 ||
+        map_Map[tileToCheck] == 125) {
+        return true;
+    }
+    return false;
+}
+
+void moveToYTile() {
+    bool isTileAligned = false;
+    if ((sprites[0].y + y) % 16 == 0) {
+        isTileAligned = true;
+        bg.directionToKeepMovingY = 0;
+        bg.tilesFromTop = (sprites[0].y + y)/8;
+    }
+
+    if (!isTileAligned) { // keep moving them to a 16x16 tile
+        if (bg.directionToKeepMovingY > 0) {
+            move("up");
+        }
+        else if (bg.directionToKeepMovingY < 0) {
+            move("down");
+        }
+    }
+}
+
+void moveToXTile() {
+    bool isTileAligned = false;
+    if ((sprites[0].x + x) % 16 == 0) {
+        isTileAligned = true;
+        bg.directionToKeepMovingX = 0;
+        bg.tilesFromLeft = (sprites[0].x + x)/8;
+    }
+
+    if (!isTileAligned) { // keep moving them to a 16x16 tile
+        if (bg.directionToKeepMovingX > 0) {
+            move("right");
+        }
+        else if (bg.directionToKeepMovingX < 0) {
+            move("left");
+        }
+    }
+}
+
+
+// attemps to dig in the passed direction
+void dig() {
+    // first loop
+    if (bg.digTotal == 0) {
+        bg.currentlyDigging = true;
+        
+        int diggingTile = 0;
+        int tile = 0;
+        // get current mineral we are digging
+        for (tile = 0; tile < 13; tile++) {
+            if (materials[tile].topLeftTile == mineralDiggingTile) {
+                diggingTile = tile;
+            }
+        }
+        
+        // calculate dig speed
+        bg.digTotal = materials[diggingTile].speedMultiplyer*(sprites[0].engineType*16 + sprites[0].drillType*16) + 16; // how many frames the 16x16 tile should take to be dug
+    }
+
+    // see if we are done digging
+    else if (bg.digProgress == bg.digTotal) {
+        bg.currentlyDigging = false;
+        bg.digTotal = 0;
+        bg.digProgress = 0;
+
+        bg.tilesFromTop = (sprites[0].y + y)/8;
+        bg.tilesFromLeft = (sprites[0].x + x)/8;
+        bg.tileUnderPlayer = bg.tilesFromTop*mapWidthTiles + bg.tilesFromLeft;
+
+        removeMineral(bg.tileUnderPlayer); // remove mineral
+        setDirt(bg.tileUnderPlayer); // set background to dirt
+        sprites[0].money += mineralDiggingValue; // add money
+        sprites[0].gasLevel -= .1; // remove gas
+        
+        // reset player animation
+        sprites[0].animation = 0;
+
+        return;
+    }
+
+    bg.digProgress++; // advance another frame
+    bool digThisFrame = false;
+
+    if (bg.digProgress%(bg.digTotal/16) == 0) {
+        digThisFrame = true;
+    }
+
+    // move the player
+    if (digThisFrame) {
+        
+    	// sprites[0].animation = X;
+    	// 0 for not moving
+        // 1 for driving animation.
+    	// 2 for jetpack animation.
+    	// 3 for drilling down animation.
+    	// 4 for drilling left animation.
+    	// 5 for drilling right animation.
+        
+        switch (bg.digDirection) {
+            case 'l':
+            case 'L':
+                move("left");
+                sprites[0].animation = 4;
+                break;
+
+            case 'r':
+            case 'R':
+                move("right");
+                sprites[0].animation = 5;
+                break;
+
+            case 'd':
+            case 'D':
+                move("down");
+                sprites[0].animation = 3;
+                break;
+        }
+    }
+}
+
+// attempts to move in the passed direction
+void move(char direction[]) {
+    if (strcmp(direction, "up") == 0) {
+        // the tile above the player is empty
+        if (checkDirection(direction)) {
+            sprites[0].animation = 2;
+            
+            // don't let the player fly too high
+            if (y <= 16) {// && bg.playerVelocity < 0) {
+                y = 16;
+                bg.playerVelocity = 0;
+                bg.directionToKeepMovingY = 0;
+            }
+            else {
+                bg.directionToKeepMovingY = 1;
+                
+                y = y - 2;
+                bg.deltaY = bg.deltaY - 2;
+            }
+        }
+    }
+    else if (strcmp(direction, "down") == 0 && canDig(direction)) {
+        // start to dig if the tile isn't open & is diggable
+        if (!bg.currentlyDigging && !checkDirection(direction)) {
+            bg.digDirection = 'd'; // down
+            dig();
+        }
+        else {
+            y++;
+            bg.deltaY++;
+
+            bg.directionToKeepMovingY = -1;
+        }
+    }
+    else if (strcmp(direction, "left") == 0 && canDig(direction)) {
+        // start to dig if the tile isn't open
+        if (!bg.currentlyDigging && !checkDirection(direction) && sprites[0].x > 0) {
+            // dont let them dig while flying
+            if (!checkDirection("down")) {
+                bg.digDirection = 'l'; // left
+                dig();
+            }
+        }
+        else {
+            if (sprites[0].x > 120) {
+                sprites[0].x--;
+            }
+            else if (x > 0) {
+                x--;
+            }
+            else if (sprites[0].x > 0) {
+                sprites[0].x--;
+            }
+
+            
+            if (checkDirection("down")) {
+                sprites[0].animation = 2; // flying animation
+        	}
+        	else {
+                sprites[0].animation = 1;
+            }
+            bg.directionToKeepMovingX = -1;
+        }
+    }
+    else if (strcmp(direction, "right") == 0 && canDig(direction)) {
+        // start to dig if the tile isn't open
+        if (!bg.currentlyDigging && !checkDirection(direction) && sprites[0].x < 224) {
+            // dont let them dig while flying
+            if (!checkDirection("down")) {
+                bg.digDirection = 'r'; // right
+                dig();
+            }
+        }
+        else {
+            if (sprites[0].x < 120) {
+                sprites[0].x++;
+            }
+            else if (x < 16) {
+                x++;
+            }
+            else if (sprites[0].x < 224) {
+                sprites[0].x++;
+            }
+
+            if (checkDirection("down")) {
+                sprites[0].animation = 2; // flying animation
+        	}
+        	else {
+                sprites[0].animation = 1;
+            }
+            bg.directionToKeepMovingX = 1;
+        }
+    }
+
+
+
+    if (bg.deltaX <= -8) {
+        bg.deltaX = 0;
+        bg.tileUnderPlayer--;
+    }
+    else if (bg.deltaX >= 8) {
+        bg.deltaX = 0;
+        bg.tileUnderPlayer++;
+    }
+
+
+
+    if (bg.deltaY <= -8) { // moved up
+        tilesFromTop--;
+        bg.deltaY += 8;
+        bg.tileUnderPlayer -= mapWidthTiles;
+
+        tileToCopy = 32 * (abs(tilesFromTop - 1));
+        locationToPaste = 32 * (abs(tilesFromTop - 1) % 32);
+
+        int loopMe = 0;
+        for (loopMe = 0; loopMe < 32; loopMe++) {
+            bg0map[locationToPaste + loopMe] = map_Map[loopMe + tileToCopy];
+            bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
+        }
+    }
+    else if (bg.deltaY >= 8) { // moved down
+        tilesFromTop++;
+        bg.deltaY -= 8;
+        bg.tileUnderPlayer += mapWidthTiles;
+
+        tileToCopy = 32 * (tilesFromTop + 21);
+        locationToPaste = 32 * ((tilesFromTop + 21) % 32);
+
+        int loopMe = 0;
+        for (loopMe = 0; loopMe < 32; loopMe++) {
+            bg0map[locationToPaste + loopMe] = map_Map[loopMe + tileToCopy];
+            bg1map[locationToPaste + loopMe] = material_Map[loopMe + tileToCopy];
+        }
+    }
+}
+
+
+
+// returns true if the tile is open
+bool checkDirection(char direction[]) {
+    int tileToCompare = bg.tileUnderPlayer; // compare current tile
+
+    if (strcmp(direction, "up") == 0) { // top
+        tileToCompare -= 2*mapWidthTiles;
+    }
+    else if (strcmp(direction, "right") == 0) { // right
+        tileToCompare += 2;
+    }
+    else if (strcmp(direction, "down") == 0) { // bottom
+        tileToCompare += 2*mapWidthTiles;
+    }
+    else if (strcmp(direction, "left") == 0) { // left
+        tileToCompare -= 2;
+    }
+
+    return isTileOpen(tileToCompare);
+}
+
+
+// returns true if the tile is diggable
+bool canDig(char direction[]) {
+    int tileToCompare = bg.tileUnderPlayer; // compare current tile
+
+    if (strcmp(direction, "up") == 0) { // top
+        tileToCompare -= 2*mapWidthTiles;
+    }
+    else if (strcmp(direction, "right") == 0) { // right
+        tileToCompare += 2;
+    }
+    else if (strcmp(direction, "down") == 0) { // bottom
+        tileToCompare += 2*mapWidthTiles;
+    }
+    else if (strcmp(direction, "left") == 0) { // left
+        tileToCompare -= 2;
+    }
+    
+    mineralDiggingValue = mineralValue(tileToCompare);
+    mineralDiggingTile = material_Map[tileToCompare];
+    
+    return mineralDiggable(tileToCompare);
+}
+

@@ -183,55 +183,63 @@ void drawBackground() {
     drawHealth();
     drawMoney();
     
-    
-    bg.tileUnderPlayer = bg.tilesFromTop*mapWidthTiles + bg.tilesFromLeft;
 
-    if (bg.currentlyDigging) {
-        dig();
-    }
-    else if (bg.directionToKeepMovingX == 0 && bg.directionToKeepMovingY == 0) {
-   	    // see if we are flying
-        if (checkDirection("down")) {
-            sprites[0].animation = 2; // flying animation
-            sprites[0].gasLevel -= .005;
-    	}
-    	else {
-            sprites[0].animation = 0;
+    // if the player isn't dead
+    if (sprites[0].alive != 0) {
+
+        // explosion animation if the player runs out of gas
+        if (sprites[0].gasLevel <= 0) {
+            sprites[0].alive = 0;
         }
-        
-    	if (keyIsDown(BUTTON_UP)) {
-    	    move("up");
-    	}
-    	else if (keyIsDown(BUTTON_DOWN)) {
-    	    move("down");
-    	}
-    	else if (keyIsDown(BUTTON_LEFT)) {
-    	    move("left");
-    	}
-    	else if (keyIsDown(BUTTON_RIGHT)) {
-    	    move("right");
-    	}
-   	}
-   	
-    // move to nearest X tile
-   	else if (bg.directionToKeepMovingX != 0) {
-        //if (!keyIsDown(BUTTON_LEFT) && !keyIsDown(BUTTON_RIGHT)) {
-            moveToXTile();
-        //}
-    }
-    
-	
-	// move to nearest Y tile
-	else if (bg.directionToKeepMovingY != 0) {
-        //if (!keyIsDown(BUTTON_UP) && !keyIsDown(BUTTON_DOWN)) {
-            moveToYTile();
-        //}
-    }
 
-	REG_BG0VOFS = y;
-	REG_BG1VOFS = y;
-	
-	REG_BG0HOFS = x;
-	REG_BG1HOFS = x;
+        if (y > 4912) { // if the user passed tile 562 - the finish line
+            GameState = STATE_GAMEOVERWIN;
+        }
+
+
+        bg.tileUnderPlayer = bg.tilesFromTop*mapWidthTiles + bg.tilesFromLeft;
+
+        if (bg.currentlyDigging) {
+            dig();
+        }
+        else if (bg.directionToKeepMovingX == 0 && bg.directionToKeepMovingY == 0) {
+       	    // see if we are flying
+            if (checkDirection("down")) {
+                sprites[0].animation = 2; // flying animation
+                sprites[0].gasLevel -= .005;
+        	}
+        	else {
+                sprites[0].animation = 0;
+            }
+
+        	if (keyIsDown(BUTTON_UP)) {
+        	    move("up");
+        	}
+        	else if (keyIsDown(BUTTON_DOWN)) {
+        	    move("down");
+        	}
+        	else if (keyIsDown(BUTTON_LEFT)) {
+        	    move("left");
+        	}
+        	else if (keyIsDown(BUTTON_RIGHT)) {
+        	    move("right");
+        	}
+       	}
+        // move to nearest X tile
+       	else if (bg.directionToKeepMovingX != 0) {
+            moveToXTile();
+        }
+    	// move to nearest Y tile
+    	else if (bg.directionToKeepMovingY != 0) {
+            moveToYTile();
+        }
+    
+
+    	REG_BG0VOFS = y;
+    	REG_BG1VOFS = y;
+    	
+    	REG_BG0HOFS = x;
+    	REG_BG1HOFS = x;
+    }
 }
 

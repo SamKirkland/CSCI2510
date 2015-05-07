@@ -6,44 +6,23 @@
 void Initialize()
 {
     //GameState = STATE_INGAME;
+    //GameState = STATE_GAMEOVERLOSE;
     GameState = STATE_TITLESCREEN;
+    
 	playMusic();
     initSprites();
 	initbackgrounds();
 	initShop();
 	initTitle();
+	initWin();
+	initGas();
+	initGameOver();
 }
 
 void LoadContent()
 {
-   switch(GameState){
-        case STATE_TITLESCREEN:
-            //load the title screen
-            
-            break;
-        case STATE_INGAME:
-            loadBackground();
-            loadSprite();
-            
-            break;
-        case STATE_MENU:
-            //menu or shop content
-            
-            break;
-        case STATE_GAMEOVERWIN:
-            //game over win content
-            
-            break;
-        case STATE_GAMEOVERLOSE:
-            //game over lose content
-            
-            break;
-		case STATE_GASSTATION:
-			//gas station content
-			break;
-        default:
-            break;
-   }
+    loadBackground();
+    loadSprite();
 }
 
 void Update()
@@ -79,7 +58,7 @@ void Update()
             
             // User pushed the action button (RETURN)
             int userYPosition = sprites[0].y + y;
-            if (keyIsDown(BUTTON_START) && userYPosition > 176 && userYPosition < 176+32) {
+            if (keyIsDown(BUTTON_A) && userYPosition > 176 && userYPosition < 176+32) {
                 int usersPosition = sprites[0].x + x;
                 
                 // open shop
@@ -105,12 +84,15 @@ void Update()
         case STATE_MENU:
             SetMode(3 | BG2_ENABLE);
             updateShop();
+            
             break;
         case STATE_GAMEOVERWIN:
-            //game over win content.
+            updateWin();
+
             break;
         case STATE_GAMEOVERLOSE:
             updateGameOver();
+
             break;
 		case STATE_GASSTATION:
 			SetMode(3 | BG2_ENABLE);
@@ -134,14 +116,15 @@ void Draw()
         case STATE_INGAME:
             WaitVBlank();
             UpdateSpriteMemory();
-			playMusic();
 
             break;
         case STATE_MENU:
 			drawShop();
+			
             break;
         case STATE_GAMEOVERWIN:
-            //gameover win content.
+            drawWin();
+            
             break;
         case STATE_GAMEOVERLOSE:
             drawGameOver();
