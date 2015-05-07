@@ -53,6 +53,7 @@ void initGas()
 {
 	gasInit = 0;
 	gasIndex = 0;
+	maxgas = 20;
 }
 
 void drawShop()
@@ -345,7 +346,8 @@ void drawGas()
 
 	 if (gasInit == 0){				
 		DMAFastCopy((void*)gasmenu_Bitmap, (void*)videoBuffer, 76800/4, DMA_32NOW);
-			
+		
+		
 		cashToString(sprites[0].money);
 		Print(85, 4, "Natasco", RGB(27, 13, 0));
 		Print(8, 8, "$", RGB(5, 31, 5));
@@ -377,6 +379,13 @@ void drawGas()
 			maxgas = 20;
 			break;
 		}
+		
+		DrawBox3(166, 120, 208, 138, RGB(20, 20, 20));
+		cashToString(sprites[0].gasLevel);
+    	Print(166, 126, moneybuffer, RGB(31, 24, 0));
+    	Print(182, 126, "/", RGB(31, 24, 0));
+    	cashToString(maxgas);
+    	Print(190, 126, moneybuffer, RGB(31, 24, 0));
 		
 		gasInit = 1;
 	}
@@ -454,7 +463,7 @@ void drawGas()
 			Print(168, 16, "Fill", RGB(27, 13, 0));
 			Print(168, 26, "Tank", RGB(27, 13, 0));
 			Print(168, 70, "$", RGB(31, 28, 0));
-			cashToString(maxgas - sprites[0].gasLevel);
+			if(sprites[0].gasLevel < 100){cashToString(maxgas - sprites[0].gasLevel);}
 			Print(176, 70, moneybuffer, RGB(31, 28, 0));
 			DrawLine3(37, 109, 132, 109, RGB(31, 0, 0));
 			DrawLine3(37, 130, 132, 130, RGB(31, 0, 0));
@@ -474,33 +483,33 @@ void updateGas()
 				if(sprites[0].money >= 5 && sprites[0].gasLevel + 5 >= maxgas){
 					sprites[0].gasLevel = maxgas;
 					sprites[0].money -= 5;
-				} else {
+				} else if (sprites[0].money >= 5) {
 					sprites[0].gasLevel += 5;
-				}
+				} else {}
 				break;
 			case 1:
 				if(sprites[0].money >= 10 && sprites[0].gasLevel + 10 >= maxgas){
 					sprites[0].gasLevel = maxgas;
 					sprites[0].money -= 10;
-				} else {
+				} else if (sprites[0].money >= 10) {
 					sprites[0].gasLevel += 10;
-				}
+				} else {}
 				break;
 			case 2:
 				if(sprites[0].money >= 20 && sprites[0].gasLevel + 20 >= maxgas){
 					sprites[0].gasLevel = maxgas;
 					sprites[0].money -= 20;
-				} else {
+				} else if (sprites[0].money >= 20){
 					sprites[0].gasLevel += 20;
-				}
+				} else {}
 				break;
 			case 3:
 				if(sprites[0].money >= 50 && sprites[0].gasLevel + 50 >= maxgas){
 					sprites[0].gasLevel = maxgas;
 					sprites[0].money -= 50;
-				} else {
+				} else if (sprites[0].money >= 50){
 					sprites[0].gasLevel += 50;
-				}
+				} else {}
 				break;
 			case 4:
 				if(sprites[0].money >= (maxgas - sprites[0].gasLevel)){
@@ -510,6 +519,13 @@ void updateGas()
 			default:
 			break;
 		}
+		DrawBox3(166, 120, 208, 138, RGB(20, 20, 20));
+		cashToString(sprites[0].gasLevel);
+    	Print(166, 126, moneybuffer, RGB(31, 24, 0));
+    	Print(182, 126, "/", RGB(31, 24, 0));
+    	cashToString(maxgas);
+    	Print(190, 126, moneybuffer, RGB(31, 24, 0));
+	
 		DrawBox3(16, 8, 68, 16, RGB(20, 20, 20));
 		cashToString(sprites[0].money);
 		Print(8, 8, "$", RGB(5, 31, 5));

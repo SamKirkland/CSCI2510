@@ -56,7 +56,7 @@ void Update()
             
             break;
         case STATE_INGAME:
-            SetMode(0 | BG0_ENABLE | BG1_ENABLE | OBJ_ENABLE | OBJ_MAP_1D);
+            SetMode(0 | BG0_ENABLE | BG1_ENABLE | BG2_ENABLE | OBJ_ENABLE | OBJ_MAP_1D);
             // first load
             if(setGame == 0) {
     	        loadBackground();
@@ -69,21 +69,32 @@ void Update()
                 DMAFastCopy((void*)map_Tiles, (void*)CharBaseBlock(0), 12288/4, DMA_32NOW); // copy tiles into memory
                 loadLastPosition();
                 loadSprite();
+                initHUD();
                 setGame = 1;
             }
             drawBackground();
             PlaySprite(0);
-            //if((keyIsDown(BUTTON_SELECT) && keyWasUp(BUTTON_SELECT))){
-            if(keyIsDown(BUTTON_SELECT)) {
-                saveLastPosition();
-                GameState = STATE_MENU;
-                setGame = 1;
-            }
- 			if(keyIsDown(BUTTON_START)){
-				saveLastPosition();
-				GameState = STATE_GASSTATION;
-				setGame = 1;
+            
+            // User pushed the action button (RETURN)
+            int userYPosition = sprites[0].y + y;
+            if (keyIsDown(BUTTON_START) && userYPosition > 176 && userYPosition < 176+32) {
+                int usersPosition = sprites[0].x + x;
+                
+                // open shop
+                if (usersPosition < 80) {
+                    saveLastPosition();
+                    GameState = STATE_MENU;
+                    setGame = 1;
+                }
+            
+                // open fuel station
+     			if (usersPosition > 190) {
+    				saveLastPosition();
+    				GameState = STATE_GASSTATION;
+    				setGame = 1;
+    			}
 			}
+            
             
             int i = 25000;
             while (i > 0) { i--; }

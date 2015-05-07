@@ -195,6 +195,7 @@ pRotData rotData = (pRotData)gamesprites;
 #define ScreenBaseBlock(n) (((n)*0x800)+0x6000000)
 
 unsigned short* bg0map =(unsigned short*)ScreenBaseBlock(31);
+unsigned short* bg2map =(unsigned short*)ScreenBaseBlock(16);
 
 // macro to change the video mode
 #define SetMode(mode) REG_DISPCNT = (mode)

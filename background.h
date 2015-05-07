@@ -31,73 +31,73 @@ void initbackgrounds() {
     // 4 = starting,    3 = iron,   2 = emerald,    1 = titanium,   0 = diamond
     
     // --------- Starting Drill ---------
-    materials[0].topLeftTile = 38;              // white gravel
+    materials[0].topLeftTile = 99;              // white gravel
     materials[0].minimumDrillLevel = 4;
     materials[0].value = 75;
     materials[0].speedMultiplyer = 1;
-    
-    materials[1].topLeftTile = 40;              // gray gravel
+
+    materials[1].topLeftTile = 101;              // gray gravel
     materials[1].minimumDrillLevel = 4;
     materials[1].value = 75;
     materials[1].speedMultiplyer = 1;
     
     // --------- Iron Drill ---------
-    materials[2].topLeftTile = 42;              // sand
+    materials[2].topLeftTile = 103;              // sand
     materials[2].minimumDrillLevel = 3;
     materials[2].value = 150;
     materials[2].speedMultiplyer = 1;
-    
-    materials[3].topLeftTile = 46;              // bronze
+
+    materials[3].topLeftTile = 107;              // bronze
     materials[3].minimumDrillLevel = 3;
     materials[3].value = 150;
     materials[3].speedMultiplyer = 1;
 
     // --------- Emerald Drill ---------
-    materials[4].topLeftTile = 44;              // iron
+    materials[4].topLeftTile = 105;              // iron
     materials[4].minimumDrillLevel = 2;
     materials[4].value = 300;
     materials[4].speedMultiplyer = 1;
-    
-    materials[5].topLeftTile = 60;              // white
+
+    materials[5].topLeftTile = 121;              // white
     materials[5].minimumDrillLevel = 2;
     materials[5].value = 300;
     materials[5].speedMultiplyer = 1;
 
     // --------- Titanium Drill ---------
-    materials[6].topLeftTile = 52;              // red
+    materials[6].topLeftTile = 113;              // red
     materials[6].minimumDrillLevel = 1;
     materials[6].value = 600;
     materials[6].speedMultiplyer = 1;
 
-    materials[7].topLeftTile = 54;              // purple
+    materials[7].topLeftTile = 119;              // purple
     materials[7].minimumDrillLevel = 1;
     materials[7].value = 600;
     materials[7].speedMultiplyer = 1;
 
-    materials[8].topLeftTile = 56;              // green
+    materials[8].topLeftTile = 117;              // green
     materials[8].minimumDrillLevel = 1;
     materials[8].value = 600;
     materials[8].speedMultiplyer = 1;
 
-    materials[9].topLeftTile = 58;              // pink
+    materials[9].topLeftTile = 119;              // pink
     materials[9].minimumDrillLevel = 1;
     materials[9].value = 600;
     materials[9].speedMultiplyer = 1;
     
     // --------- Diamond Drill ---------
-    materials[10].topLeftTile = 48;             // gold
+    materials[10].topLeftTile = 109;             // gold
     materials[10].minimumDrillLevel = 0;
     materials[10].value = 1000;
     materials[10].speedMultiplyer = 1;
 
-    materials[11].topLeftTile = 50;             // purple stripes
+    materials[11].topLeftTile = 111;             // purple stripes
     materials[11].minimumDrillLevel = 0;
     materials[11].value = 1000;
     materials[11].speedMultiplyer = 1;
     
     
     // --------- Other Tiles ---------
-    materials[12].topLeftTile = 36;             // empty tile
+    materials[12].topLeftTile = 94;             // empty tile
     materials[12].minimumDrillLevel = 4;
     materials[12].value = 0;
     materials[12].speedMultiplyer = 0;
@@ -127,17 +127,19 @@ void initbackgrounds() {
     bg.directionToKeepMovingX = 0; // stores a positive or negative number to keep the player moving left or right
     bg.directionToKeepMovingY = 0; // same but up and down
     bg.tileUnderPlayer = 0;
-    bg.tilesFromTop = 9;
+    bg.tilesFromTop = 8;
     bg.tilesFromLeft = 0;
     
 	bg0map = (unsigned short*)ScreenBaseBlock(23);
 	bg1map = (unsigned short*)ScreenBaseBlock(31);
+	bg2map = (unsigned short*)ScreenBaseBlock(16);
 }
 
 //////////////////////////////////////////////////////////This method loads the backgrounds of the game.
 void loadBackground() {
-    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 1) | (0 << CHAR_SHIFT);
-	REG_BG1CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (31 << SCREEN_SHIFT);
+    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 2) | (0 << CHAR_SHIFT);
+	REG_BG1CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (31 << SCREEN_SHIFT | 1);
+	REG_BG2CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (16 << SCREEN_SHIFT | 0);
 	
 	DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW); // copy palette into the background
     DMAFastCopy((void*)map_Tiles, (void*)CharBaseBlock(0), 12288/4, DMA_32NOW); // copy tiles into memory
@@ -145,17 +147,24 @@ void loadBackground() {
     // Generate map
     generateMap();
     
+    // Create HUD
+    initHUD();
+    
     // Load the starting position
     loadStartingPosition();
 }
 
 //////////////////////////////////////////////////////////This method reloads the background at the last position it was in
 void reloadBackground() {
-    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 1) | (0 << CHAR_SHIFT);
-	REG_BG1CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (31 << SCREEN_SHIFT);
+    REG_BG0CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (23 << SCREEN_SHIFT | 2) | (0 << CHAR_SHIFT);
+	REG_BG1CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (31 << SCREEN_SHIFT | 1);
+	REG_BG2CNT = BG_COLOR256 | TEXTBG_SIZE_256x256 | (16 << SCREEN_SHIFT | 0);
 	
 	DMAFastCopy((void*)map_Palette, (void*)BGPaletteMem, 256, DMA_16NOW); // copy palette into the background
     DMAFastCopy((void*)map_Tiles, (void*)CharBaseBlock(0), 12288/4, DMA_32NOW); // copy tiles into memory
+
+    // Create HUD
+    initHUD();
 
     // Load the starting position
     loadLastPosition();
@@ -167,6 +176,14 @@ void drawBackground() {
     keyPoll();
     WaitVBlank();
     
+
+    // update HUD
+    drawDepth();
+    drawFuel();
+    drawHealth();
+    drawMoney();
+    
+    
     bg.tileUnderPlayer = bg.tilesFromTop*mapWidthTiles + bg.tilesFromLeft;
 
     if (bg.currentlyDigging) {
@@ -176,6 +193,7 @@ void drawBackground() {
    	    // see if we are flying
         if (checkDirection("down")) {
             sprites[0].animation = 2; // flying animation
+            sprites[0].gasLevel -= .005;
     	}
     	else {
             sprites[0].animation = 0;
