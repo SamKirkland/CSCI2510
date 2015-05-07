@@ -1,6 +1,3 @@
-typedef unsigned short u16;
-typedef signed int s32;
-
 #include "scr.h"
 #include "title.h"
 #include "playerSprite.h"
@@ -45,7 +42,7 @@ void setSpriteInfo(int num) {
     sprites[num].hullType = 4;
     sprites[num].engineType = 4;
     sprites[num].Movespeed = 1;
-    sprites[num].drillType = 2;
+    sprites[num].drillType = 4;
     sprites[num].tankType = 4;
     sprites[num].money = 0;
     sprites[num].gasLevel = 20;
@@ -192,11 +189,11 @@ void PlaySprite(int num) {
                 }
                 break;
             case 2:
-                if (sprites[num].activeFrame == 11) {
-                    sprites[num].activeFrame = 12;
+                if (sprites[num].activeFrame == 12) {
+                    sprites[num].activeFrame = 13;
                 }
                 else {
-                    sprites[num].activeFrame = 11;
+                    sprites[num].activeFrame = 12;
                 }
                 break;
             case 3:
@@ -237,14 +234,20 @@ void PlaySprite(int num) {
             }
     }
     else if(sprites[num].alive == 0) {
-        if (sprites[num].activeFrame == 10) {
+        if (sprites[num].activeFrame == 8) {
+            sprites[num].activeFrame = 9;
+        }
+        else if (sprites[num].activeFrame == 9) {
+            sprites[num].activeFrame = 10;
+        }
+        else if (sprites[num].activeFrame == 10) {
             sprites[num].activeFrame = 11;
         }
         else if (sprites[num].activeFrame == 11) {
-            drawGameOver();
+            ////drawGameOver();
         }
         else {
-            sprites[num].activeFrame = 10;
+            sprites[num].activeFrame = 8;
         }
     }
     updateSprite(num);

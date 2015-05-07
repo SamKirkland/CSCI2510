@@ -24,8 +24,10 @@ unsigned short* SpriteData3 = SpriteData + 8192;
 #define bool int
 #define true 1
 #define false 0
-#define s32 signed int
-#define u16 unsigned short
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned long u32;
+typedef signed int s32;
 
 // misc sprite constants
 #define OBJ_MAP_2D          0x0

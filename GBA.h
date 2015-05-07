@@ -1,4 +1,5 @@
 #include "background.h"
+#include "sound.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////GameState & bool defines
 
@@ -6,6 +7,7 @@ void Initialize()
 {
     //GameState = STATE_INGAME;
     GameState = STATE_TITLESCREEN;
+	playMusic();
     initSprites();
 	initbackgrounds();
 	initShop();
@@ -132,6 +134,7 @@ void Draw()
         case STATE_INGAME:
             WaitVBlank();
             UpdateSpriteMemory();
+			playMusic();
 
             break;
         case STATE_MENU:
