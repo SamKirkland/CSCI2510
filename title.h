@@ -590,6 +590,7 @@ void updateGas()
     	Print(166, 126, moneybuffer, RGB(31, 24, 0));
     	Print(182, 126, "/", RGB(31, 24, 0));
     	cashToString(maxgas);
+    	DrawBox3(164, 4, 236, 80, RGB(5, 5, 5));
     	Print(190, 126, moneybuffer, RGB(31, 24, 0));
 	
 		DrawBox3(16, 8, 68, 16, RGB(20, 20, 20));

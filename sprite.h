@@ -253,6 +253,13 @@ void PlaySprite(int num) {
             while (i > 0) { i--; }
         }
         else if (sprites[num].activeFrame == 11) {
+            sprites[num].activeFrame = 12;
+            
+            int i = 750000;
+            while (i > 0) { i--; }
+        }
+        else if(sprites[num].activeFrame == 12)
+        {
             ////drawGameOver();
             GameState = STATE_GAMEOVERLOSE;
         }

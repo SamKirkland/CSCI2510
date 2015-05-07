@@ -35,9 +35,22 @@ void updateTitle()
     randcounter++;
 	if(keyIsDown(BUTTON_A) && keyWasUp(BUTTON_A)){
 		randseed = randcounter;
-		titleInit = 0;
-		GameState = STATE_INGAME;
 		srand(randseed);
+		DMAFastCopy((void*)black_Bitmap, (void*)videoBuffer, 76800/4, DMA_32NOW);
+		Print(8, 8, "Instructions:", RGB(31, 31, 31));
+		Print(8, 28, "Move your character with the", RGB(31, 31, 31));
+		Print(8, 38, "D-Pad.", RGB(31, 31, 31));
+		Print(8, 58, "Enter the shop and gas", RGB(31, 31, 31));
+		Print(8, 68, "station with A.", RGB(31, 31, 31));
+		Print(8, 88, "Don't run out of gas or", RGB(31, 31, 31));
+		Print(8, 98, "you'll explode!", RGB(31, 31, 31));
+		Print(8, 118, "Reach the finish line at the", RGB(31, 31, 31));
+		Print(8, 128, "bottom to win!", RGB(31, 31, 31));
+		Print(8, 148, "Press Start to continue.", RGB(31, 31, 31));
+	}
+	if(keyIsDown(BUTTON_START) && keyWasUp(BUTTON_START)){
+		GameState = STATE_INGAME;
+		titleInit = 0;
 	}
 }
 
@@ -577,6 +590,7 @@ void updateGas()
     	Print(166, 126, moneybuffer, RGB(31, 24, 0));
     	Print(182, 126, "/", RGB(31, 24, 0));
     	cashToString(maxgas);
+    	DrawBox3(180, 57, 210, 77, RGB(5, 5, 5));
     	Print(190, 126, moneybuffer, RGB(31, 24, 0));
 	
 		DrawBox3(16, 8, 68, 16, RGB(20, 20, 20));
