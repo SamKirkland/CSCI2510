@@ -3,21 +3,20 @@ Final game project for CSCI 2510.
 
 # Game Boy Advance Game
 
-## Screen shots:
-
-![Game play](https://raw.githubusercontent.com/SamKirkland/CSCI2510/master/screenshots/screenshot-1.png)
-![Store menu](https://raw.githubusercontent.com/SamKirkland/CSCI2510/master/screenshots/screenshot-2.png)
-
-## Description:
-
-A game boy advance game written in C that runs 
-
 ## Demo:
 
 1. You can use the gbajs project to demo game in your web browser http://endrift.github.io/gbajs/
 
 2. Select the FinalProject.gba file (in the gameFiles folder)
 
+## Description:
+
+A game boy advance game written in C that runs 
+
+## Screen shots:
+
+![Game play](https://raw.githubusercontent.com/SamKirkland/CSCI2510/master/screenshots/screenshot-1.png)
+![Store menu](https://raw.githubusercontent.com/SamKirkland/CSCI2510/master/screenshots/screenshot-2.png)
 
 ## Source:
 
